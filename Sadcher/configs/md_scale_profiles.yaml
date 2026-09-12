@@ -1,0 +1,24 @@
+version: 1
+profiles:
+  small:
+    task_count: 12
+    process_robot_count: 3
+    transport_robot_count: 2
+    seed: 12012
+  medium:
+    task_count: 30
+    process_robot_count: 6
+    transport_robot_count: 4
+    seed: 23030
+  large:
+    task_count: 60
+    process_robot_count: 12
+    transport_robot_count: 8
+    seed: 36060
+defaults:
+  transport_ratio: 0.25
+  precedence_density: 0.25
+  critical_path_length: 3
+  capacity_slack: 0.2
+  speed_ratio: 0.8
+  skill_count: 3

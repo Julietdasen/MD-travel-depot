@@ -1,0 +1,17 @@
+literature_survey/
+venv_thesis/
+datasets/
+*.pyc
+results/
+checkpoints/
+*.ipynb
+*.json
+archived_runs/
+runs/
+*.mp4
+*.gif
+*.db
+*.pkl
+gurobi.lic
+*.tex
+*.csv

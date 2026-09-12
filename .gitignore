@@ -1,0 +1,24 @@
+# Local Python environments and caches
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/*.orig
+
+# Local experiment planning and generated data
+**/.scratch/
+**/.aris/
+Sadcher/dataset_optimal_8t3r3s.zip
+Sadcher/archives/
+Sadcher/reports/**/dataset*/
+Sadcher/reports/**/*.pt
+Sadcher/reports/**/training_pairs.jsonl
+Sadcher/reports/**/logs/
+
+# Selected reproducibility checkpoints are force-added by publish_repositories.sh.
+
+# OS metadata
+**/.DS_Store
