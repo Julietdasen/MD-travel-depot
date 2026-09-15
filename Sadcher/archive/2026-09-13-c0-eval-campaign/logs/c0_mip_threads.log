@@ -1,0 +1,20 @@
+=== [Sun 13 Sep 2026 02:03:18 AM CST] START MIP threads sweep ===
+{"threads": 1, "seed": 9301, "success": true, "makespan": 444.0, "solver_calls": 61, "solver_time_total_seconds": 43.92910650232807, "solver_time_max_seconds": 0.7568782831076533, "wall_time_seconds": 114.57204371807165}
+{"threads": 1, "seed": 9302, "success": true, "makespan": 390.0, "solver_calls": 69, "solver_time_total_seconds": 49.93596916180104, "solver_time_max_seconds": 0.7490187659859657, "wall_time_seconds": 118.51423853309825}
+{"threads": 4, "seed": 9301, "success": true, "makespan": 444.0, "solver_calls": 61, "solver_time_total_seconds": 43.79766600066796, "solver_time_max_seconds": 0.7481781910173595, "wall_time_seconds": 113.43154468201101}
+{"threads": 4, "seed": 9302, "success": true, "makespan": 390.0, "solver_calls": 69, "solver_time_total_seconds": 44.247091736178845, "solver_time_max_seconds": 0.6780756870284677, "wall_time_seconds": 104.03485870314762}
+{"threads": 8, "seed": 9301, "success": true, "makespan": 444.0, "solver_calls": 61, "solver_time_total_seconds": 39.65009702183306, "solver_time_max_seconds": 0.684503705939278, "wall_time_seconds": 101.03372965706512}
+{"threads": 8, "seed": 9302, "success": true, "makespan": 390.0, "solver_calls": 69, "solver_time_total_seconds": 48.576873572776094, "solver_time_max_seconds": 0.764692619908601, "wall_time_seconds": 112.47577881580219}
+{
+  "schema": "md-c0-mip-threads-1.0",
+  "model_seed": 3101,
+  "task_count": 150,
+  "thread_counts": [
+    1,
+    4,
+    8
+  ],
+  "row_count": 6,
+  "all_success": true
+}
+=== [Sun 13 Sep 2026 02:14:24 AM CST] DONE ===

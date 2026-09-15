@@ -51,7 +51,3 @@ Each profile is represented in train, development, and test.
 | scale_medium | greedy_distance | 4 | 4/4 | 303.0 |
 | scale_medium | greedy_eta | 4 | 4/4 | 296.25 |
 | scale_medium | greedy_unlock | 4 | 4/4 | 299.5 |
-
-## C0 training status
-
-A reduced C0 training attempt was made with the existing `sadcher-md` environment and the existing Ticket 46 entry point. The entry point rejects CPU execution and requires a visible `cuda:0`; no GPU is available in this session. Therefore no new C0 checkpoint or C0 profile score is claimed. The pilot remains valid as a profile-stratified simulator/baseline comparison, but C0 training requires rerunning the same command on the project's existing GPU machine.

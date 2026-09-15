@@ -1,0 +1,26 @@
+=== [Sun 13 Sep 2026 02:18:08 AM CST] START scale threshold sweep ===
+{"confidence_threshold": 0.0, "seed": 9301, "success": true, "makespan": 444.0, "decision_count": 109, "solver_calls": 61, "solver_time_total_seconds": 38.68856595479883, "wall_time_seconds": 100.42191349994391}
+{"confidence_threshold": 0.0, "seed": 9302, "success": true, "makespan": 390.0, "decision_count": 111, "solver_calls": 69, "solver_time_total_seconds": 44.07401431701146, "wall_time_seconds": 103.5820018099621}
+{"confidence_threshold": 0.5, "seed": 9301, "success": true, "makespan": 427.0, "decision_count": 120, "solver_calls": 85, "solver_time_total_seconds": 54.653653307352215, "wall_time_seconds": 120.03743129805662}
+{"confidence_threshold": 0.5, "seed": 9302, "success": true, "makespan": 396.0, "decision_count": 118, "solver_calls": 90, "solver_time_total_seconds": 58.00468483497389, "wall_time_seconds": 121.56335273198783}
+{"confidence_threshold": 1.0, "seed": 9301, "success": true, "makespan": 427.0, "decision_count": 120, "solver_calls": 85, "solver_time_total_seconds": 54.75781141058542, "wall_time_seconds": 120.08831568108872}
+{"confidence_threshold": 1.0, "seed": 9302, "success": true, "makespan": 396.0, "decision_count": 118, "solver_calls": 90, "solver_time_total_seconds": 58.035190655849874, "wall_time_seconds": 121.44818559614941}
+{"confidence_threshold": 2.0, "seed": 9301, "success": true, "makespan": 427.0, "decision_count": 120, "solver_calls": 85, "solver_time_total_seconds": 54.485372472787276, "wall_time_seconds": 119.91488059400581}
+{"confidence_threshold": 2.0, "seed": 9302, "success": true, "makespan": 396.0, "decision_count": 118, "solver_calls": 90, "solver_time_total_seconds": 58.095764856087044, "wall_time_seconds": 121.73157502803952}
+{"confidence_threshold": 5.0, "seed": 9301, "success": true, "makespan": 427.0, "decision_count": 120, "solver_calls": 85, "solver_time_total_seconds": 54.83351314580068, "wall_time_seconds": 120.34298068913631}
+{"confidence_threshold": 5.0, "seed": 9302, "success": true, "makespan": 396.0, "decision_count": 118, "solver_calls": 90, "solver_time_total_seconds": 58.34914790140465, "wall_time_seconds": 122.30477507901378}
+{
+  "schema": "md-c0-scale-threshold-1.0",
+  "model_seed": 3101,
+  "task_count": 150,
+  "thresholds": [
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "row_count": 10,
+  "all_success": true
+}
+=== [Sun 13 Sep 2026 02:37:41 AM CST] DONE ===

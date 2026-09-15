@@ -1,0 +1,148 @@
+=== [Sun 13 Sep 2026 02:23:43 PM CST] START pure MILP baseline ===
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2770405
+Academic license 2770405 - for non-commercial use only - registered to 22___@tongji.edu.cn
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "balanced", "seed": 101, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.13349425909109414, "objective": 187.0, "optimality_gap": 0.0, "makespan": 125.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "balanced", "seed": 102, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.10688114212825894, "objective": 259.0, "optimality_gap": 0.0, "makespan": 199.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "balanced", "seed": 201, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.023526289965957403, "objective": 176.0, "optimality_gap": 0.0, "makespan": 97.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "balanced", "seed": 301, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.04068989306688309, "objective": 187.0, "optimality_gap": 0.0, "makespan": 126.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "seed": 101, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.0274042880628258, "objective": 173.0, "optimality_gap": 0.0, "makespan": 109.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "seed": 102, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.022722342982888222, "objective": 174.0, "optimality_gap": 0.0, "makespan": 98.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "seed": 201, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.01667470601387322, "objective": 141.0, "optimality_gap": 0.0, "makespan": 87.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "seed": 301, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.021111113019287586, "objective": 131.0, "optimality_gap": 0.0, "makespan": 80.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "transport_bottleneck", "seed": 101, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.14898945414461195, "objective": 453.0, "optimality_gap": 0.0, "makespan": 395.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "transport_bottleneck", "seed": 102, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.09443205897696316, "objective": 330.0, "optimality_gap": 0.0, "makespan": 265.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "transport_bottleneck", "seed": 201, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.10910065495409071, "objective": 359.0, "optimality_gap": 0.0, "makespan": 319.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "transport_bottleneck", "seed": 301, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.030727009987458587, "objective": 414.0, "optimality_gap": 0.0, "makespan": 330.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "seed": 101, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.03797060390934348, "objective": 254.0, "optimality_gap": 0.0, "makespan": 162.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "seed": 102, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.0328235849738121, "objective": 299.0, "optimality_gap": 0.0, "makespan": 204.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "seed": 201, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.024794175988063216, "objective": 227.0, "optimality_gap": 0.0, "makespan": 133.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "seed": 301, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.025730258086696267, "objective": 219.0, "optimality_gap": 0.0, "makespan": 169.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "mixed_hard", "seed": 101, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.31543922889977694, "objective": 229.0, "optimality_gap": 0.0, "makespan": 196.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "mixed_hard", "seed": 102, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.2882032960187644, "objective": 268.0, "optimality_gap": 0.0, "makespan": 201.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "mixed_hard", "seed": 201, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.053768689977005124, "objective": 247.0, "optimality_gap": 0.0, "makespan": 189.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "mixed_hard", "seed": 301, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.1746930389199406, "objective": 304.0, "optimality_gap": 0.0, "makespan": 238.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "scale_medium", "seed": 101, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.7753646960482001, "objective": 256.0, "optimality_gap": 0.0, "makespan": 180.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "scale_medium", "seed": 102, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.38713162392377853, "objective": 255.0, "optimality_gap": 0.0, "makespan": 153.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "scale_medium", "seed": 201, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 1.4801698711235076, "objective": 265.0, "optimality_gap": 0.0, "makespan": 198.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "scale_medium", "seed": 301, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.21850289404392242, "objective": 198.0, "optimality_gap": 0.0, "makespan": 132.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 12, "seed": 9601, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.10401990683749318, "objective": 286.0, "optimality_gap": 0.0, "makespan": 180.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 12, "seed": 9602, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.04165481589734554, "objective": 329.0, "optimality_gap": 0.0, "makespan": 239.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 12, "seed": 9603, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.04950568196363747, "objective": 241.0, "optimality_gap": 0.0, "makespan": 181.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 24, "seed": 9601, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.5126266449224204, "objective": 194.0, "optimality_gap": 0.0, "makespan": 118.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 24, "seed": 9602, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 4.106617978075519, "objective": 273.0, "optimality_gap": 0.0, "makespan": 185.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 24, "seed": 9603, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 0.4078466889914125, "objective": 223.0, "optimality_gap": 0.0, "makespan": 175.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 42, "seed": 9601, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 13.609141158871353, "objective": 233.0, "optimality_gap": 0.0, "makespan": 196.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 42, "seed": 9602, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 300.22639158484526, "objective": 214.0, "optimality_gap": 0.11672954272470437, "makespan": 159.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 42, "seed": 9603, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 17.608628873014823, "objective": 250.0, "optimality_gap": 0.0, "makespan": 192.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 60, "seed": 9601, "status": "optimal", "feasible": true, "timeout": false, "solve_time_seconds": 217.02665402297862, "objective": 286.0, "optimality_gap": 0.0, "makespan": 229.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 60, "seed": 9602, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 301.39834897010587, "objective": 229.0, "optimality_gap": 0.07854516702905713, "makespan": 158.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 60, "seed": 9603, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 300.53299509594217, "objective": 301.0, "optimality_gap": 0.28062711984399236, "makespan": 204.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 90, "seed": 9601, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 302.22170381690376, "objective": 247.0, "optimality_gap": 0.1659319592998265, "makespan": 177.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 90, "seed": 9602, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 301.8484223589767, "objective": 259.0, "optimality_gap": 0.17367204202257844, "makespan": 200.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 90, "seed": 9603, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 302.4175860651303, "objective": 268.0, "optimality_gap": 0.2685922760107383, "makespan": 179.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 114, "seed": 9601, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 304.3187043129001, "objective": 263.0, "optimality_gap": 0.1520527818071218, "makespan": 194.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 114, "seed": 9602, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 304.83796394313686, "objective": 262.0, "optimality_gap": 0.1221067405075295, "makespan": 188.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 114, "seed": 9603, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 304.5237031739671, "objective": 253.0, "optimality_gap": 0.12249222534219138, "makespan": 185.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 150, "seed": 9601, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 312.0374925439246, "objective": 299.0, "optimality_gap": 0.2507947463419592, "makespan": 197.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 150, "seed": 9602, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 310.6150353020057, "objective": 276.0, "optimality_gap": 0.2578793552491028, "makespan": 185.0, "message": "Gurobi returned a replayable assignment order"}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"task_count": 150, "seed": 9603, "status": "feasible", "feasible": true, "timeout": true, "solve_time_seconds": 311.24706510594115, "objective": 333.0, "optimality_gap": 0.40235137687402683, "makespan": 203.0, "message": "Gurobi returned a replayable assignment order"}
+{
+  "schema": "md-pure-milp-baseline-1.0",
+  "time_limit_seconds": 300.0,
+  "threads": 4,
+  "profile_row_count": 24,
+  "scale_row_count": 21
+}
+=== [Sun 13 Sep 2026 03:28:59 PM CST] DONE ===

@@ -1,0 +1,17 @@
+=== [Mon 14 Sep 2026 07:06:01 PM CST] START scaled-balanced eval ===
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2770405
+Academic license 2770405 - for non-commercial use only - registered to 22___@tongji.edu.cn
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/autodl-tmp/MD/Sadcher/experiments/md_c0_scaled_balanced_eval.py", line 294, in <module>
+    print(json.dumps(run(args.checkpoint, args.output, args.device), indent=2))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/experiments/md_c0_scaled_balanced_eval.py", line 174, in run
+    "config": {k: v for k, v in cfg.__dict__.items()},
+                                ^^^^^^^^^^^^
+AttributeError: 'MDGeneratorConfig' object has no attribute '__dict__'. Did you mean: '__dir__'?

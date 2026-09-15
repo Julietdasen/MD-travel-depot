@@ -1,0 +1,740 @@
+=== [Sun 13 Sep 2026 05:38:45 PM CST] START multi-scale MILP-IL pilot ===
+=== [Sun 13 Sep 2026 05:38:45 PM CST] STAGE data+train ===
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2770405
+Academic license 2770405 - for non-commercial use only - registered to 22___@tongji.edu.cn
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 60
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+Set parameter TimeLimit to value 120
+Set parameter Threads to value 4
+{
+  "output_root": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13",
+  "dataset_generation": {
+    "shards": [
+      {
+        "shard": "balanced",
+        "requested_count": 100,
+        "generated_count": 100,
+        "skipped_count": 0,
+        "skipped": []
+      },
+      {
+        "shard": "scale_medium",
+        "requested_count": 100,
+        "generated_count": 100,
+        "skipped_count": 0,
+        "skipped": []
+      },
+      {
+        "shard": "scale42",
+        "requested_count": 50,
+        "generated_count": 50,
+        "skipped_count": 0,
+        "skipped": []
+      }
+    ]
+  },
+  "artifacts": {
+    "summary": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/pilot_summary.json",
+    "report": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/RESULTS.md",
+    "training_loss_plot": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/training_loss.png",
+    "dataset_split_plot": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/dataset_split.png",
+    "checkpoint": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/training/best_checkpoint.pt",
+    "training_summary": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/training/training_summary.json"
+  }
+}
+=== [Sun 13 Sep 2026 07:29:13 PM CST] STAGE scale eval ===
+{"task_count": 12, "seed": 9601, "done": true}
+{"task_count": 12, "seed": 9602, "done": true}
+{"task_count": 12, "seed": 9603, "done": true}
+{"task_count": 24, "seed": 9601, "done": true}
+{"task_count": 24, "seed": 9602, "done": true}
+{"task_count": 24, "seed": 9603, "done": true}
+{"task_count": 42, "seed": 9601, "done": true}
+{"task_count": 42, "seed": 9602, "done": true}
+{"task_count": 42, "seed": 9603, "done": true}
+{"task_count": 60, "seed": 9601, "done": true}
+{"task_count": 60, "seed": 9602, "done": true}
+{"task_count": 60, "seed": 9603, "done": true}
+{"task_count": 90, "seed": 9601, "done": true}
+{"task_count": 90, "seed": 9602, "done": true}
+{"task_count": 90, "seed": 9603, "done": true}
+{"task_count": 114, "seed": 9601, "done": true}
+{"task_count": 114, "seed": 9602, "done": true}
+{"task_count": 114, "seed": 9603, "done": true}
+{"task_count": 150, "seed": 9601, "done": true}
+{"task_count": 150, "seed": 9602, "done": true}
+{"task_count": 150, "seed": 9603, "done": true}
+{
+  "schema": "md-c0-milp-supervised-scale-eval-1.0",
+  "checkpoint": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/training/best_checkpoint.pt",
+  "task_counts": [
+    12,
+    24,
+    42,
+    60,
+    90,
+    114,
+    150
+  ],
+  "seeds": [
+    9601,
+    9602,
+    9603
+  ],
+  "row_count_new": 21,
+  "row_count_baselines": 63,
+  "per_task_count": [
+    {
+      "task_count": 12,
+      "milp_incumbent": 285.3333333333333,
+      "new_c0_makespan": 331.0,
+      "best_greedy_makespan": 306.6666666666667,
+      "best_greedy_name": "greedy_unlock",
+      "new_c0_gap_vs_milp_percent": 16.004672897196272,
+      "best_greedy_gap_vs_milp_percent": 7.476635514018705,
+      "new_c0_vs_best_greedy_percent": 7.934782608695645
+    },
+    {
+      "task_count": 24,
+      "milp_incumbent": 230.0,
+      "new_c0_makespan": 281.6666666666667,
+      "best_greedy_makespan": 271.6666666666667,
+      "best_greedy_name": "greedy_unlock",
+      "new_c0_gap_vs_milp_percent": 22.463768115942038,
+      "best_greedy_gap_vs_milp_percent": 18.115942028985515,
+      "new_c0_vs_best_greedy_percent": 3.680981595092024
+    },
+    {
+      "task_count": 42,
+      "milp_incumbent": 232.33333333333334,
+      "new_c0_makespan": 293.0,
+      "best_greedy_makespan": 288.6666666666667,
+      "best_greedy_name": "greedy_unlock",
+      "new_c0_gap_vs_milp_percent": 26.111908177905303,
+      "best_greedy_gap_vs_milp_percent": 24.246771879483504,
+      "new_c0_vs_best_greedy_percent": 1.501154734411079
+    },
+    {
+      "task_count": 60,
+      "milp_incumbent": 272.0,
+      "new_c0_makespan": 355.0,
+      "best_greedy_makespan": 320.6666666666667,
+      "best_greedy_name": "greedy_unlock",
+      "new_c0_gap_vs_milp_percent": 30.514705882352942,
+      "best_greedy_gap_vs_milp_percent": 17.892156862745104,
+      "new_c0_vs_best_greedy_percent": 10.7068607068607
+    },
+    {
+      "task_count": 90,
+      "milp_incumbent": 258.0,
+      "new_c0_makespan": 370.0,
+      "best_greedy_makespan": 355.0,
+      "best_greedy_name": "greedy_distance",
+      "new_c0_gap_vs_milp_percent": 43.41085271317829,
+      "best_greedy_gap_vs_milp_percent": 37.5968992248062,
+      "new_c0_vs_best_greedy_percent": 4.225352112676056
+    },
+    {
+      "task_count": 114,
+      "milp_incumbent": 259.3333333333333,
+      "new_c0_makespan": 367.3333333333333,
+      "best_greedy_makespan": 310.6666666666667,
+      "best_greedy_name": "greedy_unlock",
+      "new_c0_gap_vs_milp_percent": 41.645244215938305,
+      "best_greedy_gap_vs_milp_percent": 19.794344473007726,
+      "new_c0_vs_best_greedy_percent": 18.24034334763947
+    },
+    {
+      "task_count": 150,
+      "milp_incumbent": 302.6666666666667,
+      "new_c0_makespan": 361.0,
+      "best_greedy_makespan": 336.0,
+      "best_greedy_name": "greedy_unlock",
+      "new_c0_gap_vs_milp_percent": 19.273127753303957,
+      "best_greedy_gap_vs_milp_percent": 11.01321585903083,
+      "new_c0_vs_best_greedy_percent": 7.440476190476191
+    }
+  ]
+}
+=== [Sun 13 Sep 2026 07:41:25 PM CST] STAGE profile eval ===
+{
+  "schema": "md-c0-milp-supervised-profile-eval-1.0",
+  "checkpoint": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/training/best_checkpoint.pt",
+  "profiles": [
+    "balanced",
+    "process_scarce",
+    "transport_bottleneck",
+    "dependency_deep",
+    "mixed_hard",
+    "scale_medium"
+  ],
+  "eval_seeds": [
+    101,
+    102,
+    201,
+    301
+  ],
+  "row_count_new": 24,
+  "row_count_baselines": 72,
+  "per_profile": [
+    {
+      "profile": "balanced",
+      "milp_optimum": 202.25,
+      "old_c0_makespan": 264.8333333333333,
+      "new_c0_makespan": 246.5,
+      "best_greedy_makespan": 253.75,
+      "old_c0_gap_percent": 30.943551709929945,
+      "new_c0_gap_percent": 21.878862793572313,
+      "best_greedy_gap_percent": 25.46353522867738
+    },
+    {
+      "profile": "process_scarce",
+      "milp_optimum": 154.75,
+      "old_c0_makespan": 200.58333333333334,
+      "new_c0_makespan": 183.0,
+      "best_greedy_makespan": 212.0,
+      "old_c0_gap_percent": 29.61766289714594,
+      "new_c0_gap_percent": 18.25525040387722,
+      "best_greedy_gap_percent": 36.995153473344104
+    },
+    {
+      "profile": "transport_bottleneck",
+      "milp_optimum": 389.0,
+      "old_c0_makespan": 449.8333333333333,
+      "new_c0_makespan": 438.0,
+      "best_greedy_makespan": 437.75,
+      "old_c0_gap_percent": 15.638389031705222,
+      "new_c0_gap_percent": 12.596401028277635,
+      "best_greedy_gap_percent": 12.532133676092544
+    },
+    {
+      "profile": "dependency_deep",
+      "milp_optimum": 249.75,
+      "old_c0_makespan": 289.5,
+      "new_c0_makespan": 265.75,
+      "best_greedy_makespan": 276.0,
+      "old_c0_gap_percent": 15.915915915915916,
+      "new_c0_gap_percent": 6.406406406406406,
+      "best_greedy_gap_percent": 10.51051051051051
+    },
+    {
+      "profile": "mixed_hard",
+      "milp_optimum": 262.0,
+      "old_c0_makespan": 356.25,
+      "new_c0_makespan": 297.25,
+      "best_greedy_makespan": 305.0,
+      "old_c0_gap_percent": 35.973282442748086,
+      "new_c0_gap_percent": 13.454198473282442,
+      "best_greedy_gap_percent": 16.412213740458014
+    },
+    {
+      "profile": "scale_medium",
+      "milp_optimum": 243.5,
+      "old_c0_makespan": 298.25,
+      "new_c0_makespan": 286.25,
+      "best_greedy_makespan": 296.25,
+      "old_c0_gap_percent": 22.484599589322382,
+      "new_c0_gap_percent": 17.5564681724846,
+      "best_greedy_gap_percent": 21.66324435318275
+    }
+  ]
+}
+=== [Sun 13 Sep 2026 07:41:39 PM CST] DONE ===

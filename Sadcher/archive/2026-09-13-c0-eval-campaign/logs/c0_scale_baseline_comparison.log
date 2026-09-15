@@ -1,0 +1,38 @@
+=== [Sun 13 Sep 2026 02:50:40 AM CST] START scale baseline comparison ===
+{"task_count": 12, "seed": 9601, "done": true}
+{"task_count": 12, "seed": 9602, "done": true}
+{"task_count": 12, "seed": 9603, "done": true}
+{"task_count": 24, "seed": 9601, "done": true}
+{"task_count": 24, "seed": 9602, "done": true}
+{"task_count": 24, "seed": 9603, "done": true}
+{"task_count": 42, "seed": 9601, "done": true}
+{"task_count": 42, "seed": 9602, "done": true}
+{"task_count": 42, "seed": 9603, "done": true}
+{"task_count": 60, "seed": 9601, "done": true}
+{"task_count": 60, "seed": 9602, "done": true}
+{"task_count": 60, "seed": 9603, "done": true}
+{"task_count": 90, "seed": 9601, "done": true}
+{"task_count": 90, "seed": 9602, "done": true}
+{"task_count": 90, "seed": 9603, "done": true}
+{"task_count": 114, "seed": 9601, "done": true}
+{"task_count": 114, "seed": 9602, "done": true}
+{"task_count": 114, "seed": 9603, "done": true}
+{"task_count": 150, "seed": 9601, "done": true}
+{"task_count": 150, "seed": 9602, "done": true}
+{"task_count": 150, "seed": 9603, "done": true}
+{
+  "schema": "md-c0-scale-baseline-comparison-1.0",
+  "model_seed": 3101,
+  "task_counts": [
+    12,
+    24,
+    42,
+    60,
+    90,
+    114,
+    150
+  ],
+  "row_count": 84,
+  "all_success": true
+}
+=== [Sun 13 Sep 2026 03:02:21 AM CST] DONE ===

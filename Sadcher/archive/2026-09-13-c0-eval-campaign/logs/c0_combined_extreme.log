@@ -1,0 +1,19 @@
+=== [Sun 13 Sep 2026 02:44:28 AM CST] START combined extreme pilot ===
+{"variant": "scale_only", "seed": 9501, "robot_count": 35, "success": true, "failure_reason": null, "makespan": 398.0, "decision_count": 70, "solver_calls": 37, "solver_time_total_seconds": 9.644262841902673, "solver_time_max_seconds": 0.30459282896481454, "wall_time_seconds": 28.708074703114107}
+{"variant": "scale_only", "seed": 9502, "robot_count": 35, "success": true, "failure_reason": null, "makespan": 381.0, "decision_count": 65, "solver_calls": 25, "solver_time_total_seconds": 6.573301946045831, "solver_time_max_seconds": 0.2992364028468728, "wall_time_seconds": 24.000765990000218}
+{"variant": "scale_only", "seed": 9503, "robot_count": 35, "success": true, "failure_reason": null, "makespan": 347.0, "decision_count": 68, "solver_calls": 32, "solver_time_total_seconds": 8.412022308446467, "solver_time_max_seconds": 0.2984291249886155, "wall_time_seconds": 25.795229251030833}
+{"variant": "scale_plus_combined_hard", "seed": 9501, "robot_count": 35, "success": true, "failure_reason": null, "makespan": 453.0, "decision_count": 65, "solver_calls": 32, "solver_time_total_seconds": 7.974446604261175, "solver_time_max_seconds": 0.2898120360914618, "wall_time_seconds": 27.592928348109126}
+{"variant": "scale_plus_combined_hard", "seed": 9502, "robot_count": 35, "success": true, "failure_reason": null, "makespan": 415.0, "decision_count": 66, "solver_calls": 33, "solver_time_total_seconds": 8.331465548602864, "solver_time_max_seconds": 0.2985761440359056, "wall_time_seconds": 27.27265030401759}
+{"variant": "scale_plus_combined_hard", "seed": 9503, "robot_count": 35, "success": true, "failure_reason": null, "makespan": 456.0, "decision_count": 67, "solver_calls": 32, "solver_time_total_seconds": 8.025433170609176, "solver_time_max_seconds": 0.28511265595443547, "wall_time_seconds": 27.92467997316271}
+{
+  "schema": "md-c0-combined-extreme-1.0",
+  "model_seed": 3101,
+  "task_count": 90,
+  "variants": [
+    "scale_only",
+    "scale_plus_combined_hard"
+  ],
+  "row_count": 6,
+  "all_success": true
+}
+=== [Sun 13 Sep 2026 02:47:11 AM CST] DONE ===

@@ -1,0 +1,40 @@
+=== [Mon 14 Sep 2026 09:30:47 PM CST] START RL on scaled process_scarce (tc=42, 2 iter, kl=0.005) ===
+2026-09-14 21:30:51,460	WARNING utils.py:429 -- Detecting docker specified CPUs. In previous versions of Ray, CPU detection in containers was incorrect. Please ensure that Ray has enough CPUs allocated. As a temporary workaround to revert to the prior behavior, set `RAY_USE_MULTIPROCESSING_CPU_COUNT=1` as an env var before starting Ray. Set the env var: `RAY_DISABLE_DOCKER_CPU_WARNING=1` to mute this warning.
+2026-09-14 21:30:51,801	INFO worker.py:1951 -- Started a local Ray instance.
+2026-09-14 21:30:52,336	WARNING deprecation.py:50 -- DeprecationWarning: `build` has been deprecated. Use `AlgorithmConfig.build_algo` instead. This will raise an error in the future!
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/algorithms/algorithm.py:520: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+`UnifiedLogger` will be removed in Ray 2.7.
+  return UnifiedLogger(config, logdir, loggers=None)
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `JsonLogger interface is deprecated in favor of the `ray.tune.json.JsonLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `CSVLogger interface is deprecated in favor of the `ray.tune.csv.CSVLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `TBXLogger interface is deprecated in favor of the `ray.tune.tensorboardx.TBXLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+2026-09-14 21:31:33,922	INFO trainable.py:161 -- Trainable.setup took 41.573 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2026-09-14 21:31:33,923	WARNING util.py:61 -- Install gputil for GPU system monitoring.
+*** SIGTERM received at time=1789393294 on cpu 37 ***
+PC: @     0x7f1b57d99db0  (unknown)  c10::operator!=()
+    @     0x7f1bc4254420  804840560  (unknown)
+    @     0x7f1ba5c365c5         64  at::indexing::TensorIndex::TensorIndex()
+    @     0x7f1ba596a100  (unknown)  c10::IValue::destroy()
+    @     0x560d27f83010        192  (unknown)
+    @     0x560d27f83010        192  (unknown)
+    @     0x560d27f83010  (unknown)  (unknown)
+    @     0x560d27f83010        192  (unknown)
+    @     0x560d27f83010        192  (unknown)
+    @     0x560d27f83010  (unknown)  (unknown)
+[2026-09-14 21:41:34,536 E 37821 37821] logging.cc:474: *** SIGTERM received at time=1789393294 on cpu 37 ***
+[2026-09-14 21:41:34,536 E 37821 37821] logging.cc:474: PC: @     0x7f1b57d99db0  (unknown)  c10::operator!=()
+[2026-09-14 21:41:34,538 E 37821 37821] logging.cc:474:     @     0x7f1bc4254420  804840560  (unknown)
+[2026-09-14 21:41:34,538 E 37821 37821] logging.cc:474:     @     0x7f1ba5c365c5         64  at::indexing::TensorIndex::TensorIndex()
+[2026-09-14 21:41:34,538 E 37821 37821] logging.cc:474:     @     0x7f1ba596a100  (unknown)  c10::IValue::destroy()
+[2026-09-14 21:41:34,540 E 37821 37821] logging.cc:474:     @     0x560d27f83010        192  (unknown)
+[2026-09-14 21:41:34,544 E 37821 37821] logging.cc:474:     @     0x560d27f83010        192  (unknown)
+[2026-09-14 21:41:34,548 E 37821 37821] logging.cc:474:     @     0x560d27f83010  (unknown)  (unknown)
+[2026-09-14 21:41:34,551 E 37821 37821] logging.cc:474:     @     0x560d27f83010        192  (unknown)
+[2026-09-14 21:41:34,555 E 37821 37821] logging.cc:474:     @     0x560d27f83010        192  (unknown)
+[2026-09-14 21:41:34,559 E 37821 37821] logging.cc:474:     @     0x560d27f83010  (unknown)  (unknown)

@@ -17,6 +17,8 @@ Sadcher/reports/**/dataset*/
 Sadcher/reports/**/*.pt
 Sadcher/reports/**/training_pairs.jsonl
 Sadcher/reports/**/logs/
+Sadcher/tmp_ray/
+Sadcher/gurobi*.lic
 
 # Selected reproducibility checkpoints are force-added by publish_repositories.sh.
 

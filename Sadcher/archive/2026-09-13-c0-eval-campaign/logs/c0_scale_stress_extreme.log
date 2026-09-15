@@ -1,0 +1,28 @@
+=== [Sun 13 Sep 2026 01:44:18 AM CST] START extreme scale stress pilot ===
+{"task_count": 60, "robot_count": 23, "seed": 9301, "success": true, "failure_reason": null, "makespan": 349.0, "decision_count": 44, "solver_calls": 21, "solver_time_total_seconds": 2.2289954812731594, "solver_time_max_seconds": 0.158899559173733, "wall_time_seconds": 8.104447424877435}
+{"task_count": 60, "robot_count": 23, "seed": 9302, "success": true, "failure_reason": null, "makespan": 363.0, "decision_count": 44, "solver_calls": 17, "solver_time_total_seconds": 1.8670849895570427, "solver_time_max_seconds": 0.1554954599123448, "wall_time_seconds": 7.526044945931062}
+{"task_count": 78, "robot_count": 30, "seed": 9301, "success": true, "failure_reason": null, "makespan": 381.0, "decision_count": 59, "solver_calls": 25, "solver_time_total_seconds": 4.312536307377741, "solver_time_max_seconds": 0.2239863930735737, "wall_time_seconds": 15.500458983005956}
+{"task_count": 78, "robot_count": 30, "seed": 9302, "success": true, "failure_reason": null, "makespan": 388.0, "decision_count": 56, "solver_calls": 22, "solver_time_total_seconds": 3.8581414627842605, "solver_time_max_seconds": 0.21634026803076267, "wall_time_seconds": 14.684557186206803}
+{"task_count": 96, "robot_count": 37, "seed": 9301, "success": true, "failure_reason": null, "makespan": 376.0, "decision_count": 75, "solver_calls": 34, "solver_time_total_seconds": 8.958850936265662, "solver_time_max_seconds": 0.3032981918659061, "wall_time_seconds": 27.944651952013373}
+{"task_count": 96, "robot_count": 37, "seed": 9302, "success": true, "failure_reason": null, "makespan": 348.0, "decision_count": 72, "solver_calls": 37, "solver_time_total_seconds": 9.863222013460472, "solver_time_max_seconds": 0.3016325058415532, "wall_time_seconds": 28.056809848872945}
+{"task_count": 114, "robot_count": 44, "seed": 9301, "success": true, "failure_reason": null, "makespan": 451.0, "decision_count": 85, "solver_calls": 41, "solver_time_total_seconds": 15.027482570381835, "solver_time_max_seconds": 0.4025909290648997, "wall_time_seconds": 45.67530138301663}
+{"task_count": 114, "robot_count": 44, "seed": 9302, "success": true, "failure_reason": null, "makespan": 353.0, "decision_count": 86, "solver_calls": 44, "solver_time_total_seconds": 16.274516564793885, "solver_time_max_seconds": 0.4049031911417842, "wall_time_seconds": 44.66513766604476}
+{"task_count": 132, "robot_count": 51, "seed": 9301, "success": true, "failure_reason": null, "makespan": 415.0, "decision_count": 103, "solver_calls": 62, "solver_time_total_seconds": 30.48538503726013, "solver_time_max_seconds": 0.5203577550128102, "wall_time_seconds": 76.15051683993079}
+{"task_count": 132, "robot_count": 51, "seed": 9302, "success": true, "failure_reason": null, "makespan": 381.0, "decision_count": 99, "solver_calls": 59, "solver_time_total_seconds": 29.145322632510215, "solver_time_max_seconds": 0.5229566409252584, "wall_time_seconds": 72.16982464888133}
+{"task_count": 150, "robot_count": 58, "seed": 9301, "success": true, "failure_reason": null, "makespan": 444.0, "decision_count": 109, "solver_calls": 61, "solver_time_total_seconds": 38.95446802326478, "solver_time_max_seconds": 0.6660687641706318, "wall_time_seconds": 100.61492826207541}
+{"task_count": 150, "robot_count": 58, "seed": 9302, "success": true, "failure_reason": null, "makespan": 390.0, "decision_count": 111, "solver_calls": 69, "solver_time_total_seconds": 44.49813586194068, "solver_time_max_seconds": 0.6741722370497882, "wall_time_seconds": 104.53752303100191}
+{
+  "schema": "md-c0-scale-stress-extreme-1.0",
+  "model_seed": 3101,
+  "task_counts": [
+    60,
+    78,
+    96,
+    114,
+    132,
+    150
+  ],
+  "row_count": 12,
+  "all_success": true
+}
+=== [Sun 13 Sep 2026 01:53:26 AM CST] DONE ===

@@ -1,0 +1,27 @@
+=== [Sun 13 Sep 2026 01:38:56 AM CST] START scale stress pilot ===
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.8/runpy.py", line 185, in _run_module_as_main
+    mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+  File "/root/miniconda3/lib/python3.8/runpy.py", line 111, in _get_module_details
+    __import__(pkg_name)
+  File "/root/autodl-tmp/MD/Sadcher/experiments/__init__.py", line 3, in <module>
+    from experiments.protocol import (
+  File "/root/autodl-tmp/MD/Sadcher/experiments/protocol.py", line 42, in <module>
+    @dataclass(frozen=True, slots=True)
+TypeError: dataclass() got an unexpected keyword argument 'slots'
+=== [Sun 13 Sep 2026 01:40:00 AM CST] START scale stress pilot ===
+{
+  "schema": "md-c0-scale-stress-1.0",
+  "model_seed": 3101,
+  "task_counts": [
+    12,
+    18,
+    24,
+    30,
+    36,
+    42
+  ],
+  "row_count": 18,
+  "all_success": true
+}
+=== [Sun 13 Sep 2026 01:40:27 AM CST] DONE ===

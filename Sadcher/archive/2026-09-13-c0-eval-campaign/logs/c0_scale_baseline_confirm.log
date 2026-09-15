@@ -1,0 +1,24 @@
+=== [Sun 13 Sep 2026 03:07:50 AM CST] START scale baseline confirm ===
+{"task_count": 42, "seed": 9701, "done": true}
+{"task_count": 42, "seed": 9702, "done": true}
+{"task_count": 42, "seed": 9703, "done": true}
+{"task_count": 42, "seed": 9704, "done": true}
+{"task_count": 42, "seed": 9705, "done": true}
+{"task_count": 42, "seed": 9706, "done": true}
+{"task_count": 114, "seed": 9701, "done": true}
+{"task_count": 114, "seed": 9702, "done": true}
+{"task_count": 114, "seed": 9703, "done": true}
+{"task_count": 114, "seed": 9704, "done": true}
+{"task_count": 114, "seed": 9705, "done": true}
+{"task_count": 114, "seed": 9706, "done": true}
+{
+  "schema": "md-c0-scale-baseline-confirm-1.0",
+  "model_seed": 3101,
+  "task_counts": [
+    42,
+    114
+  ],
+  "row_count": 48,
+  "all_success": true
+}
+=== [Sun 13 Sep 2026 03:14:01 AM CST] DONE ===

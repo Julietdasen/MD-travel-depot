@@ -1,0 +1,14 @@
+=== [Sun 13 Sep 2026 01:18:58 AM CST] START THRESHOLD SWEEP ===
+{
+  "schema": "md-c0-confidence-sweep-1.0",
+  "model_seed": 3101,
+  "thresholds": [
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "row_count": 120
+}
+=== [Sun 13 Sep 2026 01:19:52 AM CST] DONE ===

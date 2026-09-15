@@ -1,0 +1,28 @@
+=== [Sun 13 Sep 2026 01:56:38 AM CST] START threshold sweep for all 3 seeds ===
+--- seed 3102 ---
+{
+  "schema": "md-c0-confidence-sweep-1.0",
+  "model_seed": 3102,
+  "thresholds": [
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "row_count": 120
+}
+--- seed 3103 ---
+{
+  "schema": "md-c0-confidence-sweep-1.0",
+  "model_seed": 3103,
+  "thresholds": [
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "row_count": 120
+}
+=== [Sun 13 Sep 2026 01:58:46 AM CST] DONE ===

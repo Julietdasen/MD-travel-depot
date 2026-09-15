@@ -1,0 +1,20 @@
+=== [Sun 13 Sep 2026 01:23:44 AM CST] START HELD-OUT GENERALIZATION EVAL ===
+{
+  "schema": "md-c0-profile-eval-1.0",
+  "profiles": [
+    "balanced",
+    "process_scarce",
+    "transport_bottleneck",
+    "dependency_deep",
+    "mixed_hard",
+    "scale_medium"
+  ],
+  "model_seeds": [
+    3101,
+    3102,
+    3103
+  ],
+  "c0_row_count": 180,
+  "baseline_row_count": 180
+}
+=== [Sun 13 Sep 2026 01:25:02 AM CST] DONE ===

@@ -1,0 +1,303 @@
+=== [Mon 14 Sep 2026 04:57:06 PM CST] START RL training (30 iterations, warm-start from MILP-IL v2) ===
+2026-09-14 16:57:11,230	WARNING utils.py:429 -- Detecting docker specified CPUs. In previous versions of Ray, CPU detection in containers was incorrect. Please ensure that Ray has enough CPUs allocated. As a temporary workaround to revert to the prior behavior, set `RAY_USE_MULTIPROCESSING_CPU_COUNT=1` as an env var before starting Ray. Set the env var: `RAY_DISABLE_DOCKER_CPU_WARNING=1` to mute this warning.
+2026-09-14 16:57:11,533	INFO worker.py:1951 -- Started a local Ray instance.
+2026-09-14 16:57:12,070	WARNING deprecation.py:50 -- DeprecationWarning: `build` has been deprecated. Use `AlgorithmConfig.build_algo` instead. This will raise an error in the future!
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/algorithms/algorithm.py:520: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+`UnifiedLogger` will be removed in Ray 2.7.
+  return UnifiedLogger(config, logdir, loggers=None)
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `JsonLogger interface is deprecated in favor of the `ray.tune.json.JsonLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `CSVLogger interface is deprecated in favor of the `ray.tune.csv.CSVLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `TBXLogger interface is deprecated in favor of the `ray.tune.tensorboardx.TBXLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+2026-09-14 16:57:14,485	WARNING util.py:61 -- Install gputil for GPU system monitoring.
+2026-09-14 16:57:26,163	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.execution.train_ops.multi_gpu_train_one_step` has been deprecated. This will raise an error in the future!
+{'iteration': 1, 'train_reward_mean': -3.43770750988142, 'train_episode_len_mean': 235.0, 'ppo_kl': 2.2022737572272946e-06, 'entropy': 0.026425120094791053, 'value_loss': 1.4584841708342233, 'value_explained_variance': 0.06269898613293966, 'policy_loss': -0.00019987523555755615, 'ppo_kl_coefficient': 0.19999999999999993, 'il_reference_kl': 2.379788237997597e-06, 'actor_parameter_drift': {'max_absolute': 0.0006718188524246216, 'normalized_l2': 0.002095413059225184}, 'validation': None}
+{'iteration': 10, 'train_reward_mean': -3.866087699532241, 'train_episode_len_mean': 227.9090909090909, 'ppo_kl': 1.8200665300345995e-05, 'entropy': 0.014171584943930308, 'value_loss': 0.40619758733858663, 'value_explained_variance': -0.24255404969056446, 'policy_loss': -0.0006454984347025553, 'ppo_kl_coefficient': 0.00039062499999999986, 'il_reference_kl': 2.004572851319608e-05, 'actor_parameter_drift': {'max_absolute': 0.005192071199417114, 'normalized_l2': 0.0070755018794502805}, 'validation': {'il': {'rows': [{'seed': 100, 'success': True, 'makespan': 284.0, 'illegal_assignments': 0, 'material_starvation': 196.0}, {'seed': 101, 'success': True, 'makespan': 220.0, 'illegal_assignments': 0, 'material_starvation': 179.0}, {'seed': 102, 'success': True, 'makespan': 292.0, 'illegal_assignments': 0, 'material_starvation': 357.0}, {'seed': 103, 'success': True, 'makespan': 260.0, 'illegal_assignments': 0, 'material_starvation': 201.0}, {'seed': 104, 'success': True, 'makespan': 181.0, 'illegal_assignments': 0, 'material_starvation': 142.0}, {'seed': 105, 'success': True, 'makespan': 246.0, 'illegal_assignments': 0, 'material_starvation': 177.0}, {'seed': 106, 'success': True, 'makespan': 211.0, 'illegal_assignments': 0, 'material_starvation': 77.0}, {'seed': 107, 'success': True, 'makespan': 215.0, 'illegal_assignments': 0, 'material_starvation': 187.0}, {'seed': 108, 'success': True, 'makespan': 171.0, 'illegal_assignments': 0, 'material_starvation': 86.0}, {'seed': 109, 'success': True, 'makespan': 209.0, 'illegal_assignments': 0, 'material_starvation': 150.0}, {'seed': 110, 'success': True, 'makespan': 196.0, 'illegal_assignments': 0, 'material_starvation': 92.0}, {'seed': 111, 'success': True, 'makespan': 232.0, 'illegal_assignments': 0, 'material_starvation': 185.0}, {'seed': 112, 'success': True, 'makespan': 213.0, 'illegal_assignments': 0, 'material_starvation': 132.0}, {'seed': 113, 'success': True, 'makespan': 198.0, 'illegal_assignments': 0, 'material_starvation': 191.0}, {'seed': 114, 'success': True, 'makespan': 233.0, 'illegal_assignments': 0, 'material_starvation': 114.0}, {'seed': 115, 'success': True, 'makespan': 254.0, 'illegal_assignments': 0, 'material_starvation': 279.0}], 'success_rate': 1.0, 'mean_makespan': 225.9375, 'illegal_assignments': 0, 'mean_material_starvation': 171.5625, 'p95_latency_seconds': 0.039716254966333506, 'latency_warmup_calls_per_episode': 1, 'evaluation_order': 'IL-first on even seed index; RL-first on odd seed index', 'deterministic_action_disagreement': {'comparisons': 3615, 'disagreements': 1, 'rate': 0.00027662517289073305}}, 'rl': {'rows': [{'seed': 100, 'success': True, 'makespan': 284.0, 'illegal_assignments': 0, 'material_starvation': 196.0}, {'seed': 101, 'success': True, 'makespan': 220.0, 'illegal_assignments': 0, 'material_starvation': 179.0}, {'seed': 102, 'success': True, 'makespan': 292.0, 'illegal_assignments': 0, 'material_starvation': 357.0}, {'seed': 103, 'success': True, 'makespan': 260.0, 'illegal_assignments': 0, 'material_starvation': 201.0}, {'seed': 104, 'success': True, 'makespan': 181.0, 'illegal_assignments': 0, 'material_starvation': 142.0}, {'seed': 105, 'success': True, 'makespan': 246.0, 'illegal_assignments': 0, 'material_starvation': 177.0}, {'seed': 106, 'success': True, 'makespan': 211.0, 'illegal_assignments': 0, 'material_starvation': 77.0}, {'seed': 107, 'success': True, 'makespan': 215.0, 'illegal_assignments': 0, 'material_starvation': 187.0}, {'seed': 108, 'success': True, 'makespan': 171.0, 'illegal_assignments': 0, 'material_starvation': 86.0}, {'seed': 109, 'success': True, 'makespan': 209.0, 'illegal_assignments': 0, 'material_starvation': 150.0}, {'seed': 110, 'success': True, 'makespan': 196.0, 'illegal_assignments': 0, 'material_starvation': 92.0}, {'seed': 111, 'success': True, 'makespan': 232.0, 'illegal_assignments': 0, 'material_starvation': 185.0}, {'seed': 112, 'success': True, 'makespan': 213.0, 'illegal_assignments': 0, 'material_starvation': 132.0}, {'seed': 113, 'success': True, 'makespan': 198.0, 'illegal_assignments': 0, 'material_starvation': 191.0}, {'seed': 114, 'success': True, 'makespan': 233.0, 'illegal_assignments': 0, 'material_starvation': 114.0}, {'seed': 115, 'success': True, 'makespan': 266.0, 'illegal_assignments': 0, 'material_starvation': 276.0}], 'success_rate': 1.0, 'mean_makespan': 226.6875, 'illegal_assignments': 0, 'mean_material_starvation': 171.375, 'p95_latency_seconds': 0.03962377374991775, 'latency_warmup_calls_per_episode': 1, 'evaluation_order': 'IL-first on even seed index; RL-first on odd seed index'}, 'go_no_go': {'go': False, 'reasons': ['makespan_gain_below_threshold']}, 'paired_wins_ties_losses': {'wins': 0, 'ties': 15, 'losses': 1}, 'deterministic_action_disagreement': {'comparisons': 3615, 'disagreements': 1, 'rate': 0.00027662517289073305}}}
+{'iteration': 20, 'train_reward_mean': -3.7359080512956315, 'train_episode_len_mean': 228.95454545454547, 'ppo_kl': 3.678989693852349e-06, 'entropy': 0.014104391230891149, 'value_loss': 0.479313924908638, 'value_explained_variance': 0.2951359669367472, 'policy_loss': -0.00015112186471621196, 'ppo_kl_coefficient': 3.8146972656249986e-07, 'il_reference_kl': 1.0261400651264315e-05, 'actor_parameter_drift': {'max_absolute': 0.006798669695854187, 'normalized_l2': 0.00906320696722526}, 'validation': {'il': {'rows': [{'seed': 100, 'success': True, 'makespan': 284.0, 'illegal_assignments': 0, 'material_starvation': 196.0}, {'seed': 101, 'success': True, 'makespan': 220.0, 'illegal_assignments': 0, 'material_starvation': 179.0}, {'seed': 102, 'success': True, 'makespan': 292.0, 'illegal_assignments': 0, 'material_starvation': 357.0}, {'seed': 103, 'success': True, 'makespan': 260.0, 'illegal_assignments': 0, 'material_starvation': 201.0}, {'seed': 104, 'success': True, 'makespan': 181.0, 'illegal_assignments': 0, 'material_starvation': 142.0}, {'seed': 105, 'success': True, 'makespan': 246.0, 'illegal_assignments': 0, 'material_starvation': 177.0}, {'seed': 106, 'success': True, 'makespan': 211.0, 'illegal_assignments': 0, 'material_starvation': 77.0}, {'seed': 107, 'success': True, 'makespan': 215.0, 'illegal_assignments': 0, 'material_starvation': 187.0}, {'seed': 108, 'success': True, 'makespan': 171.0, 'illegal_assignments': 0, 'material_starvation': 86.0}, {'seed': 109, 'success': True, 'makespan': 209.0, 'illegal_assignments': 0, 'material_starvation': 150.0}, {'seed': 110, 'success': True, 'makespan': 196.0, 'illegal_assignments': 0, 'material_starvation': 92.0}, {'seed': 111, 'success': True, 'makespan': 232.0, 'illegal_assignments': 0, 'material_starvation': 185.0}, {'seed': 112, 'success': True, 'makespan': 213.0, 'illegal_assignments': 0, 'material_starvation': 132.0}, {'seed': 113, 'success': True, 'makespan': 198.0, 'illegal_assignments': 0, 'material_starvation': 191.0}, {'seed': 114, 'success': True, 'makespan': 233.0, 'illegal_assignments': 0, 'material_starvation': 114.0}, {'seed': 115, 'success': True, 'makespan': 254.0, 'illegal_assignments': 0, 'material_starvation': 279.0}], 'success_rate': 1.0, 'mean_makespan': 225.9375, 'illegal_assignments': 0, 'mean_material_starvation': 171.5625, 'p95_latency_seconds': 0.04017484441865235, 'latency_warmup_calls_per_episode': 1, 'evaluation_order': 'IL-first on even seed index; RL-first on odd seed index', 'deterministic_action_disagreement': {'comparisons': 3615, 'disagreements': 1, 'rate': 0.00027662517289073305}}, 'rl': {'rows': [{'seed': 100, 'success': True, 'makespan': 284.0, 'illegal_assignments': 0, 'material_starvation': 196.0}, {'seed': 101, 'success': True, 'makespan': 220.0, 'illegal_assignments': 0, 'material_starvation': 179.0}, {'seed': 102, 'success': True, 'makespan': 292.0, 'illegal_assignments': 0, 'material_starvation': 357.0}, {'seed': 103, 'success': True, 'makespan': 260.0, 'illegal_assignments': 0, 'material_starvation': 201.0}, {'seed': 104, 'success': True, 'makespan': 181.0, 'illegal_assignments': 0, 'material_starvation': 142.0}, {'seed': 105, 'success': True, 'makespan': 237.0, 'illegal_assignments': 0, 'material_starvation': 172.0}, {'seed': 106, 'success': True, 'makespan': 211.0, 'illegal_assignments': 0, 'material_starvation': 77.0}, {'seed': 107, 'success': True, 'makespan': 215.0, 'illegal_assignments': 0, 'material_starvation': 187.0}, {'seed': 108, 'success': True, 'makespan': 171.0, 'illegal_assignments': 0, 'material_starvation': 86.0}, {'seed': 109, 'success': True, 'makespan': 209.0, 'illegal_assignments': 0, 'material_starvation': 150.0}, {'seed': 110, 'success': True, 'makespan': 196.0, 'illegal_assignments': 0, 'material_starvation': 92.0}, {'seed': 111, 'success': True, 'makespan': 232.0, 'illegal_assignments': 0, 'material_starvation': 185.0}, {'seed': 112, 'success': True, 'makespan': 213.0, 'illegal_assignments': 0, 'material_starvation': 132.0}, {'seed': 113, 'success': True, 'makespan': 198.0, 'illegal_assignments': 0, 'material_starvation': 191.0}, {'seed': 114, 'success': True, 'makespan': 233.0, 'illegal_assignments': 0, 'material_starvation': 114.0}, {'seed': 115, 'success': True, 'makespan': 254.0, 'illegal_assignments': 0, 'material_starvation': 279.0}], 'success_rate': 1.0, 'mean_makespan': 225.375, 'illegal_assignments': 0, 'mean_material_starvation': 171.25, 'p95_latency_seconds': 0.039403710630722344, 'latency_warmup_calls_per_episode': 1, 'evaluation_order': 'IL-first on even seed index; RL-first on odd seed index'}, 'go_no_go': {'go': False, 'reasons': ['makespan_gain_below_threshold']}, 'paired_wins_ties_losses': {'wins': 1, 'ties': 15, 'losses': 0}, 'deterministic_action_disagreement': {'comparisons': 3615, 'disagreements': 1, 'rate': 0.00027662517289073305}}}
+{'iteration': 30, 'train_reward_mean': -3.672638559375392, 'train_episode_len_mean': 231.27272727272728, 'ppo_kl': 1.1893421879377587e-06, 'entropy': 0.009581375769873073, 'value_loss': 0.5506501822421949, 'value_explained_variance': 0.3225539306799571, 'policy_loss': -0.00011504491170247396, 'ppo_kl_coefficient': 3.7252902984619127e-10, 'il_reference_kl': 1.1061502884028112e-06, 'actor_parameter_drift': {'max_absolute': 0.008356817066669464, 'normalized_l2': 0.011825046051947969}, 'validation': {'il': {'rows': [{'seed': 100, 'success': True, 'makespan': 284.0, 'illegal_assignments': 0, 'material_starvation': 196.0}, {'seed': 101, 'success': True, 'makespan': 220.0, 'illegal_assignments': 0, 'material_starvation': 179.0}, {'seed': 102, 'success': True, 'makespan': 292.0, 'illegal_assignments': 0, 'material_starvation': 357.0}, {'seed': 103, 'success': True, 'makespan': 260.0, 'illegal_assignments': 0, 'material_starvation': 201.0}, {'seed': 104, 'success': True, 'makespan': 181.0, 'illegal_assignments': 0, 'material_starvation': 142.0}, {'seed': 105, 'success': True, 'makespan': 246.0, 'illegal_assignments': 0, 'material_starvation': 177.0}, {'seed': 106, 'success': True, 'makespan': 211.0, 'illegal_assignments': 0, 'material_starvation': 77.0}, {'seed': 107, 'success': True, 'makespan': 215.0, 'illegal_assignments': 0, 'material_starvation': 187.0}, {'seed': 108, 'success': True, 'makespan': 171.0, 'illegal_assignments': 0, 'material_starvation': 86.0}, {'seed': 109, 'success': True, 'makespan': 209.0, 'illegal_assignments': 0, 'material_starvation': 150.0}, {'seed': 110, 'success': True, 'makespan': 196.0, 'illegal_assignments': 0, 'material_starvation': 92.0}, {'seed': 111, 'success': True, 'makespan': 232.0, 'illegal_assignments': 0, 'material_starvation': 185.0}, {'seed': 112, 'success': True, 'makespan': 213.0, 'illegal_assignments': 0, 'material_starvation': 132.0}, {'seed': 113, 'success': True, 'makespan': 198.0, 'illegal_assignments': 0, 'material_starvation': 191.0}, {'seed': 114, 'success': True, 'makespan': 233.0, 'illegal_assignments': 0, 'material_starvation': 114.0}, {'seed': 115, 'success': True, 'makespan': 254.0, 'illegal_assignments': 0, 'material_starvation': 279.0}], 'success_rate': 1.0, 'mean_makespan': 225.9375, 'illegal_assignments': 0, 'mean_material_starvation': 171.5625, 'p95_latency_seconds': 0.04818619261495769, 'latency_warmup_calls_per_episode': 1, 'evaluation_order': 'IL-first on even seed index; RL-first on odd seed index', 'deterministic_action_disagreement': {'comparisons': 3615, 'disagreements': 1, 'rate': 0.00027662517289073305}}, 'rl': {'rows': [{'seed': 100, 'success': True, 'makespan': 284.0, 'illegal_assignments': 0, 'material_starvation': 196.0}, {'seed': 101, 'success': True, 'makespan': 220.0, 'illegal_assignments': 0, 'material_starvation': 179.0}, {'seed': 102, 'success': True, 'makespan': 292.0, 'illegal_assignments': 0, 'material_starvation': 357.0}, {'seed': 103, 'success': True, 'makespan': 260.0, 'illegal_assignments': 0, 'material_starvation': 201.0}, {'seed': 104, 'success': True, 'makespan': 181.0, 'illegal_assignments': 0, 'material_starvation': 142.0}, {'seed': 105, 'success': True, 'makespan': 237.0, 'illegal_assignments': 0, 'material_starvation': 172.0}, {'seed': 106, 'success': True, 'makespan': 211.0, 'illegal_assignments': 0, 'material_starvation': 77.0}, {'seed': 107, 'success': True, 'makespan': 215.0, 'illegal_assignments': 0, 'material_starvation': 187.0}, {'seed': 108, 'success': True, 'makespan': 171.0, 'illegal_assignments': 0, 'material_starvation': 86.0}, {'seed': 109, 'success': True, 'makespan': 209.0, 'illegal_assignments': 0, 'material_starvation': 150.0}, {'seed': 110, 'success': True, 'makespan': 196.0, 'illegal_assignments': 0, 'material_starvation': 92.0}, {'seed': 111, 'success': True, 'makespan': 232.0, 'illegal_assignments': 0, 'material_starvation': 185.0}, {'seed': 112, 'success': True, 'makespan': 213.0, 'illegal_assignments': 0, 'material_starvation': 132.0}, {'seed': 113, 'success': True, 'makespan': 198.0, 'illegal_assignments': 0, 'material_starvation': 191.0}, {'seed': 114, 'success': True, 'makespan': 233.0, 'illegal_assignments': 0, 'material_starvation': 114.0}, {'seed': 115, 'success': True, 'makespan': 254.0, 'illegal_assignments': 0, 'material_starvation': 279.0}], 'success_rate': 1.0, 'mean_makespan': 225.375, 'illegal_assignments': 0, 'mean_material_starvation': 171.25, 'p95_latency_seconds': 0.04898511368082836, 'latency_warmup_calls_per_episode': 1, 'evaluation_order': 'IL-first on even seed index; RL-first on odd seed index'}, 'go_no_go': {'go': False, 'reasons': ['makespan_gain_below_threshold']}, 'paired_wins_ties_losses': {'wins': 1, 'ties': 15, 'losses': 0}, 'deterministic_action_disagreement': {'comparisons': 3615, 'disagreements': 1, 'rate': 0.00027662517289073305}}}
+2026-09-14 18:41:44,802	INFO trainable.py:578 -- Restored on 172.17.0.6 from checkpoint: Checkpoint(filesystem=local, path=/root/autodl-tmp/MD/Sadcher/runs/md_ray_ppo_train_2026-09-14/best_iter_0020)
+{
+  "il": {
+    "rows": [
+      {
+        "seed": 200,
+        "success": true,
+        "makespan": 228.0,
+        "illegal_assignments": 0,
+        "material_starvation": 294.0
+      },
+      {
+        "seed": 201,
+        "success": true,
+        "makespan": 222.0,
+        "illegal_assignments": 0,
+        "material_starvation": 105.0
+      },
+      {
+        "seed": 202,
+        "success": true,
+        "makespan": 214.0,
+        "illegal_assignments": 0,
+        "material_starvation": 191.0
+      },
+      {
+        "seed": 203,
+        "success": true,
+        "makespan": 273.0,
+        "illegal_assignments": 0,
+        "material_starvation": 200.0
+      },
+      {
+        "seed": 204,
+        "success": true,
+        "makespan": 263.0,
+        "illegal_assignments": 0,
+        "material_starvation": 262.0
+      },
+      {
+        "seed": 205,
+        "success": true,
+        "makespan": 225.0,
+        "illegal_assignments": 0,
+        "material_starvation": 227.0
+      },
+      {
+        "seed": 206,
+        "success": true,
+        "makespan": 212.0,
+        "illegal_assignments": 0,
+        "material_starvation": 212.0
+      },
+      {
+        "seed": 207,
+        "success": true,
+        "makespan": 231.0,
+        "illegal_assignments": 0,
+        "material_starvation": 23.0
+      },
+      {
+        "seed": 208,
+        "success": true,
+        "makespan": 239.0,
+        "illegal_assignments": 0,
+        "material_starvation": 86.0
+      },
+      {
+        "seed": 209,
+        "success": true,
+        "makespan": 228.0,
+        "illegal_assignments": 0,
+        "material_starvation": 212.0
+      },
+      {
+        "seed": 210,
+        "success": true,
+        "makespan": 240.0,
+        "illegal_assignments": 0,
+        "material_starvation": 186.0
+      },
+      {
+        "seed": 211,
+        "success": true,
+        "makespan": 154.0,
+        "illegal_assignments": 0,
+        "material_starvation": 139.0
+      },
+      {
+        "seed": 212,
+        "success": true,
+        "makespan": 314.0,
+        "illegal_assignments": 0,
+        "material_starvation": 277.0
+      },
+      {
+        "seed": 213,
+        "success": true,
+        "makespan": 270.0,
+        "illegal_assignments": 0,
+        "material_starvation": 263.0
+      },
+      {
+        "seed": 214,
+        "success": true,
+        "makespan": 222.0,
+        "illegal_assignments": 0,
+        "material_starvation": 101.0
+      },
+      {
+        "seed": 215,
+        "success": true,
+        "makespan": 200.0,
+        "illegal_assignments": 0,
+        "material_starvation": 116.0
+      }
+    ],
+    "success_rate": 1.0,
+    "mean_makespan": 233.4375,
+    "illegal_assignments": 0,
+    "mean_material_starvation": 180.875,
+    "p95_latency_seconds": 0.040012671845033765,
+    "latency_warmup_calls_per_episode": 1,
+    "evaluation_order": "IL-first on even seed index; RL-first on odd seed index",
+    "deterministic_action_disagreement": {
+      "comparisons": 3735,
+      "disagreements": 1,
+      "rate": 0.0002677376171352075
+    }
+  },
+  "rl": {
+    "rows": [
+      {
+        "seed": 200,
+        "success": true,
+        "makespan": 228.0,
+        "illegal_assignments": 0,
+        "material_starvation": 294.0
+      },
+      {
+        "seed": 201,
+        "success": true,
+        "makespan": 222.0,
+        "illegal_assignments": 0,
+        "material_starvation": 105.0
+      },
+      {
+        "seed": 202,
+        "success": true,
+        "makespan": 214.0,
+        "illegal_assignments": 0,
+        "material_starvation": 191.0
+      },
+      {
+        "seed": 203,
+        "success": true,
+        "makespan": 273.0,
+        "illegal_assignments": 0,
+        "material_starvation": 200.0
+      },
+      {
+        "seed": 204,
+        "success": true,
+        "makespan": 263.0,
+        "illegal_assignments": 0,
+        "material_starvation": 262.0
+      },
+      {
+        "seed": 205,
+        "success": true,
+        "makespan": 225.0,
+        "illegal_assignments": 0,
+        "material_starvation": 227.0
+      },
+      {
+        "seed": 206,
+        "success": true,
+        "makespan": 212.0,
+        "illegal_assignments": 0,
+        "material_starvation": 212.0
+      },
+      {
+        "seed": 207,
+        "success": true,
+        "makespan": 231.0,
+        "illegal_assignments": 0,
+        "material_starvation": 23.0
+      },
+      {
+        "seed": 208,
+        "success": true,
+        "makespan": 238.0,
+        "illegal_assignments": 0,
+        "material_starvation": 85.0
+      },
+      {
+        "seed": 209,
+        "success": true,
+        "makespan": 228.0,
+        "illegal_assignments": 0,
+        "material_starvation": 212.0
+      },
+      {
+        "seed": 210,
+        "success": true,
+        "makespan": 240.0,
+        "illegal_assignments": 0,
+        "material_starvation": 186.0
+      },
+      {
+        "seed": 211,
+        "success": true,
+        "makespan": 154.0,
+        "illegal_assignments": 0,
+        "material_starvation": 139.0
+      },
+      {
+        "seed": 212,
+        "success": true,
+        "makespan": 314.0,
+        "illegal_assignments": 0,
+        "material_starvation": 277.0
+      },
+      {
+        "seed": 213,
+        "success": true,
+        "makespan": 270.0,
+        "illegal_assignments": 0,
+        "material_starvation": 263.0
+      },
+      {
+        "seed": 214,
+        "success": true,
+        "makespan": 222.0,
+        "illegal_assignments": 0,
+        "material_starvation": 101.0
+      },
+      {
+        "seed": 215,
+        "success": true,
+        "makespan": 200.0,
+        "illegal_assignments": 0,
+        "material_starvation": 116.0
+      }
+    ],
+    "success_rate": 1.0,
+    "mean_makespan": 233.375,
+    "illegal_assignments": 0,
+    "mean_material_starvation": 180.8125,
+    "p95_latency_seconds": 0.04009839101927355,
+    "latency_warmup_calls_per_episode": 1,
+    "evaluation_order": "IL-first on even seed index; RL-first on odd seed index"
+  },
+  "go_no_go": {
+    "go": false,
+    "reasons": [
+      "makespan_gain_below_threshold"
+    ]
+  },
+  "paired_wins_ties_losses": {
+    "wins": 1,
+    "ties": 15,
+    "losses": 0
+  },
+  "deterministic_action_disagreement": {
+    "comparisons": 3735,
+    "disagreements": 1,
+    "rate": 0.0002677376171352075
+  },
+  "model_seed": 0,
+  "evaluation_split": "held_out",
+  "best_validation_iteration": 20,
+  "best_checkpoint": "/root/autodl-tmp/MD/Sadcher/runs/md_ray_ppo_train_2026-09-14/best_iter_0020",
+  "checkpoint_restore_succeeded": true,
+  "frozen_encoder_verified": true,
+  "actor_parameter_drift": {
+    "max_absolute": 0.006798669695854187,
+    "normalized_l2": 0.00906320696722526
+  }
+}
+=== [Mon 14 Sep 2026 06:49:13 PM CST] DONE ===

@@ -1,0 +1,94 @@
+=== [Sun 13 Sep 2026 01:03:50 AM CST] FREEZE ===
+{
+  "all_model_blind_valid": true,
+  "all_static_valid": true,
+  "development_instance_overlap_count": 0,
+  "instance_count": 30,
+  "instance_seeds": [
+    46000,
+    46001,
+    46002,
+    46003,
+    46004,
+    46005,
+    46006,
+    46007,
+    46008,
+    46009,
+    46010,
+    46011,
+    46012,
+    46013,
+    46014,
+    46015,
+    46016,
+    46017,
+    46018,
+    46019,
+    46020,
+    46021,
+    46022,
+    46023,
+    46024,
+    46025,
+    46026,
+    46027,
+    46028,
+    46029
+  ],
+  "model_loaded_during_generation": false,
+  "overlap_check_basis": "separate frozen MD instance identifiers and relational-template namespace",
+  "schema_version": "1.0.0",
+  "ticket": 46,
+  "training_development_template_overlap_count": 0,
+  "training_instance_overlap_count": 0
+}
+=== [Sun 13 Sep 2026 01:03:52 AM CST] SMOKE ===
+{
+  "checkpoint_reload_verified": true,
+  "debug_instance_seed": 45999,
+  "decision_count": 33,
+  "failure_reason": null,
+  "formal_package_observed": false,
+  "illegal_assignment_count": 0,
+  "multiple_decision_points": true,
+  "normal_path_solver_calls": 0,
+  "passed": true,
+  "runtime": {
+    "cuda_version": "12.1",
+    "cuda_visible_devices": "0",
+    "data_parallel": false,
+    "ddp": false,
+    "gpu_name": "NVIDIA GeForce RTX 3080 Ti",
+    "hostname": "autodl-container-3vf9ypy8lb-fd22b568",
+    "pid": 23230,
+    "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.31",
+    "requested_device": "cuda:0",
+    "resolved_device": "cuda:0",
+    "single_device_execution": true,
+    "torch_version": "2.4.0+cu121",
+    "visible_device_count": 1
+  },
+  "success": true,
+  "ticket": 46
+}
+=== [Sun 13 Sep 2026 01:03:56 AM CST] TRAIN SEED 3101 ===
+"reports/md_c0_gpu_retrain_pilot_2026-09-13/training/C0_seed3101/checkpoints/best_checkpoint.pt"
+=== [Sun 13 Sep 2026 01:05:57 AM CST] TRAIN SEED 3102 ===
+"reports/md_c0_gpu_retrain_pilot_2026-09-13/training/C0_seed3102/checkpoints/best_checkpoint.pt"
+=== [Sun 13 Sep 2026 01:07:59 AM CST] TRAIN SEED 3103 ===
+"reports/md_c0_gpu_retrain_pilot_2026-09-13/training/C0_seed3103/checkpoints/best_checkpoint.pt"
+=== [Sun 13 Sep 2026 01:10:10 AM CST] RUN FORMAL PILOT ===
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/autodl-tmp/MD/Sadcher/experiments/md_c0_end_to_end_diagnostic_pilot.py", line 1875, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/experiments/md_c0_end_to_end_diagnostic_pilot.py", line 1851, in main
+    result = run_formal_diagnostic_pilot(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/experiments/md_c0_end_to_end_diagnostic_pilot.py", line 1704, in run_formal_diagnostic_pilot
+    raise FileNotFoundError(
+FileNotFoundError: formal rollout requires all frozen checkpoints: /root/autodl-tmp/MD/Sadcher/reports/md_hyperparameter_sweep_2026-08-31/stage2/C1_seed3101/checkpoints/best_checkpoint.pt, /root/autodl-tmp/MD/Sadcher/reports/md_hyperparameter_sweep_2026-08-31/stage2/C1_seed3102/checkpoints/best_checkpoint.pt, /root/autodl-tmp/MD/Sadcher/reports/md_hyperparameter_sweep_2026-08-31/stage2/C1_seed3103/checkpoints/best_checkpoint.pt, /root/autodl-tmp/MD/Sadcher/reports/md_hyperparameter_sweep_2026-08-31/stage2/C2_seed3101/checkpoints/best_checkpoint.pt, /root/autodl-tmp/MD/Sadcher/reports/md_hyperparameter_sweep_2026-08-31/stage2/C2_seed3102/checkpoints/best_checkpoint.pt, /root/autodl-tmp/MD/Sadcher/reports/md_hyperparameter_sweep_2026-08-31/stage2/C2_seed3103/checkpoints/best_checkpoint.pt
+=== [Sun 13 Sep 2026 01:10:12 AM CST] C0 GPU TRAIN ALL DONE ===

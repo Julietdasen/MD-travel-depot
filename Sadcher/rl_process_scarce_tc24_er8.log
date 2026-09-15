@@ -1,0 +1,22 @@
+=== [Tue 15 Sep 2026 03:20:15 PM CST] START RL er=8 batch=2048 epochs=5 (tc=24, 6 iter) ===
+2026-09-15 15:20:20,274	WARNING utils.py:429 -- Detecting docker specified CPUs. In previous versions of Ray, CPU detection in containers was incorrect. Please ensure that Ray has enough CPUs allocated. As a temporary workaround to revert to the prior behavior, set `RAY_USE_MULTIPROCESSING_CPU_COUNT=1` as an env var before starting Ray. Set the env var: `RAY_DISABLE_DOCKER_CPU_WARNING=1` to mute this warning.
+2026-09-15 15:20:20,589	INFO worker.py:1951 -- Started a local Ray instance.
+2026-09-15 15:20:21,106	WARNING deprecation.py:50 -- DeprecationWarning: `build` has been deprecated. Use `AlgorithmConfig.build_algo` instead. This will raise an error in the future!
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/algorithms/algorithm.py:520: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+`UnifiedLogger` will be removed in Ray 2.7.
+  return UnifiedLogger(config, logdir, loggers=None)
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `JsonLogger interface is deprecated in favor of the `ray.tune.json.JsonLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `CSVLogger interface is deprecated in favor of the `ray.tune.csv.CSVLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `TBXLogger interface is deprecated in favor of the `ray.tune.tensorboardx.TBXLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+[2026-09-15 15:20:21,200 E 93499 93499] core_worker.cc:2246: Actor with class name: 'RolloutWorker' and ID: '072d982fa429dfaa5ee98fe201000000' has constructor arguments in the object store and max_restarts > 0. If the arguments in the object store go out of scope or are lost, the actor restart will fail. See https://github.com/ray-project/ray/issues/53727 for more details.
+2026-09-15 15:20:36,986	INFO trainable.py:161 -- Trainable.setup took 15.862 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2026-09-15 15:20:36,986	WARNING util.py:61 -- Install gputil for GPU system monitoring.
+2026-09-15 15:22:32,027	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.execution.train_ops.multi_gpu_train_one_step` has been deprecated. This will raise an error in the future!
+{'iteration': 1, 'train_reward_mean': -2.70665540540542, 'train_episode_len_mean': 295.875, 'ppo_kl': 1.1657151658558963e-06, 'entropy': 0.032363611785694954, 'value_loss': 0.7310212261974811, 'value_explained_variance': 0.03256285786628723, 'policy_loss': -9.935498237609864e-05, 'ppo_kl_coefficient': 0.2, 'il_reference_kl': 2.7896508254840467e-06, 'actor_parameter_drift': {'max_absolute': 0.0003865659236907959, 'normalized_l2': 0.0011152406802647358}, 'validation': None}
+=== [Tue 15 Sep 2026 04:28:43 PM CST] DONE ===

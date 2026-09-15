@@ -1,0 +1,221 @@
+=== [Mon 14 Sep 2026 07:12:17 PM CST] START scaled target-profiles eval ===
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2770405
+Academic license 2770405 - for non-commercial use only - registered to 22___@tongji.edu.cn
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 219.0, "c0_ms": 232.0, "gd_ms": 313.0, "ge_ms": 313.0, "gu_ms": 277.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 249.0, "c0_ms": 274.0, "gd_ms": 320.0, "ge_ms": 305.0, "gu_ms": 263.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 225.0, "c0_ms": 256.0, "gd_ms": 254.0, "ge_ms": 254.0, "gu_ms": 254.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 213.0, "c0_ms": 220.0, "gd_ms": 232.0, "ge_ms": 208.0, "gu_ms": 189.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 305.0, "c0_ms": 308.0, "gd_ms": 339.0, "ge_ms": 338.0, "gu_ms": 307.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 249.0, "c0_ms": 295.0, "gd_ms": 348.0, "ge_ms": 313.0, "gu_ms": 306.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 255.0, "c0_ms": 293.0, "gd_ms": 304.0, "ge_ms": 304.0, "gu_ms": 247.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 240.0, "c0_ms": 240.0, "gd_ms": 303.0, "ge_ms": 338.0, "gu_ms": 266.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 42, "seed": 301, "milp_status": "optimal", "milp_ms": 384.0, "c0_ms": 404.0, "gd_ms": 410.0, "ge_ms": 411.0, "gu_ms": 393.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 311.0, "c0_ms": 312.0, "gd_ms": 344.0, "ge_ms": 344.0, "gu_ms": 344.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 313.0, "c0_ms": 390.0, "gd_ms": 388.0, "ge_ms": 397.0, "gu_ms": 375.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 363.0, "c0_ms": 427.0, "gd_ms": 487.0, "ge_ms": 519.0, "gu_ms": 457.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 60, "seed": 301, "milp_status": "optimal", "milp_ms": 403.0, "c0_ms": 466.0, "gd_ms": 514.0, "ge_ms": 516.0, "gu_ms": 472.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 60, "seed": 302, "milp_status": "optimal", "milp_ms": 481.0, "c0_ms": 570.0, "gd_ms": 561.0, "ge_ms": 569.0, "gu_ms": 533.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 60, "seed": 303, "milp_status": "optimal", "milp_ms": 380.0, "c0_ms": 425.0, "gd_ms": 441.0, "ge_ms": 441.0, "gu_ms": 441.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "dependency_deep", "tc": 60, "seed": 304, "milp_status": "optimal", "milp_ms": 514.0, "c0_ms": 541.0, "gd_ms": 568.0, "ge_ms": 587.0, "gu_ms": 524.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 131.0, "c0_ms": 132.0, "gd_ms": 209.0, "ge_ms": 209.0, "gu_ms": 209.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 187.0, "c0_ms": 187.0, "gd_ms": 243.0, "ge_ms": 243.0, "gu_ms": 243.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 185.0, "c0_ms": 218.0, "gd_ms": 211.0, "ge_ms": 211.0, "gu_ms": 211.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 154.0, "c0_ms": 166.0, "gd_ms": 165.0, "ge_ms": 165.0, "gu_ms": 165.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 263.0, "c0_ms": 286.0, "gd_ms": 312.0, "ge_ms": 312.0, "gu_ms": 312.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 278.0, "c0_ms": 293.0, "gd_ms": 323.0, "ge_ms": 323.0, "gu_ms": 305.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 206.0, "c0_ms": 210.0, "gd_ms": 266.0, "ge_ms": 266.0, "gu_ms": 266.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 253.0, "c0_ms": 265.0, "gd_ms": 333.0, "ge_ms": 333.0, "gu_ms": 333.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 42, "seed": 301, "milp_status": "optimal", "milp_ms": 265.0, "c0_ms": 289.0, "gd_ms": 301.0, "ge_ms": 308.0, "gu_ms": 290.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 334.0, "c0_ms": 376.0, "gd_ms": 398.0, "ge_ms": 411.0, "gu_ms": 416.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 271.0, "c0_ms": 316.0, "gd_ms": 323.0, "ge_ms": 323.0, "gu_ms": 323.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 346.0, "c0_ms": 348.0, "gd_ms": 375.0, "ge_ms": 379.0, "gu_ms": 357.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 60, "seed": 301, "milp_status": "optimal", "milp_ms": 358.0, "c0_ms": 423.0, "gd_ms": 455.0, "ge_ms": 455.0, "gu_ms": 411.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 60, "seed": 302, "milp_status": "optimal", "milp_ms": 392.0, "c0_ms": 423.0, "gd_ms": 426.0, "ge_ms": 468.0, "gu_ms": 426.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 60, "seed": 303, "milp_status": "optimal", "milp_ms": 317.0, "c0_ms": 347.0, "gd_ms": 351.0, "ge_ms": 351.0, "gu_ms": 351.0}
+Set parameter TimeLimit to value 300
+Set parameter Threads to value 4
+{"profile": "process_scarce", "tc": 60, "seed": 304, "milp_status": "optimal", "milp_ms": 357.0, "c0_ms": 402.0, "gd_ms": 418.0, "ge_ms": 418.0, "gu_ms": 395.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/training/best_checkpoint.pt",
+  "profiles": [
+    "dependency_deep",
+    "process_scarce"
+  ],
+  "task_counts": [
+    12,
+    24,
+    42,
+    60
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "dependency_deep",
+      "task_count": 12,
+      "milp_incumbent": 226.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 245.5,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 245.75,
+      "c0_gap_vs_milp_percent": 8.388520971302428,
+      "best_greedy_gap_vs_milp_percent": 8.49889624724062,
+      "c0_vs_best_greedy_percent": -0.10172939979654119
+    },
+    {
+      "profile": "dependency_deep",
+      "task_count": 24,
+      "milp_incumbent": 262.25,
+      "milp_timeout_count": 0,
+      "c0_makespan": 284.0,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 281.5,
+      "c0_gap_vs_milp_percent": 8.293612964728313,
+      "best_greedy_gap_vs_milp_percent": 7.340324118207817,
+      "c0_vs_best_greedy_percent": 0.8880994671403196
+    },
+    {
+      "profile": "dependency_deep",
+      "task_count": 42,
+      "milp_incumbent": 342.75,
+      "milp_timeout_count": 0,
+      "c0_makespan": 383.25,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 392.25,
+      "c0_gap_vs_milp_percent": 11.816192560175056,
+      "best_greedy_gap_vs_milp_percent": 14.442013129102845,
+      "c0_vs_best_greedy_percent": -2.294455066921606
+    },
+    {
+      "profile": "dependency_deep",
+      "task_count": 60,
+      "milp_incumbent": 444.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 500.5,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 492.5,
+      "c0_gap_vs_milp_percent": 12.598425196850393,
+      "best_greedy_gap_vs_milp_percent": 10.798650168728908,
+      "c0_vs_best_greedy_percent": 1.6243654822335025
+    },
+    {
+      "profile": "process_scarce",
+      "task_count": 12,
+      "milp_incumbent": 164.25,
+      "milp_timeout_count": 0,
+      "c0_makespan": 175.75,
+      "best_greedy_name": "greedy_distance",
+      "best_greedy_makespan": 207.0,
+      "c0_gap_vs_milp_percent": 7.00152207001522,
+      "best_greedy_gap_vs_milp_percent": 26.027397260273972,
+      "c0_vs_best_greedy_percent": -15.096618357487923
+    },
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 250.0,
+      "milp_timeout_count": 0,
+      "c0_makespan": 263.5,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 304.0,
+      "c0_gap_vs_milp_percent": 5.4,
+      "best_greedy_gap_vs_milp_percent": 21.6,
+      "c0_vs_best_greedy_percent": -13.322368421052634
+    },
+    {
+      "profile": "process_scarce",
+      "task_count": 42,
+      "milp_incumbent": 304.0,
+      "milp_timeout_count": 0,
+      "c0_makespan": 332.25,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 346.5,
+      "c0_gap_vs_milp_percent": 9.292763157894738,
+      "best_greedy_gap_vs_milp_percent": 13.980263157894738,
+      "c0_vs_best_greedy_percent": -4.112554112554113
+    },
+    {
+      "profile": "process_scarce",
+      "task_count": 60,
+      "milp_incumbent": 356.0,
+      "milp_timeout_count": 0,
+      "c0_makespan": 398.75,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 395.75,
+      "c0_gap_vs_milp_percent": 12.008426966292134,
+      "best_greedy_gap_vs_milp_percent": 11.165730337078651,
+      "c0_vs_best_greedy_percent": 0.7580543272267846
+    }
+  ]
+}
+=== [Mon 14 Sep 2026 07:18:36 PM CST] DONE ===

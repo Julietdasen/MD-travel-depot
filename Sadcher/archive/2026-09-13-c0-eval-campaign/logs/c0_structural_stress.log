@@ -1,0 +1,30 @@
+=== [Sun 13 Sep 2026 02:41:11 AM CST] START structural stress pilot ===
+{"variant": "baseline", "seed": 9401, "success": true, "failure_reason": null, "makespan": 276.0, "decision_count": 18, "solver_calls": 6, "solver_time_total_seconds": 0.1557386431377381, "solver_time_max_seconds": 0.028972602915018797, "wall_time_seconds": 1.1866451480891556}
+{"variant": "baseline", "seed": 9402, "success": true, "failure_reason": null, "makespan": 316.0, "decision_count": 19, "solver_calls": 4, "solver_time_total_seconds": 0.09217880689539015, "solver_time_max_seconds": 0.024082934018224478, "wall_time_seconds": 0.887863437877968}
+{"variant": "baseline", "seed": 9403, "success": true, "failure_reason": null, "makespan": 361.0, "decision_count": 26, "solver_calls": 3, "solver_time_total_seconds": 0.07391725201159716, "solver_time_max_seconds": 0.025733199901878834, "wall_time_seconds": 1.0404121389146894}
+{"variant": "max_precedence_density", "seed": 9401, "success": true, "failure_reason": null, "makespan": 327.0, "decision_count": 19, "solver_calls": 8, "solver_time_total_seconds": 0.18758054682984948, "solver_time_max_seconds": 0.02543561509810388, "wall_time_seconds": 1.0249969630967826}
+{"variant": "max_precedence_density", "seed": 9402, "success": true, "failure_reason": null, "makespan": 328.0, "decision_count": 17, "solver_calls": 5, "solver_time_total_seconds": 0.118105826433748, "solver_time_max_seconds": 0.025695221032947302, "wall_time_seconds": 0.9075194711331278}
+{"variant": "max_precedence_density", "seed": 9403, "success": true, "failure_reason": null, "makespan": 370.0, "decision_count": 19, "solver_calls": 6, "solver_time_total_seconds": 0.1929246278014034, "solver_time_max_seconds": 0.07851275592111051, "wall_time_seconds": 1.08488001790829}
+{"variant": "min_capacity_slack", "seed": 9401, "success": true, "failure_reason": null, "makespan": 276.0, "decision_count": 18, "solver_calls": 6, "solver_time_total_seconds": 0.14058916200883687, "solver_time_max_seconds": 0.024817696074023843, "wall_time_seconds": 0.861753644188866}
+{"variant": "min_capacity_slack", "seed": 9402, "success": true, "failure_reason": null, "makespan": 316.0, "decision_count": 19, "solver_calls": 4, "solver_time_total_seconds": 0.09594229911454022, "solver_time_max_seconds": 0.02488240017555654, "wall_time_seconds": 0.8868136671371758}
+{"variant": "min_capacity_slack", "seed": 9403, "success": true, "failure_reason": null, "makespan": 360.0, "decision_count": 20, "solver_calls": 2, "solver_time_total_seconds": 0.05050063622184098, "solver_time_max_seconds": 0.026069413172081113, "wall_time_seconds": 0.9097537179477513}
+{"variant": "max_transport_ratio", "seed": 9401, "success": true, "failure_reason": null, "makespan": 396.0, "decision_count": 17, "solver_calls": 2, "solver_time_total_seconds": 0.047589493449777365, "solver_time_max_seconds": 0.024464336223900318, "wall_time_seconds": 0.902919010957703}
+{"variant": "max_transport_ratio", "seed": 9402, "success": true, "failure_reason": null, "makespan": 421.0, "decision_count": 48, "solver_calls": 1, "solver_time_total_seconds": 0.022632512962445617, "solver_time_max_seconds": 0.022632512962445617, "wall_time_seconds": 1.4302375130355358}
+{"variant": "max_transport_ratio", "seed": 9403, "success": true, "failure_reason": null, "makespan": 353.0, "decision_count": 19, "solver_calls": 3, "solver_time_total_seconds": 0.06953208800405264, "solver_time_max_seconds": 0.023837338900193572, "wall_time_seconds": 0.9067896991036832}
+{"variant": "combined_hard", "seed": 9401, "success": true, "failure_reason": null, "makespan": 394.0, "decision_count": 20, "solver_calls": 5, "solver_time_total_seconds": 0.11841128603555262, "solver_time_max_seconds": 0.025317847030237317, "wall_time_seconds": 1.0492449200246483}
+{"variant": "combined_hard", "seed": 9402, "success": true, "failure_reason": null, "makespan": 417.0, "decision_count": 45, "solver_calls": 1, "solver_time_total_seconds": 0.024940763833001256, "solver_time_max_seconds": 0.024940763833001256, "wall_time_seconds": 1.4195809080265462}
+{"variant": "combined_hard", "seed": 9403, "success": true, "failure_reason": null, "makespan": 377.0, "decision_count": 19, "solver_calls": 4, "solver_time_total_seconds": 0.09091355814598501, "solver_time_max_seconds": 0.024779825005680323, "wall_time_seconds": 0.9770420149434358}
+{
+  "schema": "md-c0-structural-stress-1.0",
+  "model_seed": 3101,
+  "variants": [
+    "baseline",
+    "max_precedence_density",
+    "min_capacity_slack",
+    "max_transport_ratio",
+    "combined_hard"
+  ],
+  "row_count": 15,
+  "all_success": true
+}
+=== [Sun 13 Sep 2026 02:41:29 AM CST] DONE ===
