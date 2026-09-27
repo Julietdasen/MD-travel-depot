@@ -1,0 +1,21 @@
+[21:19:26] epoch 000 (pretrained) val=0.673815 pos_pairs=1952 skipped_states=37
+[21:20:44] epoch 001 train=0.632527 val=0.667442 pos_pairs(train)=15048 skipped=293 elapsed=78.1s
+[21:22:02] epoch 002 train=0.612547 val=0.647153 pos_pairs(train)=15048 skipped=293 elapsed=77.7s
+[21:23:20] epoch 003 train=0.603914 val=0.633867 pos_pairs(train)=15048 skipped=293 elapsed=77.9s
+[21:25:02] epoch 004 train=0.593209 val=0.628229 pos_pairs(train)=15048 skipped=293 elapsed=102.3s
+[21:26:22] epoch 005 train=0.586029 val=0.624419 pos_pairs(train)=15048 skipped=293 elapsed=79.6s
+[21:27:43] epoch 006 train=0.575327 val=0.630342 pos_pairs(train)=15048 skipped=293 elapsed=80.9s
+[21:29:04] epoch 007 train=0.565619 val=0.619835 pos_pairs(train)=15048 skipped=293 elapsed=81.5s
+[21:30:20] epoch 008 train=0.562259 val=0.610802 pos_pairs(train)=15048 skipped=293 elapsed=76.0s
+[21:31:38] epoch 009 train=0.559980 val=0.616054 pos_pairs(train)=15048 skipped=293 elapsed=78.2s
+[21:32:56] epoch 010 train=0.554782 val=0.600063 pos_pairs(train)=15048 skipped=293 elapsed=77.8s
+[21:34:14] epoch 011 train=0.551935 val=0.594845 pos_pairs(train)=15048 skipped=293 elapsed=77.6s
+[21:35:31] epoch 012 train=0.545397 val=0.593045 pos_pairs(train)=15048 skipped=293 elapsed=77.7s
+[21:36:49] epoch 013 train=0.541953 val=0.582352 pos_pairs(train)=15048 skipped=293 elapsed=77.7s
+[21:38:07] epoch 014 train=0.541451 val=0.587519 pos_pairs(train)=15048 skipped=293 elapsed=77.6s
+[21:39:24] epoch 015 train=0.538989 val=0.584939 pos_pairs(train)=15048 skipped=293 elapsed=77.5s
+[21:40:42] epoch 016 train=0.531346 val=0.581974 pos_pairs(train)=15048 skipped=293 elapsed=77.7s
+[21:42:00] epoch 017 train=0.532952 val=0.571720 pos_pairs(train)=15048 skipped=293 elapsed=77.8s
+[21:43:18] epoch 018 train=0.529276 val=0.578558 pos_pairs(train)=15048 skipped=293 elapsed=78.1s
+[21:44:36] epoch 019 train=0.532091 val=0.573016 pos_pairs(train)=15048 skipped=293 elapsed=77.9s
+[21:45:55] epoch 020 train=0.526331 val=0.567446 pos_pairs(train)=15048 skipped=293 elapsed=79.3s

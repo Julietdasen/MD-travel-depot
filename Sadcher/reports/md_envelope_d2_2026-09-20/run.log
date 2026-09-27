@@ -1,0 +1,276 @@
+=========== D2a: scarce_skill sweep (tc=24, pr=4, tr=4, skill=3) ===========
+--- scarce_skill=0 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 263.0, "c0_ms": 286.0, "gd_ms": 312.0, "ge_ms": 312.0, "gu_ms": 312.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 278.0, "c0_ms": 292.0, "gd_ms": 323.0, "ge_ms": 323.0, "gu_ms": 305.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 206.0, "c0_ms": 238.0, "gd_ms": 266.0, "ge_ms": 266.0, "gu_ms": 266.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 253.0, "c0_ms": 265.0, "gd_ms": 333.0, "ge_ms": 333.0, "gu_ms": 333.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 250.0,
+      "milp_timeout_count": 0,
+      "c0_makespan": 270.25,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 304.0,
+      "c0_gap_vs_milp_percent": 8.1,
+      "best_greedy_gap_vs_milp_percent": 21.6,
+      "c0_vs_best_greedy_percent": -11.101973684210527
+    }
+  ]
+}
+--- scarce_skill=1 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 286.0, "gd_ms": 352.0, "ge_ms": 352.0, "gu_ms": 352.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 321.0, "gd_ms": 324.0, "ge_ms": 324.0, "gu_ms": 343.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 231.0, "c0_ms": 239.0, "gd_ms": 275.0, "ge_ms": 275.0, "gu_ms": 275.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 267.0, "c0_ms": 269.0, "gd_ms": 311.0, "ge_ms": 311.0, "gu_ms": 311.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 264.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 278.75,
+      "best_greedy_name": "greedy_distance",
+      "best_greedy_makespan": 315.5,
+      "c0_gap_vs_milp_percent": 5.387523629489603,
+      "best_greedy_gap_vs_milp_percent": 19.281663516068054,
+      "c0_vs_best_greedy_percent": -11.648177496038036
+    }
+  ]
+}
+--- scarce_skill=2 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 264.0, "c0_ms": 304.0, "gd_ms": 336.0, "ge_ms": 336.0, "gu_ms": 336.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 301.0, "c0_ms": 326.0, "gd_ms": 333.0, "ge_ms": 333.0, "gu_ms": 333.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 255.0, "c0_ms": 271.0, "gd_ms": 315.0, "ge_ms": 315.0, "gu_ms": 315.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 265.0, "c0_ms": 269.0, "gd_ms": 311.0, "ge_ms": 311.0, "gu_ms": 311.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 271.25,
+      "milp_timeout_count": 0,
+      "c0_makespan": 292.5,
+      "best_greedy_name": "greedy_distance",
+      "best_greedy_makespan": 323.75,
+      "c0_gap_vs_milp_percent": 7.834101382488479,
+      "best_greedy_gap_vs_milp_percent": 19.35483870967742,
+      "c0_vs_best_greedy_percent": -9.652509652509652
+    }
+  ]
+}
+--- scarce_skill=3 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 307.0, "gd_ms": 319.0, "ge_ms": 319.0, "gu_ms": 319.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 301.0, "c0_ms": 326.0, "gd_ms": 345.0, "ge_ms": 345.0, "gu_ms": 349.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "feasible", "milp_ms": 278.0, "c0_ms": 309.0, "gd_ms": 308.0, "ge_ms": 308.0, "gu_ms": 308.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 246.0, "gd_ms": 301.0, "ge_ms": 301.0, "gu_ms": 301.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 284.75,
+      "milp_timeout_count": 1,
+      "c0_makespan": 297.0,
+      "best_greedy_name": "greedy_distance",
+      "best_greedy_makespan": 318.25,
+      "c0_gap_vs_milp_percent": 4.302019315188762,
+      "best_greedy_gap_vs_milp_percent": 11.76470588235294,
+      "c0_vs_best_greedy_percent": -6.677140612725845
+    }
+  ]
+}
+=========== D2b: scale-preserved sweep (pr/process_task=0.2, skill=3, scarce=1) ===========
+--- tc=24 pr=4 tr=4 scarce=1 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 286.0, "gd_ms": 352.0, "ge_ms": 352.0, "gu_ms": 352.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 321.0, "gd_ms": 324.0, "ge_ms": 324.0, "gu_ms": 343.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 231.0, "c0_ms": 239.0, "gd_ms": 275.0, "ge_ms": 275.0, "gu_ms": 275.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 267.0, "c0_ms": 269.0, "gd_ms": 311.0, "ge_ms": 311.0, "gu_ms": 311.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 264.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 278.75,
+      "best_greedy_name": "greedy_distance",
+      "best_greedy_makespan": 315.5,
+      "c0_gap_vs_milp_percent": 5.387523629489603,
+      "best_greedy_gap_vs_milp_percent": 19.281663516068054,
+      "c0_vs_best_greedy_percent": -11.648177496038036
+    }
+  ]
+}
+--- tc=42 pr=7 tr=7 scarce=1 ---
+{"profile": "process_scarce", "tc": 42, "seed": 301, "milp_status": "feasible", "milp_ms": 307.0, "c0_ms": 334.0, "gd_ms": 352.0, "ge_ms": 361.0, "gu_ms": 352.0}
+{"profile": "process_scarce", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 334.0, "c0_ms": 385.0, "gd_ms": 416.0, "ge_ms": 429.0, "gu_ms": 416.0}
+{"profile": "process_scarce", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 287.0, "c0_ms": 355.0, "gd_ms": 392.0, "ge_ms": 392.0, "gu_ms": 392.0}
+{"profile": "process_scarce", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 417.0, "c0_ms": 436.0, "gd_ms": 428.0, "ge_ms": 432.0, "gu_ms": 427.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    42
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 7,
+  "override_transport_robot_count": 7,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 42,
+      "milp_incumbent": 336.25,
+      "milp_timeout_count": 1,
+      "c0_makespan": 377.5,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 396.75,
+      "c0_gap_vs_milp_percent": 12.267657992565056,
+      "best_greedy_gap_vs_milp_percent": 17.992565055762082,
+      "c0_vs_best_greedy_percent": -4.851921865154379
+    }
+  ]
+}
+--- tc=60 pr=10 tr=10 scarce=1 ---
+{"profile": "process_scarce", "tc": 60, "seed": 301, "milp_status": "feasible", "milp_ms": 435.0, "c0_ms": 491.0, "gd_ms": 530.0, "ge_ms": 549.0, "gu_ms": 525.0}
+{"profile": "process_scarce", "tc": 60, "seed": 302, "milp_status": "feasible", "milp_ms": 469.0, "c0_ms": 537.0, "gd_ms": 524.0, "ge_ms": 524.0, "gu_ms": 524.0}
+{"profile": "process_scarce", "tc": 60, "seed": 303, "milp_status": "feasible", "milp_ms": 430.0, "c0_ms": 467.0, "gd_ms": 470.0, "ge_ms": 470.0, "gu_ms": 470.0}
+{"profile": "process_scarce", "tc": 60, "seed": 304, "milp_status": "feasible", "milp_ms": 423.0, "c0_ms": 490.0, "gd_ms": 509.0, "ge_ms": 509.0, "gu_ms": 509.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    60
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 10,
+  "override_transport_robot_count": 10,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 60,
+      "milp_incumbent": 439.25,
+      "milp_timeout_count": 4,
+      "c0_makespan": 496.25,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 507.0,
+      "c0_gap_vs_milp_percent": 12.976664769493453,
+      "best_greedy_gap_vs_milp_percent": 15.424018212862833,
+      "c0_vs_best_greedy_percent": -2.1203155818540433
+    }
+  ]
+}
+D2 DONE

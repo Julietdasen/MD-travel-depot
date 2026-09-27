@@ -6,7 +6,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
-from baselines.gurobi_md_residual_oracle import ForcedAssignmentBatch, ResidualMDState, ResidualOracleResult
+from baselines.md_oracle_types import ForcedAssignmentBatch, ResidualMDState, ResidualOracleResult
 
 
 @dataclass(frozen=True, slots=True)

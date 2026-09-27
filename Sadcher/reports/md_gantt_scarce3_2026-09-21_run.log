@@ -1,0 +1,13 @@
+loading reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt
+  tc=24 pr=4: makespan=307.0 wall=2.3s -> reports/md_gantt_scarce3_2026-09-21/seed3101/tc24_pr4
+  tc=42 pr=7: makespan=357.0 wall=6.6s -> reports/md_gantt_scarce3_2026-09-21/seed3101/tc42_pr7
+  tc=60 pr=10: makespan=597.0 wall=20.7s -> reports/md_gantt_scarce3_2026-09-21/seed3101/tc60_pr10
+loading reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_5.pt
+  tc=24 pr=4: makespan=307.0 wall=2.0s -> reports/md_gantt_scarce3_2026-09-21/seed3102/tc24_pr4
+  tc=42 pr=7: makespan=357.0 wall=6.8s -> reports/md_gantt_scarce3_2026-09-21/seed3102/tc42_pr7
+  tc=60 pr=10: makespan=597.0 wall=20.8s -> reports/md_gantt_scarce3_2026-09-21/seed3102/tc60_pr10
+loading reports/md_c0_pathC_v1_stability_2026-09-18/seed3103/training/checkpoint_epoch_5.pt
+  tc=24 pr=4: makespan=307.0 wall=2.0s -> reports/md_gantt_scarce3_2026-09-21/seed3103/tc24_pr4
+  tc=42 pr=7: makespan=357.0 wall=6.8s -> reports/md_gantt_scarce3_2026-09-21/seed3103/tc42_pr7
+  tc=60 pr=10: makespan=597.0 wall=20.9s -> reports/md_gantt_scarce3_2026-09-21/seed3103/tc60_pr10
+done -> reports/md_gantt_scarce3_2026-09-21

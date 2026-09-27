@@ -1,5 +1,5 @@
 import unittest
-from baselines.gurobi_md_residual_oracle import ResidualMDState, ResidualOracleStatus, enumerate_forced_batches
+from baselines.md_oracle_types import ResidualMDState, ResidualOracleStatus, enumerate_forced_batches
 from baselines.exact_online_action_oracle import CompleteOnlineAction, enumerate_complete_online_actions, solve_exact_action_continuation
 from simulation_environment.domain_model import MaterialDeliveryConfig, ProcessRobot, ProcessTask, SchedulingDomain, TransportRobot, TransportTask
 

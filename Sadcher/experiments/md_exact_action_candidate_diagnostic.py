@@ -15,9 +15,10 @@ from baselines.exact_online_action_oracle import (
     SCHEMA, CompleteOnlineAction, enumerate_complete_online_actions,
     label_to_json, solve_exact_action_continuation,
 )
-from baselines.gurobi_md_residual_oracle import (
-    ForcedAssignmentBatch, ResidualOracleStatus, solve_residual_forced_batch,
+from baselines.md_oracle_types import (
+    ForcedAssignmentBatch, ResidualOracleStatus,
 )
+from baselines.md_ortools_residual_oracle import solve_residual_forced_batch
 from data_generation.md_residual_generation import SnapshotCandidate, eligible_snapshot, residual_state
 from data_generation.md_residual_pipeline import collect_seed_snapshots
 from imitation_learning.md_residual_train import load_residual_tail_checkpoint

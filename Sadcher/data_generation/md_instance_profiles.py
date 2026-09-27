@@ -51,6 +51,24 @@ INSTANCE_PROFILES = {
             ),
         ),
         MDInstanceProfile(
+            "process_scarce_v2",
+            "State-dependent unlock: scarce skill, wide duration spread, stratified material downstream.",
+            (
+                ("task_count", 12),
+                ("transport_ratio", 0.25),
+                ("precedence_density", 0.50),
+                ("critical_path_length", 5),
+                ("capacity_slack", 0.2),
+                ("speed_ratio", 0.6),
+                ("process_robot_count", 3),
+                ("transport_robot_count", 2),
+                ("skill_count", 3),
+                ("scarce_skill_count", 1),
+                ("material_downstream_stratified", True),
+                ("process_duration_range", (3, 40)),
+            ),
+        ),
+        MDInstanceProfile(
             "transport_bottleneck",
             "Stresses material unlock choices with one slow, capacity-tight carrier.",
             (

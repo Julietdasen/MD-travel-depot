@@ -94,6 +94,93 @@ class MDAutoregressiveActionDistribution(TorchDistributionWrapper):
             dim=1,
         ).sum(dim=1)
 
+
+
+class MDIndependentActionDistribution(TorchDistributionWrapper):
+    """Non-autoregressive: each robot samples independently from the base action mask.
+
+    Contract identical to MDAutoregressiveActionDistribution:
+      - inputs: (B, R * A) reshaped to (B, R, A) logits
+      - action_mask: (B, R, A) from observation; robot-task feasibility
+      - sample()/deterministic_sample() returns (B, R) int64
+      - logp/entropy/kl return (B,)
+
+    Difference: the mask is fixed (base_mask), NOT conditioned on prior robots.
+    Conflict resolution (two robots picking same task) is delegated to the
+    deploy-side LearnedConstrainedDecoder via bipartite matching. During RL
+    training the environment already reports illegal_assignments; the policy
+    learns via reward shaping to avoid conflicts.
+
+    This entirely bypasses the CPU-side per-batch masking loop in
+    autoregressive_action_masks(), which was the real throughput bottleneck.
+    """
+
+    def __init__(self, inputs, model):
+        super().__init__(inputs, model)
+        self.context = model._last_action_context
+        self.robot_count = int(self.context["action_mask"].shape[1])
+        self.action_count = int(self.context["action_mask"].shape[2])
+        self.logits = self.inputs.reshape(-1, self.robot_count, self.action_count)
+        # Static per-robot mask lives on GPU; broadcast across sample steps.
+        base_mask = self.context["action_mask"].bool()
+        self._masked = self.logits.masked_fill(~base_mask, -1.0e9)
+
+    @staticmethod
+    def required_model_output_shape(action_space, model_config):
+        return int(sum(action_space.nvec))
+
+    def _draw(self, deterministic):
+        # One GPU-parallel batched sample across all robots.
+        if deterministic:
+            actions = torch.argmax(self._masked, dim=-1)
+        else:
+            flat_logits = self._masked.reshape(-1, self.action_count)
+            actions = torch.distributions.Categorical(logits=flat_logits).sample()
+            actions = actions.reshape(-1, self.robot_count)
+        self.last_sample = actions
+        return actions
+
+    def sample(self):
+        return self._draw(False)
+
+    def deterministic_sample(self):
+        return self._draw(True)
+
+    def logp(self, actions):
+        actions = actions.long().reshape(-1, self.robot_count)
+        flat_logits = self._masked.reshape(-1, self.action_count)
+        flat_actions = actions.reshape(-1)
+        return (
+            torch.distributions.Categorical(logits=flat_logits)
+            .log_prob(flat_actions)
+            .reshape(-1, self.robot_count)
+            .sum(dim=1)
+        )
+
+    def entropy(self):
+        flat_logits = self._masked.reshape(-1, self.action_count)
+        return (
+            torch.distributions.Categorical(logits=flat_logits)
+            .entropy()
+            .reshape(-1, self.robot_count)
+            .sum(dim=1)
+        )
+
+    def kl(self, other: ActionDistribution):
+        if not isinstance(other, MDIndependentActionDistribution):
+            raise TypeError("KL requires another MD independent distribution")
+        left = self._masked.reshape(-1, self.action_count)
+        right = other._masked.reshape(-1, self.action_count)
+        return (
+            torch.distributions.kl.kl_divergence(
+                torch.distributions.Categorical(logits=left),
+                torch.distributions.Categorical(logits=right),
+            )
+            .reshape(-1, self.robot_count)
+            .sum(dim=1)
+        )
+
+
 class MDRLlibModel(TorchModelV2, nn.Module):
     def __init__(self, obs_space, action_space, num_outputs, model_config, name, **kwargs):
         TorchModelV2.__init__(self, obs_space, action_space, num_outputs, model_config, name)

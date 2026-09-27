@@ -21,9 +21,6 @@ dependencies = [
     "tensorboard>=2.19.0",
     "skrl[torch]>=1.4.3",
     "ray[rllib]>=2.49,<2.50",
+    "ortools>=9.15.6755",
 ]
-
-[project.optional-dependencies]
-md-oracle = ["gurobipy>=13.0.3"]
-
 

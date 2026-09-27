@@ -8,6 +8,9 @@
 **/.ruff_cache/
 **/*.orig
 
+# Claude Code local session state (worktrees, transcripts)
+.claude/
+
 # Local experiment planning and generated data
 **/.scratch/
 **/.aris/

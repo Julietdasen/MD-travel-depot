@@ -1,0 +1,151 @@
+[19:00:06] EVAL START epoch=5 ckpt=reports/md_c0_pathC_v1_2026-09-21-depot/training/checkpoint_epoch_5.pt
+{"profile": "dependency_deep", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 472.0, "c0_ms": 499.0, "gd_ms": 505.0, "ge_ms": 575.0, "gu_ms": 505.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 371.0, "c0_ms": 488.0, "gd_ms": 521.0, "ge_ms": 521.0, "gu_ms": 543.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 289.0, "c0_ms": 472.0, "gd_ms": 409.0, "ge_ms": 409.0, "gu_ms": 409.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 405.0, "c0_ms": 468.0, "gd_ms": 523.0, "ge_ms": 523.0, "gu_ms": 523.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 376.0, "c0_ms": 769.0, "gd_ms": 828.0, "ge_ms": 914.0, "gu_ms": 828.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 463.0, "c0_ms": 764.0, "gd_ms": 812.0, "ge_ms": 811.0, "gu_ms": 713.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 682.0, "c0_ms": 804.0, "gd_ms": 925.0, "ge_ms": 925.0, "gu_ms": 925.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 348.0, "c0_ms": 707.0, "gd_ms": 660.0, "ge_ms": 660.0, "gu_ms": 657.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 301, "milp_status": "optimal", "milp_ms": 520.0, "c0_ms": 1247.0, "gd_ms": 1289.0, "ge_ms": 1289.0, "gu_ms": 1289.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 379.0, "c0_ms": 886.0, "gd_ms": 1220.0, "ge_ms": 1220.0, "gu_ms": 1220.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 421.0, "c0_ms": 1131.0, "gd_ms": 1262.0, "ge_ms": 1336.0, "gu_ms": 1336.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 422.0, "c0_ms": 1092.0, "gd_ms": 1476.0, "ge_ms": 1368.0, "gu_ms": 1405.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 301, "milp_status": "optimal", "milp_ms": 456.0, "c0_ms": 1658.0, "gd_ms": 1717.0, "ge_ms": 1717.0, "gu_ms": 1717.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 302, "milp_status": "optimal", "milp_ms": 550.0, "c0_ms": 1862.0, "gd_ms": 1824.0, "ge_ms": 1795.0, "gu_ms": 1763.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 303, "milp_status": "optimal", "milp_ms": 419.0, "c0_ms": 1653.0, "gd_ms": 1707.0, "ge_ms": 1707.0, "gu_ms": 1707.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 304, "milp_status": "optimal", "milp_ms": 475.0, "c0_ms": 1733.0, "gd_ms": 1672.0, "ge_ms": 1717.0, "gu_ms": 1672.0}
+{"profile": "process_scarce", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 443.0, "c0_ms": 516.0, "gd_ms": 513.0, "ge_ms": 513.0, "gu_ms": 513.0}
+{"profile": "process_scarce", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 567.0, "c0_ms": 799.0, "gd_ms": 751.0, "ge_ms": 751.0, "gu_ms": 751.0}
+{"profile": "process_scarce", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 529.0, "c0_ms": 741.0, "gd_ms": 572.0, "ge_ms": 572.0, "gu_ms": 572.0}
+{"profile": "process_scarce", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 329.0, "c0_ms": 474.0, "gd_ms": 474.0, "ge_ms": 474.0, "gu_ms": 474.0}
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 771.0, "c0_ms": 1112.0, "gd_ms": 1019.0, "ge_ms": 1019.0, "gu_ms": 1019.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 494.0, "c0_ms": 710.0, "gd_ms": 729.0, "ge_ms": 729.0, "gu_ms": 729.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 461.0, "c0_ms": 702.0, "gd_ms": 747.0, "ge_ms": 747.0, "gu_ms": 747.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 557.0, "c0_ms": 852.0, "gd_ms": 709.0, "ge_ms": 709.0, "gu_ms": 702.0}
+{"profile": "process_scarce", "tc": 42, "seed": 301, "milp_status": "feasible", "milp_ms": 399.0, "c0_ms": 818.0, "gd_ms": 910.0, "ge_ms": 918.0, "gu_ms": 910.0}
+{"profile": "process_scarce", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 851.0, "c0_ms": 1289.0, "gd_ms": 1309.0, "ge_ms": 1309.0, "gu_ms": 1309.0}
+{"profile": "process_scarce", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 458.0, "c0_ms": 898.0, "gd_ms": 967.0, "ge_ms": 967.0, "gu_ms": 967.0}
+{"profile": "process_scarce", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 637.0, "c0_ms": 1128.0, "gd_ms": 1152.0, "ge_ms": 1170.0, "gu_ms": 1170.0}
+{"profile": "process_scarce", "tc": 60, "seed": 301, "milp_status": "feasible", "milp_ms": 453.0, "c0_ms": 944.0, "gd_ms": 1016.0, "ge_ms": 1187.0, "gu_ms": 1016.0}
+{"profile": "process_scarce", "tc": 60, "seed": 302, "milp_status": "feasible", "milp_ms": 510.0, "c0_ms": 1399.0, "gd_ms": 1339.0, "ge_ms": 1339.0, "gu_ms": 1339.0}
+{"profile": "process_scarce", "tc": 60, "seed": 303, "milp_status": "feasible", "milp_ms": 488.0, "c0_ms": 1330.0, "gd_ms": 1195.0, "ge_ms": 1195.0, "gu_ms": 1195.0}
+{"profile": "process_scarce", "tc": 60, "seed": 304, "milp_status": "feasible", "milp_ms": 509.0, "c0_ms": 1169.0, "gd_ms": 1337.0, "ge_ms": 1337.0, "gu_ms": 1337.0}
+[19:40:46] EVAL DONE epoch=5 elapsed=2439.7s
+[19:40:46] EVAL START epoch=10 ckpt=reports/md_c0_pathC_v1_2026-09-21-depot/training/checkpoint_epoch_10.pt
+{"profile": "dependency_deep", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 472.0, "c0_ms": 506.0, "gd_ms": 505.0, "ge_ms": 575.0, "gu_ms": 505.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 371.0, "c0_ms": 488.0, "gd_ms": 521.0, "ge_ms": 521.0, "gu_ms": 543.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 289.0, "c0_ms": 472.0, "gd_ms": 409.0, "ge_ms": 409.0, "gu_ms": 409.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 405.0, "c0_ms": 468.0, "gd_ms": 523.0, "ge_ms": 523.0, "gu_ms": 523.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 376.0, "c0_ms": 749.0, "gd_ms": 828.0, "ge_ms": 914.0, "gu_ms": 828.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 463.0, "c0_ms": 764.0, "gd_ms": 812.0, "ge_ms": 811.0, "gu_ms": 713.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 682.0, "c0_ms": 880.0, "gd_ms": 925.0, "ge_ms": 925.0, "gu_ms": 925.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 348.0, "c0_ms": 717.0, "gd_ms": 660.0, "ge_ms": 660.0, "gu_ms": 657.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 301, "milp_status": "optimal", "milp_ms": 520.0, "c0_ms": 1246.0, "gd_ms": 1289.0, "ge_ms": 1289.0, "gu_ms": 1289.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 379.0, "c0_ms": 906.0, "gd_ms": 1220.0, "ge_ms": 1220.0, "gu_ms": 1220.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 421.0, "c0_ms": 1038.0, "gd_ms": 1262.0, "ge_ms": 1336.0, "gu_ms": 1336.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 422.0, "c0_ms": 1067.0, "gd_ms": 1476.0, "ge_ms": 1368.0, "gu_ms": 1405.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 301, "milp_status": "optimal", "milp_ms": 456.0, "c0_ms": 1589.0, "gd_ms": 1717.0, "ge_ms": 1717.0, "gu_ms": 1717.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 302, "milp_status": "optimal", "milp_ms": 550.0, "c0_ms": 1765.0, "gd_ms": 1824.0, "ge_ms": 1795.0, "gu_ms": 1763.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 303, "milp_status": "optimal", "milp_ms": 419.0, "c0_ms": 1599.0, "gd_ms": 1707.0, "ge_ms": 1707.0, "gu_ms": 1707.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 304, "milp_status": "optimal", "milp_ms": 475.0, "c0_ms": 1668.0, "gd_ms": 1672.0, "ge_ms": 1717.0, "gu_ms": 1672.0}
+{"profile": "process_scarce", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 443.0, "c0_ms": 516.0, "gd_ms": 513.0, "ge_ms": 513.0, "gu_ms": 513.0}
+{"profile": "process_scarce", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 567.0, "c0_ms": 757.0, "gd_ms": 751.0, "ge_ms": 751.0, "gu_ms": 751.0}
+{"profile": "process_scarce", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 529.0, "c0_ms": 741.0, "gd_ms": 572.0, "ge_ms": 572.0, "gu_ms": 572.0}
+{"profile": "process_scarce", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 329.0, "c0_ms": 474.0, "gd_ms": 474.0, "ge_ms": 474.0, "gu_ms": 474.0}
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 771.0, "c0_ms": 1112.0, "gd_ms": 1019.0, "ge_ms": 1019.0, "gu_ms": 1019.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 494.0, "c0_ms": 633.0, "gd_ms": 729.0, "ge_ms": 729.0, "gu_ms": 729.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 461.0, "c0_ms": 702.0, "gd_ms": 747.0, "ge_ms": 747.0, "gu_ms": 747.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 557.0, "c0_ms": 852.0, "gd_ms": 709.0, "ge_ms": 709.0, "gu_ms": 702.0}
+{"profile": "process_scarce", "tc": 42, "seed": 301, "milp_status": "feasible", "milp_ms": 401.0, "c0_ms": 811.0, "gd_ms": 910.0, "ge_ms": 918.0, "gu_ms": 910.0}
+{"profile": "process_scarce", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 851.0, "c0_ms": 1289.0, "gd_ms": 1309.0, "ge_ms": 1309.0, "gu_ms": 1309.0}
+{"profile": "process_scarce", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 458.0, "c0_ms": 929.0, "gd_ms": 967.0, "ge_ms": 967.0, "gu_ms": 967.0}
+{"profile": "process_scarce", "tc": 42, "seed": 304, "milp_status": "feasible", "milp_ms": 637.0, "c0_ms": 1166.0, "gd_ms": 1152.0, "ge_ms": 1170.0, "gu_ms": 1170.0}
+{"profile": "process_scarce", "tc": 60, "seed": 301, "milp_status": "feasible", "milp_ms": 453.0, "c0_ms": 940.0, "gd_ms": 1016.0, "ge_ms": 1187.0, "gu_ms": 1016.0}
+{"profile": "process_scarce", "tc": 60, "seed": 302, "milp_status": "feasible", "milp_ms": 507.0, "c0_ms": 1419.0, "gd_ms": 1339.0, "ge_ms": 1339.0, "gu_ms": 1339.0}
+{"profile": "process_scarce", "tc": 60, "seed": 303, "milp_status": "feasible", "milp_ms": 469.0, "c0_ms": 1182.0, "gd_ms": 1195.0, "ge_ms": 1195.0, "gu_ms": 1195.0}
+{"profile": "process_scarce", "tc": 60, "seed": 304, "milp_status": "feasible", "milp_ms": 505.0, "c0_ms": 1174.0, "gd_ms": 1337.0, "ge_ms": 1337.0, "gu_ms": 1337.0}
+[20:25:25] EVAL DONE epoch=10 elapsed=2679.3s
+[20:25:25] EVAL START epoch=15 ckpt=reports/md_c0_pathC_v1_2026-09-21-depot/training/checkpoint_epoch_15.pt
+{"profile": "dependency_deep", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 472.0, "c0_ms": 506.0, "gd_ms": 505.0, "ge_ms": 575.0, "gu_ms": 505.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 371.0, "c0_ms": 488.0, "gd_ms": 521.0, "ge_ms": 521.0, "gu_ms": 543.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 289.0, "c0_ms": 472.0, "gd_ms": 409.0, "ge_ms": 409.0, "gu_ms": 409.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 405.0, "c0_ms": 468.0, "gd_ms": 523.0, "ge_ms": 523.0, "gu_ms": 523.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 376.0, "c0_ms": 726.0, "gd_ms": 828.0, "ge_ms": 914.0, "gu_ms": 828.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 463.0, "c0_ms": 764.0, "gd_ms": 812.0, "ge_ms": 811.0, "gu_ms": 713.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 682.0, "c0_ms": 880.0, "gd_ms": 925.0, "ge_ms": 925.0, "gu_ms": 925.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 348.0, "c0_ms": 710.0, "gd_ms": 660.0, "ge_ms": 660.0, "gu_ms": 657.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 301, "milp_status": "optimal", "milp_ms": 520.0, "c0_ms": 1251.0, "gd_ms": 1289.0, "ge_ms": 1289.0, "gu_ms": 1289.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 379.0, "c0_ms": 959.0, "gd_ms": 1220.0, "ge_ms": 1220.0, "gu_ms": 1220.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 421.0, "c0_ms": 1037.0, "gd_ms": 1262.0, "ge_ms": 1336.0, "gu_ms": 1336.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 422.0, "c0_ms": 1067.0, "gd_ms": 1476.0, "ge_ms": 1368.0, "gu_ms": 1405.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 301, "milp_status": "optimal", "milp_ms": 456.0, "c0_ms": 1486.0, "gd_ms": 1717.0, "ge_ms": 1717.0, "gu_ms": 1717.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 302, "milp_status": "optimal", "milp_ms": 550.0, "c0_ms": 1770.0, "gd_ms": 1824.0, "ge_ms": 1795.0, "gu_ms": 1763.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 303, "milp_status": "optimal", "milp_ms": 419.0, "c0_ms": 1513.0, "gd_ms": 1707.0, "ge_ms": 1707.0, "gu_ms": 1707.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 304, "milp_status": "optimal", "milp_ms": 475.0, "c0_ms": 1596.0, "gd_ms": 1672.0, "ge_ms": 1717.0, "gu_ms": 1672.0}
+{"profile": "process_scarce", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 443.0, "c0_ms": 516.0, "gd_ms": 513.0, "ge_ms": 513.0, "gu_ms": 513.0}
+{"profile": "process_scarce", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 567.0, "c0_ms": 757.0, "gd_ms": 751.0, "ge_ms": 751.0, "gu_ms": 751.0}
+{"profile": "process_scarce", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 529.0, "c0_ms": 741.0, "gd_ms": 572.0, "ge_ms": 572.0, "gu_ms": 572.0}
+{"profile": "process_scarce", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 329.0, "c0_ms": 474.0, "gd_ms": 474.0, "ge_ms": 474.0, "gu_ms": 474.0}
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 771.0, "c0_ms": 1099.0, "gd_ms": 1019.0, "ge_ms": 1019.0, "gu_ms": 1019.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 494.0, "c0_ms": 633.0, "gd_ms": 729.0, "ge_ms": 729.0, "gu_ms": 729.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 461.0, "c0_ms": 699.0, "gd_ms": 747.0, "ge_ms": 747.0, "gu_ms": 747.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 557.0, "c0_ms": 872.0, "gd_ms": 709.0, "ge_ms": 709.0, "gu_ms": 702.0}
+{"profile": "process_scarce", "tc": 42, "seed": 301, "milp_status": "feasible", "milp_ms": 399.0, "c0_ms": 858.0, "gd_ms": 910.0, "ge_ms": 918.0, "gu_ms": 910.0}
+{"profile": "process_scarce", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 851.0, "c0_ms": 1290.0, "gd_ms": 1309.0, "ge_ms": 1309.0, "gu_ms": 1309.0}
+{"profile": "process_scarce", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 458.0, "c0_ms": 910.0, "gd_ms": 967.0, "ge_ms": 967.0, "gu_ms": 967.0}
+{"profile": "process_scarce", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 637.0, "c0_ms": 1030.0, "gd_ms": 1152.0, "ge_ms": 1170.0, "gu_ms": 1170.0}
+{"profile": "process_scarce", "tc": 60, "seed": 301, "milp_status": "feasible", "milp_ms": 455.0, "c0_ms": 960.0, "gd_ms": 1016.0, "ge_ms": 1187.0, "gu_ms": 1016.0}
+{"profile": "process_scarce", "tc": 60, "seed": 302, "milp_status": "feasible", "milp_ms": 516.0, "c0_ms": 1375.0, "gd_ms": 1339.0, "ge_ms": 1339.0, "gu_ms": 1339.0}
+{"profile": "process_scarce", "tc": 60, "seed": 303, "milp_status": "feasible", "milp_ms": 485.0, "c0_ms": 1089.0, "gd_ms": 1195.0, "ge_ms": 1195.0, "gu_ms": 1195.0}
+{"profile": "process_scarce", "tc": 60, "seed": 304, "milp_status": "feasible", "milp_ms": 506.0, "c0_ms": 1251.0, "gd_ms": 1337.0, "ge_ms": 1337.0, "gu_ms": 1337.0}
+[21:07:44] EVAL DONE epoch=15 elapsed=2538.2s
+[21:07:44] EVAL START epoch=20 ckpt=reports/md_c0_pathC_v1_2026-09-21-depot/training/checkpoint_epoch_20.pt
+{"profile": "dependency_deep", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 472.0, "c0_ms": 506.0, "gd_ms": 505.0, "ge_ms": 575.0, "gu_ms": 505.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 371.0, "c0_ms": 488.0, "gd_ms": 521.0, "ge_ms": 521.0, "gu_ms": 543.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 289.0, "c0_ms": 315.0, "gd_ms": 409.0, "ge_ms": 409.0, "gu_ms": 409.0}
+{"profile": "dependency_deep", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 405.0, "c0_ms": 468.0, "gd_ms": 523.0, "ge_ms": 523.0, "gu_ms": 523.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 376.0, "c0_ms": 726.0, "gd_ms": 828.0, "ge_ms": 914.0, "gu_ms": 828.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 463.0, "c0_ms": 764.0, "gd_ms": 812.0, "ge_ms": 811.0, "gu_ms": 713.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 682.0, "c0_ms": 802.0, "gd_ms": 925.0, "ge_ms": 925.0, "gu_ms": 925.0}
+{"profile": "dependency_deep", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 348.0, "c0_ms": 652.0, "gd_ms": 660.0, "ge_ms": 660.0, "gu_ms": 657.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 301, "milp_status": "optimal", "milp_ms": 520.0, "c0_ms": 1214.0, "gd_ms": 1289.0, "ge_ms": 1289.0, "gu_ms": 1289.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 379.0, "c0_ms": 953.0, "gd_ms": 1220.0, "ge_ms": 1220.0, "gu_ms": 1220.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 421.0, "c0_ms": 1037.0, "gd_ms": 1262.0, "ge_ms": 1336.0, "gu_ms": 1336.0}
+{"profile": "dependency_deep", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 422.0, "c0_ms": 967.0, "gd_ms": 1476.0, "ge_ms": 1368.0, "gu_ms": 1405.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 301, "milp_status": "optimal", "milp_ms": 456.0, "c0_ms": 1563.0, "gd_ms": 1717.0, "ge_ms": 1717.0, "gu_ms": 1717.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 302, "milp_status": "optimal", "milp_ms": 550.0, "c0_ms": 1597.0, "gd_ms": 1824.0, "ge_ms": 1795.0, "gu_ms": 1763.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 303, "milp_status": "optimal", "milp_ms": 419.0, "c0_ms": 1513.0, "gd_ms": 1707.0, "ge_ms": 1707.0, "gu_ms": 1707.0}
+{"profile": "dependency_deep", "tc": 60, "seed": 304, "milp_status": "optimal", "milp_ms": 475.0, "c0_ms": 1559.0, "gd_ms": 1672.0, "ge_ms": 1717.0, "gu_ms": 1672.0}
+{"profile": "process_scarce", "tc": 12, "seed": 301, "milp_status": "optimal", "milp_ms": 443.0, "c0_ms": 516.0, "gd_ms": 513.0, "ge_ms": 513.0, "gu_ms": 513.0}
+{"profile": "process_scarce", "tc": 12, "seed": 302, "milp_status": "optimal", "milp_ms": 567.0, "c0_ms": 751.0, "gd_ms": 751.0, "ge_ms": 751.0, "gu_ms": 751.0}
+{"profile": "process_scarce", "tc": 12, "seed": 303, "milp_status": "optimal", "milp_ms": 529.0, "c0_ms": 729.0, "gd_ms": 572.0, "ge_ms": 572.0, "gu_ms": 572.0}
+{"profile": "process_scarce", "tc": 12, "seed": 304, "milp_status": "optimal", "milp_ms": 329.0, "c0_ms": 474.0, "gd_ms": 474.0, "ge_ms": 474.0, "gu_ms": 474.0}
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 771.0, "c0_ms": 1099.0, "gd_ms": 1019.0, "ge_ms": 1019.0, "gu_ms": 1019.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 494.0, "c0_ms": 627.0, "gd_ms": 729.0, "ge_ms": 729.0, "gu_ms": 729.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 461.0, "c0_ms": 699.0, "gd_ms": 747.0, "ge_ms": 747.0, "gu_ms": 747.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 557.0, "c0_ms": 805.0, "gd_ms": 709.0, "ge_ms": 709.0, "gu_ms": 702.0}
+{"profile": "process_scarce", "tc": 42, "seed": 301, "milp_status": "feasible", "milp_ms": 396.0, "c0_ms": 763.0, "gd_ms": 910.0, "ge_ms": 918.0, "gu_ms": 910.0}
+{"profile": "process_scarce", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 851.0, "c0_ms": 1290.0, "gd_ms": 1309.0, "ge_ms": 1309.0, "gu_ms": 1309.0}
+{"profile": "process_scarce", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 458.0, "c0_ms": 899.0, "gd_ms": 967.0, "ge_ms": 967.0, "gu_ms": 967.0}
+{"profile": "process_scarce", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 637.0, "c0_ms": 1057.0, "gd_ms": 1152.0, "ge_ms": 1170.0, "gu_ms": 1170.0}
+{"profile": "process_scarce", "tc": 60, "seed": 301, "milp_status": "feasible", "milp_ms": 448.0, "c0_ms": 893.0, "gd_ms": 1016.0, "ge_ms": 1187.0, "gu_ms": 1016.0}
+{"profile": "process_scarce", "tc": 60, "seed": 302, "milp_status": "feasible", "milp_ms": 516.0, "c0_ms": 1231.0, "gd_ms": 1339.0, "ge_ms": 1339.0, "gu_ms": 1339.0}
+{"profile": "process_scarce", "tc": 60, "seed": 303, "milp_status": "feasible", "milp_ms": 497.0, "c0_ms": 1089.0, "gd_ms": 1195.0, "ge_ms": 1195.0, "gu_ms": 1195.0}
+{"profile": "process_scarce", "tc": 60, "seed": 304, "milp_status": "feasible", "milp_ms": 503.0, "c0_ms": 1302.0, "gd_ms": 1337.0, "ge_ms": 1337.0, "gu_ms": 1337.0}
+[21:51:43] EVAL DONE epoch=20 elapsed=2639.4s
+{
+  "primary_verdict": "FAILED",
+  "p60_ps_by_epoch": {
+    "5": 1210.5,
+    "10": 1178.75,
+    "15": 1168.75,
+    "20": 1128.75
+  },
+  "tier_non_regression_by_epoch": {
+    "5": 0,
+    "10": 0,
+    "15": 0,
+    "20": 0
+  }
+}

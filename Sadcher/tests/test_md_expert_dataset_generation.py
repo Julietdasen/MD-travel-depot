@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from baselines.gurobi_md_oracle import (
+from baselines.md_oracle_types import (
     GurobiOracleResult,
     GurobiOracleStatus,
     OracleAction,

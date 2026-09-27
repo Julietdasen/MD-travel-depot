@@ -35,6 +35,7 @@ class ProcessExecutionRecord(TypedDict):
     started_at: int
     completed_at: int | None
     waiting_duration: int
+    travel_duration: int
     service_duration: float
     occupied_duration: int | None
 

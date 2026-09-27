@@ -170,31 +170,6 @@ def collect_seed_snapshots(
     return tuple(candidates)
 
 
-def _probe_worker(_: int) -> bool:
-    try:
-        import gurobipy as gp
-
-        model = gp.Model()
-        model.Params.OutputFlag = 0
-        value = model.addVar(lb=0.0)
-        model.setObjective(value)
-        model.optimize()
-        return int(model.Status) == int(gp.GRB.OPTIMAL)
-    except Exception:
-        return False
-
-
-def probe_gurobi_workers(requested: int) -> int:
-    if requested <= 1:
-        return 1
-    try:
-        with concurrent.futures.ProcessPoolExecutor(max_workers=requested) as pool:
-            supported = tuple(pool.map(_probe_worker, range(requested)))
-    except Exception:
-        return 1
-    return requested if all(supported) else 1
-
-
 def _shard_name(candidate: SnapshotCandidate, ordinal: int) -> str:
     method = candidate.rollout_method.replace("/", "_")
     return f"{candidate.seed}_{method}_t{candidate.simulator.time}.json"
@@ -275,7 +250,7 @@ def generate_sharded_dataset(
             batch_root / split / shard_path.stem,
         ))
 
-    workers = probe_gurobi_workers(config.workers)
+    workers = max(1, int(config.workers))
     if workers == 1:
         for job in jobs:
             _label_shard(job)

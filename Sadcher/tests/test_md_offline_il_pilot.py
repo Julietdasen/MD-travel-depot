@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from baselines.gurobi_md_oracle import OracleAction
+from baselines.md_oracle_types import OracleAction
 from data_generation.md_dataset import MDInstanceRecord
 from data_generation.md_expert_dataset import (
     ExpertQuality,
@@ -72,7 +72,9 @@ class MDOfflineILPilotTests(unittest.TestCase):
             save_md_expert_record(dataset / "validation.json", validation_record)
 
             with (
-                patch("baselines.gurobi_md_oracle.solve_gurobi_md_oracle") as gurobi,
+                patch(
+                    "baselines.md_ortools_scheduler.solve_ortools_md_oracle"
+                ) as ortools,
                 patch("pulp.LpProblem.solve") as pulp_solve,
             ):
                 paths = run_md_offline_il_pilot(
@@ -87,7 +89,7 @@ class MDOfflineILPilotTests(unittest.TestCase):
                     run_date="2026-08-27",
                 )
 
-            gurobi.assert_not_called()
+            ortools.assert_not_called()
             pulp_solve.assert_not_called()
             self.assertEqual(paths["summary"].parent, output)
             self.assertTrue(all(path.is_file() for path in paths.values()))

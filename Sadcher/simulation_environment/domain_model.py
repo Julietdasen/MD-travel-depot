@@ -135,6 +135,7 @@ class ProcessRobot:
     location: Location
     capabilities: tuple[bool, ...]
     speed: float = 1.0
+    home_location: Location | None = None
     robot_type: RobotType = field(default=RobotType.PROCESS_ROBOT, init=False)
 
     def __post_init__(self) -> None:
@@ -144,6 +145,8 @@ class ProcessRobot:
             self, "capabilities", _booleans(self.capabilities, "capabilities")
         )
         object.__setattr__(self, "speed", _positive_number(self.speed, "speed"))
+        home = self.home_location if self.home_location is not None else self.location
+        object.__setattr__(self, "home_location", _location(home, "home_location"))
 
 
 @dataclass(frozen=True, slots=True)

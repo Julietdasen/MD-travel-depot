@@ -14,11 +14,11 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
-from baselines.gurobi_md_oracle import (
+from baselines.md_oracle_types import (
     GurobiOracleStatus,
     replay_oracle_actions,
-    solve_gurobi_md_oracle,
 )
+from baselines.md_oracle_dispatch import solve_md_oracle
 from experiments.md_c0_end_to_end_diagnostic_pilot import (
     FROZEN_INSTANCE_SEEDS,
     MAX_ROLLOUT_STEPS,
@@ -317,7 +317,7 @@ def _run_milp(
     threads: int = MILP_THREADS,
 ) -> dict[str, object]:
     started = time.perf_counter()
-    oracle = solve_gurobi_md_oracle(
+    oracle = solve_md_oracle(
         instance.generated.domain,
         exit_location=EXIT_LOCATION,
         time_limit_seconds=time_limit_seconds,
@@ -1058,7 +1058,7 @@ def _protocol_payload(
             "C0_seed3103",
         ],
         "milp": {
-            "implementation": "baselines.gurobi_md_oracle",
+            "implementation": "baselines.md_oracle_dispatch",
             "time_limit_seconds": milp_time_limit_seconds,
             "threads": milp_threads,
             "objective": "minimize_latest_robot_exit_return",

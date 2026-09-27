@@ -1,0 +1,203 @@
+[16:16:42] legacy symlinks: records=250 manifests=3 legacy_root=reports/md_c0_milp_supervised_scale_pilot_2026-09-13/dataset
+[16:16:42] SHARD start profile=process_scarce tc=24 count=50 seed_start=86000 time_limit=300s process_robots=4 transport_robots=4 critical_path=8
+[16:17:46] SHARD done profile=process_scarce tc=24 generated=50/50 skipped=0 elapsed=64.1s
+[16:17:46] SHARD start profile=process_scarce tc=42 count=50 seed_start=86200 time_limit=300s process_robots=7 transport_robots=7 critical_path=14
+[16:35:53] SHARD done profile=process_scarce tc=42 generated=50/50 skipped=0 elapsed=1086.5s
+[16:35:53] SHARD start profile=process_scarce tc=60 count=50 seed_start=86400 time_limit=300s process_robots=10 transport_robots=10 critical_path=20
+[16:47:53] SHARD done profile=process_scarce tc=60 generated=50/50 skipped=0 elapsed=720.8s
+[16:47:53] SHARD start profile=dependency_deep tc=24 count=50 seed_start=87000 time_limit=300s process_robots=6 transport_robots=4 critical_path=10
+[16:48:31] SHARD done profile=dependency_deep tc=24 generated=50/50 skipped=0 elapsed=37.6s
+[16:48:31] SHARD start profile=dependency_deep tc=42 count=50 seed_start=87200 time_limit=300s process_robots=10 transport_robots=7 critical_path=18
+[16:52:06] SHARD done profile=dependency_deep tc=42 generated=50/50 skipped=0 elapsed=214.5s
+[16:52:06] SHARD start profile=dependency_deep tc=60 count=50 seed_start=87400 time_limit=300s process_robots=15 transport_robots=10 critical_path=25
+[17:05:59] SHARD done profile=dependency_deep tc=60 generated=50/50 skipped=0 elapsed=833.0s
+[17:10:15] epoch 001 train=0.339009 val=0.352721 best=0.354865 (new best) elapsed=66.7s
+[17:11:17] epoch 002 train=0.336597 val=0.351212 best=0.352721 (new best) elapsed=62.4s
+[17:12:21] epoch 003 train=0.334552 val=0.350133 best=0.351212 (new best) elapsed=63.2s
+[17:13:30] epoch 004 train=0.333069 val=0.349179 best=0.350133 (new best) elapsed=69.2s
+[17:14:53] epoch 005 train=0.332139 val=0.348451 best=0.349179 (new best) elapsed=83.4s
+[17:16:23] epoch 006 train=0.330048 val=0.347903 best=0.348451 (new best) elapsed=89.6s
+[17:17:39] epoch 007 train=0.328825 val=0.347359 best=0.347903 (new best) elapsed=76.0s
+[17:18:48] epoch 008 train=0.329217 val=0.346781 best=0.347359 (new best) elapsed=69.4s
+[17:19:58] epoch 009 train=0.328606 val=0.346310 best=0.346781 (new best) elapsed=69.9s
+[17:21:08] epoch 010 train=0.327854 val=0.345897 best=0.346310 (new best) elapsed=69.5s
+[17:22:17] epoch 011 train=0.327224 val=0.345531 best=0.345897 (new best) elapsed=69.4s
+[17:23:26] epoch 012 train=0.326600 val=0.345245 best=0.345531 (new best) elapsed=69.3s
+[17:24:35] epoch 013 train=0.325761 val=0.344887 best=0.345245 (new best) elapsed=69.1s
+[17:25:45] epoch 014 train=0.325541 val=0.344618 best=0.344887 (new best) elapsed=69.1s
+[17:26:51] epoch 015 train=0.325085 val=0.344302 best=0.344618 (new best) elapsed=66.9s
+[17:28:00] epoch 016 train=0.324275 val=0.344143 best=0.344302 (new best) elapsed=68.2s
+[17:29:09] epoch 017 train=0.324233 val=0.343923 best=0.344143 (new best) elapsed=69.4s
+[17:30:37] epoch 018 train=0.324423 val=0.343621 best=0.343923 (new best) elapsed=87.7s
+[17:32:11] epoch 019 train=0.324708 val=0.343371 best=0.343621 (new best) elapsed=94.7s
+[17:33:22] epoch 020 train=0.324331 val=0.343274 best=0.343371 (new best) elapsed=70.8s
+{
+  "schema": "md-c0-pathA-scaled-finetune-1.0",
+  "output_root": "reports/md_c0_pathA_scaled_finetune_2026-09-17",
+  "pretrained_checkpoint": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/training/best_checkpoint.pt",
+  "dataset_generation": {
+    "schema": "md-c0-pathA-scaled-finetune-1.0",
+    "started_at": 1789633002.5127823,
+    "finished_at": 1789635959.0509002,
+    "legacy_dataset": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/dataset",
+    "legacy_symlink_counts": {
+      "records": 250,
+      "manifests": 3
+    },
+    "profiles": [
+      "process_scarce",
+      "dependency_deep"
+    ],
+    "task_counts": [
+      24,
+      42,
+      60
+    ],
+    "count_per_tier": 50,
+    "milp_time_limit_seconds": 300.0,
+    "shards": [
+      {
+        "profile": "process_scarce",
+        "task_count": 24,
+        "seed_start": 86000,
+        "count": 50,
+        "generated": 50,
+        "skipped": 0,
+        "elapsed_seconds": 64.11952600697987,
+        "config": {
+          "transport_ratio": 0.16666666666666666,
+          "precedence_density": 0.3,
+          "critical_path_length": 8,
+          "capacity_slack": 0.2,
+          "speed_ratio": 0.8,
+          "process_robot_count": 4,
+          "transport_robot_count": 4,
+          "skill_count": 3,
+          "time_limit_seconds": 300.0,
+          "threads": 4
+        },
+        "skipped_records": []
+      },
+      {
+        "profile": "process_scarce",
+        "task_count": 42,
+        "seed_start": 86200,
+        "count": 50,
+        "generated": 50,
+        "skipped": 0,
+        "elapsed_seconds": 1086.5076283409726,
+        "config": {
+          "transport_ratio": 0.16666666666666666,
+          "precedence_density": 0.3,
+          "critical_path_length": 14,
+          "capacity_slack": 0.2,
+          "speed_ratio": 0.8,
+          "process_robot_count": 7,
+          "transport_robot_count": 7,
+          "skill_count": 3,
+          "time_limit_seconds": 300.0,
+          "threads": 4
+        },
+        "skipped_records": []
+      },
+      {
+        "profile": "process_scarce",
+        "task_count": 60,
+        "seed_start": 86400,
+        "count": 50,
+        "generated": 50,
+        "skipped": 0,
+        "elapsed_seconds": 720.8022203731816,
+        "config": {
+          "transport_ratio": 0.16666666666666666,
+          "precedence_density": 0.3,
+          "critical_path_length": 20,
+          "capacity_slack": 0.2,
+          "speed_ratio": 0.8,
+          "process_robot_count": 10,
+          "transport_robot_count": 10,
+          "skill_count": 3,
+          "time_limit_seconds": 300.0,
+          "threads": 4
+        },
+        "skipped_records": []
+      },
+      {
+        "profile": "dependency_deep",
+        "task_count": 24,
+        "seed_start": 87000,
+        "count": 50,
+        "generated": 50,
+        "skipped": 0,
+        "elapsed_seconds": 37.608402107143775,
+        "config": {
+          "transport_ratio": 0.25,
+          "precedence_density": 0.45,
+          "critical_path_length": 10,
+          "capacity_slack": 0.2,
+          "speed_ratio": 0.8,
+          "process_robot_count": 6,
+          "transport_robot_count": 4,
+          "skill_count": 3,
+          "time_limit_seconds": 300.0,
+          "threads": 4
+        },
+        "skipped_records": []
+      },
+      {
+        "profile": "dependency_deep",
+        "task_count": 42,
+        "seed_start": 87200,
+        "count": 50,
+        "generated": 50,
+        "skipped": 0,
+        "elapsed_seconds": 214.52748989779502,
+        "config": {
+          "transport_ratio": 0.25,
+          "precedence_density": 0.45,
+          "critical_path_length": 18,
+          "capacity_slack": 0.2,
+          "speed_ratio": 0.8,
+          "process_robot_count": 10,
+          "transport_robot_count": 7,
+          "skill_count": 3,
+          "time_limit_seconds": 300.0,
+          "threads": 4
+        },
+        "skipped_records": []
+      },
+      {
+        "profile": "dependency_deep",
+        "task_count": 60,
+        "seed_start": 87400,
+        "count": 50,
+        "generated": 50,
+        "skipped": 0,
+        "elapsed_seconds": 832.9570972421207,
+        "config": {
+          "transport_ratio": 0.25,
+          "precedence_density": 0.45,
+          "critical_path_length": 25,
+          "capacity_slack": 0.2,
+          "speed_ratio": 0.8,
+          "process_robot_count": 15,
+          "transport_robot_count": 10,
+          "skill_count": 3,
+          "time_limit_seconds": 300.0,
+          "threads": 4
+        },
+        "skipped_records": []
+      }
+    ]
+  },
+  "training": {
+    "checkpoint_path": "reports/md_c0_pathA_scaled_finetune_2026-09-17/training/best_checkpoint.pt",
+    "summary_path": "reports/md_c0_pathA_scaled_finetune_2026-09-17/training/training_summary.json",
+    "best_validation_loss": 0.34327384233474734,
+    "pretrained_validation_loss": 0.354864962067869,
+    "best_epoch": 20,
+    "epochs_run": 20,
+    "train_sample_count": 9838,
+    "validation_sample_count": 1291
+  }
+}

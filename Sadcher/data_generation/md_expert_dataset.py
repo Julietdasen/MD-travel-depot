@@ -9,7 +9,7 @@ from enum import Enum
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
-from baselines.gurobi_md_oracle import (
+from baselines.md_oracle_types import (
     GurobiOracleResult,
     GurobiOracleStatus,
     OracleAction,

@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 import torch
 
-from baselines.gurobi_md_oracle import OracleAction
+from baselines.md_oracle_types import OracleAction
 from data_generation.md_dataset import MDInstanceRecord
 from data_generation.md_expert_dataset import (
     ExpertQuality,
@@ -149,13 +149,13 @@ class MDOfflineILTests(unittest.TestCase):
 
             with (
                 patch(
-                    "baselines.gurobi_md_oracle.solve_gurobi_md_oracle"
-                ) as gurobi_solve,
+                    "baselines.md_ortools_scheduler.solve_ortools_md_oracle"
+                ) as ortools_solve,
                 patch("pulp.LpProblem.solve") as pulp_solve,
             ):
                 result = train_md_policy(dataset, output, config=config)
 
-            gurobi_solve.assert_not_called()
+            ortools_solve.assert_not_called()
             pulp_solve.assert_not_called()
             self.assertEqual(result.train_instance_ids, (train_record.instance_id,))
             self.assertEqual(
@@ -216,12 +216,14 @@ class MDOfflineILTests(unittest.TestCase):
             )
 
             with (
-                patch("baselines.gurobi_md_oracle.solve_gurobi_md_oracle") as gurobi,
+                patch(
+                    "baselines.md_ortools_scheduler.solve_ortools_md_oracle"
+                ) as ortools,
                 patch("pulp.LpProblem.solve") as pulp_solve,
             ):
                 result = train_md_policy(dataset, root / "output", config=config)
 
-            gurobi.assert_not_called()
+            ortools.assert_not_called()
             pulp_solve.assert_not_called()
             _, checkpoint = load_md_policy_checkpoint(result.checkpoint_path)
             self.assertTrue(checkpoint["training_enhancements"]["use_structured_loss"])

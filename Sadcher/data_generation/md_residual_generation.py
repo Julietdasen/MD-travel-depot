@@ -7,7 +7,8 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Callable, Mapping, Sequence
 
-from baselines.gurobi_md_residual_oracle import ForcedAssignmentBatch, ResidualMDState, ResidualOracleResult, ResidualOracleStatus, enumerate_forced_batches, solve_residual_forced_batch
+from baselines.md_oracle_types import ForcedAssignmentBatch, ResidualMDState, ResidualOracleResult, ResidualOracleStatus, enumerate_forced_batches
+from baselines.md_ortools_residual_oracle import solve_residual_forced_batch
 from data_generation.md_residual_dataset import (
     LEGACY_RESIDUAL_SPLIT_PLAN,
     ResidualDecisionSample,

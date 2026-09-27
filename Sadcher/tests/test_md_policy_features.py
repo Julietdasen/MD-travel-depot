@@ -2,7 +2,7 @@ import unittest
 
 import torch
 
-from baselines.gurobi_md_oracle import OracleAction
+from baselines.md_oracle_types import OracleAction
 from data_generation.md_dataset import MDInstanceRecord
 from data_generation.md_expert_dataset import (
     ExpertQuality,

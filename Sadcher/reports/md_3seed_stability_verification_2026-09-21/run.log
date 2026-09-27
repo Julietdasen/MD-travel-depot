@@ -1,0 +1,158 @@
+=== 3-seed verification start ===
+--- ckpt=seed3102 tc=60 pr=10 scarce=3 ---
+{"profile": "process_scarce", "tc": 60, "seed": 301, "milp_status": "feasible", "milp_ms": 585.0, "c0_ms": 597.0, "gd_ms": 675.0, "ge_ms": 708.0, "gu_ms": 635.0}
+{"profile": "process_scarce", "tc": 60, "seed": 302, "milp_status": "feasible", "milp_ms": 523.0, "c0_ms": 583.0, "gd_ms": 586.0, "ge_ms": 586.0, "gu_ms": 586.0}
+{"profile": "process_scarce", "tc": 60, "seed": 303, "milp_status": "feasible", "milp_ms": 498.0, "c0_ms": 524.0, "gd_ms": 593.0, "ge_ms": 593.0, "gu_ms": 593.0}
+{"profile": "process_scarce", "tc": 60, "seed": 304, "milp_status": "feasible", "milp_ms": 507.0, "c0_ms": 566.0, "gd_ms": 613.0, "ge_ms": 613.0, "gu_ms": 619.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    60
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 10,
+  "override_transport_robot_count": 10,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 60,
+      "milp_incumbent": 528.25,
+      "milp_timeout_count": 4,
+      "c0_makespan": 567.5,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 608.25,
+      "c0_gap_vs_milp_percent": 7.430194036914339,
+      "best_greedy_gap_vs_milp_percent": 15.144344533838144,
+      "c0_vs_best_greedy_percent": -6.699547883271681
+    }
+  ]
+}
+--- ckpt=seed3102 tc=24 pr=4 scarce=1 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 286.0, "gd_ms": 352.0, "ge_ms": 352.0, "gu_ms": 352.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 321.0, "gd_ms": 324.0, "ge_ms": 324.0, "gu_ms": 343.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 231.0, "c0_ms": 239.0, "gd_ms": 275.0, "ge_ms": 275.0, "gu_ms": 275.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 267.0, "c0_ms": 269.0, "gd_ms": 311.0, "ge_ms": 311.0, "gu_ms": 311.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 264.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 278.75,
+      "best_greedy_name": "greedy_distance",
+      "best_greedy_makespan": 315.5,
+      "c0_gap_vs_milp_percent": 5.387523629489603,
+      "best_greedy_gap_vs_milp_percent": 19.281663516068054,
+      "c0_vs_best_greedy_percent": -11.648177496038036
+    }
+  ]
+}
+--- ckpt=seed3103 tc=60 pr=10 scarce=3 ---
+{"profile": "process_scarce", "tc": 60, "seed": 301, "milp_status": "feasible", "milp_ms": 585.0, "c0_ms": 597.0, "gd_ms": 675.0, "ge_ms": 708.0, "gu_ms": 635.0}
+{"profile": "process_scarce", "tc": 60, "seed": 302, "milp_status": "feasible", "milp_ms": 523.0, "c0_ms": 583.0, "gd_ms": 586.0, "ge_ms": 586.0, "gu_ms": 586.0}
+{"profile": "process_scarce", "tc": 60, "seed": 303, "milp_status": "feasible", "milp_ms": 498.0, "c0_ms": 524.0, "gd_ms": 593.0, "ge_ms": 593.0, "gu_ms": 593.0}
+{"profile": "process_scarce", "tc": 60, "seed": 304, "milp_status": "feasible", "milp_ms": 507.0, "c0_ms": 566.0, "gd_ms": 613.0, "ge_ms": 613.0, "gu_ms": 619.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3103/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    60
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 10,
+  "override_transport_robot_count": 10,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 60,
+      "milp_incumbent": 528.25,
+      "milp_timeout_count": 4,
+      "c0_makespan": 567.5,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 608.25,
+      "c0_gap_vs_milp_percent": 7.430194036914339,
+      "best_greedy_gap_vs_milp_percent": 15.144344533838144,
+      "c0_vs_best_greedy_percent": -6.699547883271681
+    }
+  ]
+}
+--- ckpt=seed3103 tc=24 pr=4 scarce=1 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 286.0, "gd_ms": 352.0, "ge_ms": 352.0, "gu_ms": 352.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 321.0, "gd_ms": 324.0, "ge_ms": 324.0, "gu_ms": 343.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 231.0, "c0_ms": 239.0, "gd_ms": 275.0, "ge_ms": 275.0, "gu_ms": 275.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 267.0, "c0_ms": 269.0, "gd_ms": 311.0, "ge_ms": 311.0, "gu_ms": 311.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3103/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 264.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 278.75,
+      "best_greedy_name": "greedy_distance",
+      "best_greedy_makespan": 315.5,
+      "c0_gap_vs_milp_percent": 5.387523629489603,
+      "best_greedy_gap_vs_milp_percent": 19.281663516068054,
+      "c0_vs_best_greedy_percent": -11.648177496038036
+    }
+  ]
+}
+=== 3-SEED VERIFICATION DONE ===

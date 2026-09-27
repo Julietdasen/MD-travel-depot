@@ -1,0 +1,88 @@
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 771.0, "c0_ms": 1086.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 494.0, "c0_ms": 712.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 461.0, "c0_ms": 701.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 557.0, "c0_ms": 850.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 42, "seed": 301, "milp_status": "feasible", "milp_ms": 393.0, "c0_ms": 887.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 42, "seed": 302, "milp_status": "feasible", "milp_ms": 851.0, "c0_ms": 1277.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 42, "seed": 303, "milp_status": "feasible", "milp_ms": 463.0, "c0_ms": 962.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 42, "seed": 304, "milp_status": "feasible", "milp_ms": 637.0, "c0_ms": 1157.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "dependency_deep", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 376.0, "c0_ms": 790.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "dependency_deep", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 463.0, "c0_ms": 782.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "dependency_deep", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 682.0, "c0_ms": 921.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "dependency_deep", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 348.0, "c0_ms": 717.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "dependency_deep", "tc": 42, "seed": 301, "milp_status": "optimal", "milp_ms": 520.0, "c0_ms": 1150.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "dependency_deep", "tc": 42, "seed": 302, "milp_status": "optimal", "milp_ms": 379.0, "c0_ms": 947.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "dependency_deep", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 421.0, "c0_ms": 1171.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "dependency_deep", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 422.0, "c0_ms": 1208.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_baseline_2026-09-21-depot/training/best_checkpoint.pt",
+  "profiles": [
+    "process_scarce",
+    "dependency_deep"
+  ],
+  "task_counts": [
+    24,
+    42
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": null,
+  "override_transport_robot_count": null,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 60.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 570.75,
+      "milp_timeout_count": 0,
+      "c0_makespan": 837.25,
+      "best_greedy_name": "n/a",
+      "best_greedy_makespan": null,
+      "c0_gap_vs_milp_percent": 46.69294787560227,
+      "best_greedy_gap_vs_milp_percent": null,
+      "c0_vs_best_greedy_percent": null
+    },
+    {
+      "profile": "process_scarce",
+      "task_count": 42,
+      "milp_incumbent": 586.0,
+      "milp_timeout_count": 4,
+      "c0_makespan": 1070.75,
+      "best_greedy_name": "n/a",
+      "best_greedy_makespan": null,
+      "c0_gap_vs_milp_percent": 82.72184300341297,
+      "best_greedy_gap_vs_milp_percent": null,
+      "c0_vs_best_greedy_percent": null
+    },
+    {
+      "profile": "dependency_deep",
+      "task_count": 24,
+      "milp_incumbent": 467.25,
+      "milp_timeout_count": 0,
+      "c0_makespan": 802.5,
+      "best_greedy_name": "n/a",
+      "best_greedy_makespan": null,
+      "c0_gap_vs_milp_percent": 71.74959871589085,
+      "best_greedy_gap_vs_milp_percent": null,
+      "c0_vs_best_greedy_percent": null
+    },
+    {
+      "profile": "dependency_deep",
+      "task_count": 42,
+      "milp_incumbent": 435.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 1119.0,
+      "best_greedy_name": "n/a",
+      "best_greedy_makespan": null,
+      "c0_gap_vs_milp_percent": 156.94603903559127,
+      "best_greedy_gap_vs_milp_percent": null,
+      "c0_vs_best_greedy_percent": null
+    }
+  ]
+}

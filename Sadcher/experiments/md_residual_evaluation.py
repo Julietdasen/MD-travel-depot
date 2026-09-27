@@ -11,11 +11,11 @@ from typing import Mapping, Sequence
 
 import torch
 
-from baselines.gurobi_md_oracle import (
+from baselines.md_oracle_types import (
     GurobiOracleStatus,
     replay_oracle_actions,
-    solve_gurobi_md_oracle,
 )
+from baselines.md_oracle_dispatch import solve_md_oracle
 from data_generation.md_instance_generator import MDGeneratorConfig, generate_md_instance
 from data_generation.md_residual_dataset import FORMAL_RESIDUAL_SPLIT_PLAN
 from data_generation.md_residual_generation import (
@@ -190,7 +190,7 @@ def _run_online(
 
 def _run_milp(domain, *, instance_id: str, instance_seed: int, time_limit: float, max_steps: int) -> dict[str, object]:
     started = time.perf_counter()
-    result = solve_gurobi_md_oracle(
+    result = solve_md_oracle(
         domain,
         time_limit_seconds=time_limit,
         threads=1,

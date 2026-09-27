@@ -1,0 +1,267 @@
+=== [Tue 15 Sep 2026 08:10:58 PM CST] START smoke indep-dist er=8 GPU-per-worker (tc=24, 3 iter) ===
+2026-09-15 20:11:02,638	WARNING utils.py:429 -- Detecting docker specified CPUs. In previous versions of Ray, CPU detection in containers was incorrect. Please ensure that Ray has enough CPUs allocated. As a temporary workaround to revert to the prior behavior, set `RAY_USE_MULTIPROCESSING_CPU_COUNT=1` as an env var before starting Ray. Set the env var: `RAY_DISABLE_DOCKER_CPU_WARNING=1` to mute this warning.
+2026-09-15 20:11:03,949	INFO worker.py:1951 -- Started a local Ray instance.
+2026-09-15 20:11:04,457	WARNING deprecation.py:50 -- DeprecationWarning: `build` has been deprecated. Use `AlgorithmConfig.build_algo` instead. This will raise an error in the future!
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/algorithms/algorithm.py:520: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+`UnifiedLogger` will be removed in Ray 2.7.
+  return UnifiedLogger(config, logdir, loggers=None)
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `JsonLogger interface is deprecated in favor of the `ray.tune.json.JsonLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `CSVLogger interface is deprecated in favor of the `ray.tune.csv.CSVLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/tune/logger/unified.py:53: RayDeprecationWarning: This API is deprecated and may be removed in future Ray releases. You could suppress this warning by setting env variable PYTHONWARNINGS="ignore::DeprecationWarning"
+The `TBXLogger interface is deprecated in favor of the `ray.tune.tensorboardx.TBXLoggerCallback` interface and will be removed in Ray 2.7.
+  self._loggers.append(cls(self.config, self.logdir, self.trial))
+[2026-09-15 20:11:04,554 E 212624 212624] core_worker.cc:2246: Actor with class name: 'RolloutWorker' and ID: 'ad7280db246bf3385a3cade301000000' has constructor arguments in the object store and max_restarts > 0. If the arguments in the object store go out of scope or are lost, the actor restart will fail. See https://github.com/ray-project/ray/issues/53727 for more details.
+2026-09-15 20:11:13,057	WARNING util.py:61 -- Install gputil for GPU system monitoring.
+[36m(RolloutWorker pid=212977)[0m 2026-09-15 20:11:13,597	ERROR actor_manager.py:187 -- Worker exception caught during `apply()`: env.step received an action outside the autoregressive support
+[36m(RolloutWorker pid=212977)[0m Traceback (most recent call last):
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/utils/actor_manager.py", line 183, in apply
+[36m(RolloutWorker pid=212977)[0m     return func(self, *args, **kwargs)
+[36m(RolloutWorker pid=212977)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/execution/rollout_ops.py", line 108, in <lambda>
+[36m(RolloutWorker pid=212977)[0m     (lambda w: w.sample(**random_action_kwargs))
+[36m(RolloutWorker pid=212977)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/util/tracing/tracing_helper.py", line 461, in _resume_span
+[36m(RolloutWorker pid=212977)[0m     return method(self, *_args, **_kwargs)
+[36m(RolloutWorker pid=212977)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/rollout_worker.py", line 677, in sample
+[36m(RolloutWorker pid=212977)[0m     batches = [self.input_reader.next()]
+[36m(RolloutWorker pid=212977)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/sampler.py", line 59, in next
+[36m(RolloutWorker pid=212977)[0m     batches = [self.get_data()]
+[36m(RolloutWorker pid=212977)[0m                ^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/sampler.py", line 225, in get_data
+[36m(RolloutWorker pid=212977)[0m     item = next(self._env_runner)
+[36m(RolloutWorker pid=212977)[0m            ^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 329, in run
+[36m(RolloutWorker pid=212977)[0m     outputs = self.step()
+[36m(RolloutWorker pid=212977)[0m               ^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 385, in step
+[36m(RolloutWorker pid=212977)[0m     self._base_env.send_actions(actions_to_send)
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/env/vector_env.py", line 462, in send_actions
+[36m(RolloutWorker pid=212977)[0m     ) = self.vector_env.vector_step(action_vector)
+[36m(RolloutWorker pid=212977)[0m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/env/vector_env.py", line 358, in vector_step
+[36m(RolloutWorker pid=212977)[0m     raise e
+[36m(RolloutWorker pid=212977)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/env/vector_env.py", line 351, in vector_step
+[36m(RolloutWorker pid=212977)[0m     results = self.envs[i].step(actions[i])
+[36m(RolloutWorker pid=212977)[0m               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m   File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step
+[36m(RolloutWorker pid=212977)[0m     assert joint_action_is_legal(tensor_observation, tensor_action), (
+[36m(RolloutWorker pid=212977)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212977)[0m AssertionError: env.step received an action outside the autoregressive support
+[36m(RolloutWorker pid=212981)[0m 2026-09-15 20:11:13,524	ERROR actor_manager.py:187 -- Worker exception caught during `apply()`: joint action prefix has no legal completion
+[36m(RolloutWorker pid=212981)[0m   File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_joint_action.py", line 193, in joint_action_is_legal
+[36m(RolloutWorker pid=212981)[0m     masks = autoregressive_action_masks(observation, actions)
+[36m(RolloutWorker pid=212981)[0m             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212981)[0m   File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_joint_action.py", line 14, in autoregressive_action_masks
+[36m(RolloutWorker pid=212981)[0m     return _action_masks(
+[36m(RolloutWorker pid=212981)[0m            ^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212981)[0m   File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_joint_action.py", line 181, in _action_masks
+[36m(RolloutWorker pid=212981)[0m     raise RuntimeError("joint action prefix has no legal completion")
+[36m(RolloutWorker pid=212981)[0m RuntimeError: joint action prefix has no legal completion
+2026-09-15 20:12:13,070	WARNING rollout_ops.py:121 -- No samples returned from remote workers. If you have a slow environment or model, consider increasing the `sample_timeout_s` or decreasing the `rollout_fragment_length` in `AlgorithmConfig.env_runners().
+[33m(raylet)[0m A worker died or was killed while executing a task by an unexpected system error. To troubleshoot the problem, check the logs for the dead worker. RayTask ID: ffffffffffffffff78cfa39898170dfd4d377d9401000000 Worker ID: 6c200609f2c187a14f5b2453b7e0f6438417cced9c8c53ae5bb94879 Node ID: 548f878278dd01ab15f7c05afa19c89a521667b40c3c1df1460bf438 Worker IP address: 172.17.0.7 Worker port: 39737 Worker PID: 212982 Worker exit type: SYSTEM_ERROR Worker exit detail: Worker exits unexpectedly. Worker exits with an exit code 1.
+2026-09-15 20:12:15,532	ERROR actor_manager.py:873 -- Ray error (The actor ad7280db246bf3385a3cade301000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.), taking actor 1 out of service.
+2026-09-15 20:12:15,533	ERROR actor_manager.py:873 -- Ray error (The actor 25dc9219b4f8be67adf94ad501000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.), taking actor 2 out of service.
+2026-09-15 20:12:15,533	ERROR actor_manager.py:873 -- Ray error (The actor 2677f1b96b1a84ad3509e60201000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.), taking actor 3 out of service.
+2026-09-15 20:12:15,533	ERROR actor_manager.py:873 -- Ray error (The actor 470c22447741136e7bd6a5bd01000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.), taking actor 4 out of service.
+2026-09-15 20:12:15,533	ERROR actor_manager.py:873 -- Ray error (The actor 78cfa39898170dfd4d377d9401000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.), taking actor 5 out of service.
+2026-09-15 20:12:15,534	ERROR actor_manager.py:873 -- Ray error (The actor 134d1c50c0072585db42d98801000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.), taking actor 6 out of service.
+2026-09-15 20:12:15,534	ERROR actor_manager.py:873 -- Ray error (The actor 571548fcb7a369a1548eac2901000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.), taking actor 7 out of service.
+2026-09-15 20:12:15,534	ERROR actor_manager.py:873 -- Ray error (The actor c4f05518af2eb83a89c1d3ee01000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.), taking actor 8 out of service.
+2026-09-15 20:12:15,534	ERROR actor_manager.py:674 -- The actor ad7280db246bf3385a3cade301000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.
+NoneType: None
+2026-09-15 20:12:15,535	ERROR actor_manager.py:674 -- The actor 25dc9219b4f8be67adf94ad501000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.
+NoneType: None
+2026-09-15 20:12:15,535	ERROR actor_manager.py:674 -- The actor 2677f1b96b1a84ad3509e60201000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.
+NoneType: None
+2026-09-15 20:12:15,535	ERROR actor_manager.py:674 -- The actor 470c22447741136e7bd6a5bd01000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.
+NoneType: None
+2026-09-15 20:12:15,535	ERROR actor_manager.py:674 -- The actor 78cfa39898170dfd4d377d9401000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.
+NoneType: None
+2026-09-15 20:12:15,535	ERROR actor_manager.py:674 -- The actor 134d1c50c0072585db42d98801000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.
+NoneType: None
+2026-09-15 20:12:15,535	ERROR actor_manager.py:674 -- The actor 571548fcb7a369a1548eac2901000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.
+NoneType: None
+2026-09-15 20:12:15,535	ERROR actor_manager.py:674 -- The actor c4f05518af2eb83a89c1d3ee01000000 is unavailable: The actor is temporarily unavailable: IOError: The actor was restarted. The task may or may not have been executed on the actor.
+NoneType: None
+{'iteration': 1, 'train_reward_mean': nan, 'train_episode_len_mean': nan, 'ppo_kl': None, 'entropy': None, 'value_loss': None, 'value_explained_variance': None, 'policy_loss': None, 'ppo_kl_coefficient': None, 'il_reference_kl': None, 'actor_parameter_drift': {'max_absolute': 0.0, 'normalized_l2': 0.0}, 'validation': None}
+2026-09-15 20:12:17,534	WARNING rollout_ops.py:121 -- No samples returned from remote workers. If you have a slow environment or model, consider increasing the `sample_timeout_s` or decreasing the `rollout_fragment_length` in `AlgorithmConfig.env_runners().
+2026-09-15 20:12:19,536	WARNING rollout_ops.py:121 -- No samples returned from remote workers. If you have a slow environment or model, consider increasing the `sample_timeout_s` or decreasing the `rollout_fragment_length` in `AlgorithmConfig.env_runners().
+2026-09-15 20:12:21,537	ERROR actor_manager.py:674 -- The actor ad7280db246bf3385a3cade301000000 is unavailable: The actor is temporarily unavailable: IOError: The actor is restarting.. The task may or may not have been executed on the actor.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 405, in train
+    il_validation, rl_validation = paired_rollout_metrics(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 225, in paired_rollout_metrics
+    metrics = rollout_metrics(
+              ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 205, in rollout_metrics
+    obs, _reward, terminated, truncated, _info = env.step(action)
+                                                 ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step
+    assert joint_action_is_legal(tensor_observation, tensor_action), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: env.step received an action outside the autoregressive support
+2026-09-15 20:12:21,538	ERROR actor_manager.py:674 -- The actor 25dc9219b4f8be67adf94ad501000000 is unavailable: The actor is temporarily unavailable: IOError: The actor is restarting.. The task may or may not have been executed on the actor.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 405, in train
+    il_validation, rl_validation = paired_rollout_metrics(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 225, in paired_rollout_metrics
+    metrics = rollout_metrics(
+              ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 205, in rollout_metrics
+    obs, _reward, terminated, truncated, _info = env.step(action)
+                                                 ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step
+    assert joint_action_is_legal(tensor_observation, tensor_action), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: env.step received an action outside the autoregressive support
+2026-09-15 20:12:21,539	ERROR actor_manager.py:674 -- The actor 2677f1b96b1a84ad3509e60201000000 is unavailable: The actor is temporarily unavailable: IOError: The actor is restarting.. The task may or may not have been executed on the actor.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 405, in train
+    il_validation, rl_validation = paired_rollout_metrics(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 225, in paired_rollout_metrics
+    metrics = rollout_metrics(
+              ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 205, in rollout_metrics
+    obs, _reward, terminated, truncated, _info = env.step(action)
+                                                 ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step
+    assert joint_action_is_legal(tensor_observation, tensor_action), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: env.step received an action outside the autoregressive support
+2026-09-15 20:12:21,540	ERROR actor_manager.py:674 -- The actor 470c22447741136e7bd6a5bd01000000 is unavailable: The actor is temporarily unavailable: IOError: The actor is restarting.. The task may or may not have been executed on the actor.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 405, in train
+    il_validation, rl_validation = paired_rollout_metrics(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 225, in paired_rollout_metrics
+    metrics = rollout_metrics(
+              ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 205, in rollout_metrics
+    obs, _reward, terminated, truncated, _info = env.step(action)
+                                                 ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step
+    assert joint_action_is_legal(tensor_observation, tensor_action), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: env.step received an action outside the autoregressive support
+2026-09-15 20:12:21,540	ERROR actor_manager.py:674 -- The actor 134d1c50c0072585db42d98801000000 is unavailable: The actor is temporarily unavailable: IOError: The actor is restarting.. The task may or may not have been executed on the actor.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 405, in train
+    il_validation, rl_validation = paired_rollout_metrics(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 225, in paired_rollout_metrics
+    metrics = rollout_metrics(
+              ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 205, in rollout_metrics
+    obs, _reward, terminated, truncated, _info = env.step(action)
+                                                 ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step
+    assert joint_action_is_legal(tensor_observation, tensor_action), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: env.step received an action outside the autoregressive support
+2026-09-15 20:12:21,541	ERROR actor_manager.py:674 -- The actor 571548fcb7a369a1548eac2901000000 is unavailable: The actor is temporarily unavailable: IOError: The actor is restarting.. The task may or may not have been executed on the actor.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 405, in train
+    il_validation, rl_validation = paired_rollout_metrics(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 225, in paired_rollout_metrics
+    metrics = rollout_metrics(
+              ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 205, in rollout_metrics
+    obs, _reward, terminated, truncated, _info = env.step(action)
+                                                 ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step
+    assert joint_action_is_legal(tensor_observation, tensor_action), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: env.step received an action outside the autoregressive support
+2026-09-15 20:12:21,542	ERROR actor_manager.py:674 -- The actor c4f05518af2eb83a89c1d3ee01000000 is unavailable: The actor is temporarily unavailable: IOError: The actor is restarting.. The task may or may not have been executed on the actor.
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 405, in train
+    il_validation, rl_validation = paired_rollout_metrics(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 225, in paired_rollout_metrics
+    metrics = rollout_metrics(
+              ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 205, in rollout_metrics
+    obs, _reward, terminated, truncated, _info = env.step(action)
+                                                 ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step
+    assert joint_action_is_legal(tensor_observation, tensor_action), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: env.step received an action outside the autoregressive support
+[33m(raylet)[0m A worker died or was killed while executing a task by an unexpected system error. To troubleshoot the problem, check the logs for the dead worker. RayTask ID: ffffffffffffffffad7280db246bf3385a3cade301000000 Worker ID: 76509beb22cbf5e85699826d5a49cdeb83084b4a391a1cc0a2413502 Node ID: 548f878278dd01ab15f7c05afa19c89a521667b40c3c1df1460bf438 Worker IP address: 172.17.0.7 Worker port: 43941 Worker PID: 212976 Worker exit type: SYSTEM_ERROR Worker exit detail: Worker exits unexpectedly. Worker exits with an exit code 1.[32m [repeated 7x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(RolloutWorker pid=212976)[0m 2026-09-15 20:11:13,635	ERROR actor_manager.py:187 -- Worker exception caught during `apply()`: env.step received an action outside the autoregressive support[32m [repeated 5x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m Traceback (most recent call last):[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/utils/actor_manager.py", line 183, in apply[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     return func(self, *args, **kwargs)[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/execution/rollout_ops.py", line 108, in <lambda>[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     (lambda w: w.sample(**random_action_kwargs))[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/util/tracing/tracing_helper.py", line 461, in _resume_span[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     return method(self, *_args, **_kwargs)[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/rollout_worker.py", line 677, in sample[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     batches = [self.input_reader.next()][32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/sampler.py", line 59, in next[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     batches = [self.get_data()][32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m                ^^^^^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/sampler.py", line 225, in get_data[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     item = next(self._env_runner)[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m            ^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 329, in run[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     outputs = self.step()[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m               ^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/evaluation/env_runner_v2.py", line 385, in step[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     self._base_env.send_actions(actions_to_send)[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/env/vector_env.py", line 462, in send_actions[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     ) = self.vector_env.vector_step(action_vector)[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/miniconda3/envs/md/lib/python3.11/site-packages/ray/rllib/env/vector_env.py", line 351, in vector_step[32m [repeated 14x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     raise e[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     results = self.envs[i].step(actions[i])[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m   File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m     assert joint_action_is_legal(tensor_observation, tensor_action), ([32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 7x across cluster][0m
+[36m(RolloutWorker pid=212976)[0m AssertionError: env.step received an action outside the autoregressive support[32m [repeated 5x across cluster][0m
+[36m(RolloutWorker pid=212984)[0m 2026-09-15 20:11:13,520	ERROR actor_manager.py:187 -- Worker exception caught during `apply()`: joint action prefix has no legal completion
+[36m(RolloutWorker pid=212984)[0m   File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_joint_action.py", line 193, in joint_action_is_legal
+[36m(RolloutWorker pid=212984)[0m     masks = autoregressive_action_masks(observation, actions)
+[36m(RolloutWorker pid=212984)[0m             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212984)[0m   File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_joint_action.py", line 14, in autoregressive_action_masks
+[36m(RolloutWorker pid=212984)[0m     return _action_masks(
+[36m(RolloutWorker pid=212984)[0m            ^^^^^^^^^^^^^^
+[36m(RolloutWorker pid=212984)[0m   File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_joint_action.py", line 181, in _action_masks
+[36m(RolloutWorker pid=212984)[0m     raise RuntimeError("joint action prefix has no legal completion")
+[36m(RolloutWorker pid=212984)[0m RuntimeError: joint action prefix has no legal completion
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/autodl-tmp/MD/Sadcher/experiments/md_c0_ppo_process_scarce_pilot.py", line 137, in <module>
+    main()
+  File "/root/autodl-tmp/MD/Sadcher/experiments/md_c0_ppo_process_scarce_pilot.py", line 124, in main
+    md_ray_ppo.train(
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 405, in train
+    il_validation, rl_validation = paired_rollout_metrics(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 225, in paired_rollout_metrics
+    metrics = rollout_metrics(
+              ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_ray_ppo.py", line 205, in rollout_metrics
+    obs, _reward, terminated, truncated, _info = env.step(action)
+                                                 ^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/MD/Sadcher/reinforcement_learning/md_gym_environment.py", line 94, in step
+    assert joint_action_is_legal(tensor_observation, tensor_action), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: env.step received an action outside the autoregressive support
+=== [Tue 15 Sep 2026 08:12:24 PM CST] DONE ===

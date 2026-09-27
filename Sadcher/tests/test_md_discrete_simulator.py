@@ -112,7 +112,10 @@ class MDDiscreteSimulatorTests(unittest.TestCase):
         while not self.sim.done:
             self.sim.step()
 
-        self.assertEqual(self.sim.time, 11)
+        # Process robots return to their home location (default: initial
+        # location (4, 0)) — zero travel — while the transport robot returns
+        # to the shared exit (0, 0) over distance 4 at unloaded speed 2.
+        self.assertEqual(self.sim.time, 9)
         self.assertTrue(self.sim.all_real_tasks_completed)
         self.assertTrue(self.sim.all_robots_at_exit)
         self.assertTrue(

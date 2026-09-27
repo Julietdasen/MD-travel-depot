@@ -350,6 +350,7 @@ def _robot_to_dict(robot: ProcessRobot | TransportRobot) -> dict[str, Any]:
             "location": list(robot.location),
             "capabilities": list(robot.capabilities),
             "speed": robot.speed,
+            "home_location": list(robot.home_location),
         }
     return {
         "robot_type": RobotType.TRANSPORT_ROBOT.value,
@@ -375,6 +376,7 @@ def _robot_from_dict(payload: Any) -> ProcessRobot | TransportRobot:
             location=payload["location"],
             capabilities=payload["capabilities"],
             speed=payload["speed"],
+            home_location=payload.get("home_location"),
         )
     if robot_type == RobotType.TRANSPORT_ROBOT.value:
         _require_mapping_fields(

@@ -1,0 +1,8 @@
+[21:48:45] EVAL START epoch=5 ckpt=reports/md_c0_pathC_ranking_v1_2026-09-17/training/checkpoint_epoch_5.pt
+[21:53:23] EVAL DONE epoch=5 elapsed=278.3s
+[21:53:23] EVAL START epoch=10 ckpt=reports/md_c0_pathC_ranking_v1_2026-09-17/training/checkpoint_epoch_10.pt
+[21:57:59] EVAL DONE epoch=10 elapsed=275.2s
+[21:57:59] EVAL START epoch=15 ckpt=reports/md_c0_pathC_ranking_v1_2026-09-17/training/checkpoint_epoch_15.pt
+[22:02:38] EVAL DONE epoch=15 elapsed=279.9s
+[22:02:38] EVAL START epoch=20 ckpt=reports/md_c0_pathC_ranking_v1_2026-09-17/training/checkpoint_epoch_20.pt
+[22:07:16] EVAL DONE epoch=20 elapsed=277.6s

@@ -72,6 +72,21 @@ def _install_env_runner_gpu_shim(num_gpus_per_env_runner: float) -> None:
 
     PPOConfig.env_runners = _patched
 
+def _install_independent_action_dist_shim() -> None:
+    """Replace MDAutoregressiveActionDistribution with MDIndependentActionDistribution.
+
+    md_ray_ppo.train registers the autoregressive one via ModelCatalog with the
+    name 'md_autoregressive'. We hijack the same registration slot by swapping
+    the module-level class reference in md_ray_ppo, so when it calls
+    ModelCatalog.register_custom_action_dist('md_autoregressive', X) it registers
+    the independent variant instead. Deploy-side path (LearnedConstrainedDecoder)
+    is unaffected — it never touches this class.
+    """
+    from models.md_rllib_model import MDIndependentActionDistribution
+    md_ray_ppo.MDAutoregressiveActionDistribution = MDIndependentActionDistribution
+
+
+
 
 
 def _experiment_config(kl_weight: float) -> MDPPOExperimentConfig:
@@ -97,11 +112,14 @@ def main(argv=None) -> None:
     parser.add_argument("--num-env-runners", type=int, default=0)
     parser.add_argument("--num-gpus", type=float, default=1.0)
     parser.add_argument("--num-gpus-per-env-runner", type=float, default=0.0)
+    parser.add_argument("--use-independent-action-dist", action="store_true", help="Replace MDAutoregressiveActionDistribution with the independent Categorical variant")
     parser.add_argument("--output-dir", required=True)
     args = parser.parse_args(argv)
 
     _install_scaled_config_shim(args.task_count)
     _install_env_runner_gpu_shim(args.num_gpus_per_env_runner)
+    if args.use_independent_action_dist:
+        _install_independent_action_dist_shim()
 
     md_ray_ppo.train(
         seed=args.seed,

@@ -1,0 +1,71 @@
+[18:13:25] epoch 001 lr=2.00e-04 train=0.398555 val=0.435448 best=inf (new best) elapsed=76.5s
+[18:14:42] epoch 002 lr=4.00e-04 train=0.380046 val=0.424275 best=0.435448 (new best) elapsed=76.9s
+[18:16:18] epoch 003 lr=6.00e-04 train=0.361540 val=0.422054 best=0.424275 (new best) elapsed=95.2s
+[18:17:37] epoch 004 lr=8.00e-04 train=0.345998 val=0.402799 best=0.422054 (new best) elapsed=79.9s
+[18:19:01] epoch 005 lr=1.00e-03 train=0.341512 val=0.387748 best=0.402799 (new best) elapsed=83.4s
+[18:20:21] epoch 006 lr=1.00e-03 train=0.335182 val=0.378879 best=0.387748 (new best) elapsed=80.1s
+[18:21:38] epoch 007 lr=9.99e-04 train=0.330153 val=0.379458 best=0.378879 (patience 1/15) elapsed=77.4s
+[18:22:55] epoch 008 lr=9.98e-04 train=0.327449 val=0.367922 best=0.378879 (new best) elapsed=77.4s
+[18:24:13] epoch 009 lr=9.96e-04 train=0.324400 val=0.360528 best=0.367922 (new best) elapsed=78.3s
+[18:25:30] epoch 010 lr=9.93e-04 train=0.321272 val=0.365525 best=0.360528 (patience 1/15) elapsed=77.3s
+[18:26:48] epoch 011 lr=9.90e-04 train=0.321299 val=0.356260 best=0.360528 (new best) elapsed=78.0s
+[18:28:06] epoch 012 lr=9.87e-04 train=0.317002 val=0.352255 best=0.356260 (new best) elapsed=77.4s
+[18:29:24] epoch 013 lr=9.83e-04 train=0.313778 val=0.350588 best=0.352255 (new best) elapsed=78.2s
+[18:30:42] epoch 014 lr=9.78e-04 train=0.310120 val=0.347942 best=0.350588 (new best) elapsed=78.0s
+[18:32:01] epoch 015 lr=9.73e-04 train=0.308432 val=0.341298 best=0.347942 (new best) elapsed=78.7s
+[18:33:20] epoch 016 lr=9.68e-04 train=0.304856 val=0.346473 best=0.341298 (patience 1/15) elapsed=78.7s
+[18:34:45] epoch 017 lr=9.62e-04 train=0.304488 val=0.342495 best=0.341298 (patience 2/15) elapsed=85.6s
+[18:36:03] epoch 018 lr=9.55e-04 train=0.301481 val=0.346759 best=0.341298 (patience 3/15) elapsed=78.2s
+[18:37:21] epoch 019 lr=9.48e-04 train=0.300983 val=0.345720 best=0.341298 (patience 4/15) elapsed=77.4s
+[18:38:39] epoch 020 lr=9.40e-04 train=0.298531 val=0.344067 best=0.341298 (patience 5/15) elapsed=77.8s
+[18:39:56] epoch 021 lr=9.32e-04 train=0.295539 val=0.345069 best=0.341298 (patience 6/15) elapsed=77.2s
+[18:41:12] epoch 022 lr=9.24e-04 train=0.293000 val=0.344447 best=0.341298 (patience 7/15) elapsed=76.0s
+[18:42:28] epoch 023 lr=9.15e-04 train=0.292191 val=0.340706 best=0.341298 (new best) elapsed=75.7s
+[18:43:42] epoch 024 lr=9.05e-04 train=0.304357 val=0.349050 best=0.340706 (patience 1/15) elapsed=74.4s
+[18:45:00] epoch 025 lr=8.96e-04 train=0.294980 val=0.341249 best=0.340706 (patience 2/15) elapsed=77.7s
+[18:46:17] epoch 026 lr=8.85e-04 train=0.286924 val=0.345703 best=0.340706 (patience 3/15) elapsed=77.5s
+[18:47:35] epoch 027 lr=8.75e-04 train=0.283003 val=0.344138 best=0.340706 (patience 4/15) elapsed=77.5s
+[18:48:53] epoch 028 lr=8.64e-04 train=0.280867 val=0.351177 best=0.340706 (patience 5/15) elapsed=78.1s
+[18:50:12] epoch 029 lr=8.52e-04 train=0.278928 val=0.341739 best=0.340706 (patience 6/15) elapsed=78.8s
+[18:51:29] epoch 030 lr=8.40e-04 train=0.276319 val=0.348005 best=0.340706 (patience 7/15) elapsed=77.7s
+[18:52:47] epoch 031 lr=8.28e-04 train=0.279318 val=0.352151 best=0.340706 (patience 8/15) elapsed=77.2s
+[18:54:01] epoch 032 lr=8.15e-04 train=0.273784 val=0.350141 best=0.340706 (patience 9/15) elapsed=74.0s
+[18:55:18] epoch 033 lr=8.03e-04 train=0.268978 val=0.348688 best=0.340706 (patience 10/15) elapsed=77.5s
+[18:56:36] epoch 034 lr=7.89e-04 train=0.272411 val=0.347556 best=0.340706 (patience 11/15) elapsed=77.9s
+[18:57:52] epoch 035 lr=7.76e-04 train=0.266152 val=0.350975 best=0.340706 (patience 12/15) elapsed=75.9s
+[18:59:09] epoch 036 lr=7.62e-04 train=0.280007 val=0.352257 best=0.340706 (patience 13/15) elapsed=77.0s
+[19:00:27] epoch 037 lr=7.48e-04 train=0.276335 val=0.351744 best=0.340706 (patience 14/15) elapsed=77.8s
+[19:01:46] epoch 038 lr=7.33e-04 train=0.263848 val=0.348453 best=0.340706 (patience 15/15) elapsed=78.8s
+[19:01:46] early stop after 15 epochs w/o improvement
+{
+  "schema": "md-c0-pathB-capacity-upgrade-1.0",
+  "output_root": "reports/md_c0_pathB1_capacity48_2026-09-17",
+  "dataset_dir": "reports/md_c0_pathA_scaled_finetune_2026-09-17/dataset",
+  "capacity": {
+    "hidden_dim": 48,
+    "embed_dim": 48,
+    "transformer_layers": 2,
+    "gat_layers": 2,
+    "dropout": 0.1
+  },
+  "lr_schedule": {
+    "peak_lr": 0.001,
+    "warmup_epochs": 5,
+    "min_lr": 1e-05
+  },
+  "epochs": 100,
+  "early_stopping_patience": 15,
+  "batch_size": 32,
+  "seed": 3101,
+  "from_scratch": true,
+  "pretrained_checkpoint": null,
+  "training": {
+    "checkpoint_path": "reports/md_c0_pathB1_capacity48_2026-09-17/training/best_checkpoint.pt",
+    "summary_path": "reports/md_c0_pathB1_capacity48_2026-09-17/training/training_summary.json",
+    "best_validation_loss": 0.3407058775424957,
+    "best_epoch": 23,
+    "epochs_run": 38,
+    "train_sample_count": 9838,
+    "validation_sample_count": 1291
+  }
+}

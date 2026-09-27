@@ -1,0 +1,95 @@
+[17:49:24] epoch 000 (pretrained) val=0.541420 pos_pairs=1527 skipped_states=13
+[17:50:50] epoch 001 train=0.495387 val=0.524049 pos_pairs(train)=11323 skipped=92 elapsed=86.3s
+[17:52:16] epoch 002 train=0.484375 val=0.493619 pos_pairs(train)=11323 skipped=92 elapsed=85.1s
+[17:53:42] epoch 003 train=0.473958 val=0.489025 pos_pairs(train)=11323 skipped=92 elapsed=86.5s
+[17:55:09] epoch 004 train=0.469275 val=0.478737 pos_pairs(train)=11323 skipped=92 elapsed=86.8s
+[17:56:36] epoch 005 train=0.457388 val=0.468018 pos_pairs(train)=11323 skipped=92 elapsed=87.1s
+[17:58:01] epoch 006 train=0.448676 val=0.464322 pos_pairs(train)=11323 skipped=92 elapsed=84.9s
+[17:59:27] epoch 007 train=0.441015 val=0.464284 pos_pairs(train)=11323 skipped=92 elapsed=86.4s
+[18:00:53] epoch 008 train=0.437121 val=0.463016 pos_pairs(train)=11323 skipped=92 elapsed=85.4s
+[18:02:16] epoch 009 train=0.431337 val=0.441288 pos_pairs(train)=11323 skipped=92 elapsed=83.3s
+[18:03:40] epoch 010 train=0.425784 val=0.462405 pos_pairs(train)=11323 skipped=92 elapsed=84.0s
+[18:05:03] epoch 011 train=0.425462 val=0.446631 pos_pairs(train)=11323 skipped=92 elapsed=83.3s
+[18:06:27] epoch 012 train=0.422796 val=0.438780 pos_pairs(train)=11323 skipped=92 elapsed=83.4s
+[18:07:50] epoch 013 train=0.419975 val=0.424318 pos_pairs(train)=11323 skipped=92 elapsed=83.7s
+[18:09:14] epoch 014 train=0.402681 val=0.432859 pos_pairs(train)=11323 skipped=92 elapsed=83.4s
+[18:10:39] epoch 015 train=0.407704 val=0.427872 pos_pairs(train)=11323 skipped=92 elapsed=84.8s
+[18:12:02] epoch 016 train=0.398884 val=0.431342 pos_pairs(train)=11323 skipped=92 elapsed=83.2s
+[18:13:27] epoch 017 train=0.400454 val=0.431594 pos_pairs(train)=11323 skipped=92 elapsed=84.6s
+[18:14:52] epoch 018 train=0.400289 val=0.423165 pos_pairs(train)=11323 skipped=92 elapsed=85.1s
+[18:16:17] epoch 019 train=0.398540 val=0.425039 pos_pairs(train)=11323 skipped=92 elapsed=85.5s
+[18:17:42] epoch 020 train=0.386272 val=0.426663 pos_pairs(train)=11323 skipped=92 elapsed=85.2s
+{
+  "schema": "md-c0-pathC-ranking-v1-1.0",
+  "pretrained_checkpoint": "reports/md_c0_baseline_2026-09-21-depot/training/best_checkpoint.pt",
+  "dataset_dir": "reports/md_c0_pathA_2026-09-21-depot/dataset",
+  "output_dir": "reports/md_c0_pathC_v1_2026-09-21-depot/training",
+  "epochs_requested": 20,
+  "epochs_run": 20,
+  "learning_rate": 5e-06,
+  "num_negatives": 5,
+  "margin": 1.0,
+  "seed": 3101,
+  "device": "cuda:0",
+  "train_sample_count": 9091,
+  "validation_sample_count": 1241,
+  "train_instance_count": 241,
+  "validation_instance_count": 33,
+  "epoch0_validation_loss": 0.5414202859004339,
+  "train_losses": [
+    0.49538723032714593,
+    0.48437456227838993,
+    0.47395765587377053,
+    0.46927468126846683,
+    0.45738781253910726,
+    0.44867634638730025,
+    0.44101480955982375,
+    0.4371207484509796,
+    0.4313369159741948,
+    0.4257844215672877,
+    0.42546210903674364,
+    0.42279625140751403,
+    0.4199751793510384,
+    0.40268125518923625,
+    0.40770424297079444,
+    0.39888427395150455,
+    0.4004536984397823,
+    0.40028920078960556,
+    0.3985404404811561,
+    0.3862724438206189
+  ],
+  "validation_losses": [
+    0.5414202859004339,
+    0.5240494601783299,
+    0.4936188253618422,
+    0.4890247058300745,
+    0.4787373287337167,
+    0.4680178953068597,
+    0.46432226222185863,
+    0.4642842532623382,
+    0.46301554285344626,
+    0.44128811607758206,
+    0.46240525657222387,
+    0.4466306900694257,
+    0.4387799338215873,
+    0.4243182837963104,
+    0.4328590695347105,
+    0.42787211459307445,
+    0.4313423317812738,
+    0.4315939676903543,
+    0.42316471359559465,
+    0.4250388588933718,
+    0.4266632291532698
+  ],
+  "checkpoint_paths": {
+    "5": "reports/md_c0_pathC_v1_2026-09-21-depot/training/checkpoint_epoch_5.pt",
+    "10": "reports/md_c0_pathC_v1_2026-09-21-depot/training/checkpoint_epoch_10.pt",
+    "15": "reports/md_c0_pathC_v1_2026-09-21-depot/training/checkpoint_epoch_15.pt",
+    "20": "reports/md_c0_pathC_v1_2026-09-21-depot/training/checkpoint_epoch_20.pt",
+    "final": "reports/md_c0_pathC_v1_2026-09-21-depot/training/best_checkpoint.pt"
+  },
+  "environment": {
+    "python": "3.11.16",
+    "torch": "2.4.0+cu121"
+  }
+}

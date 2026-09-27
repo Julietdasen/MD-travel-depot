@@ -10,7 +10,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Mapping
 
-from baselines.gurobi_md_residual_oracle import (
+from baselines.md_oracle_types import (
     ForcedAssignmentBatch,
     ResidualMDState,
     ResidualOracleResult,
@@ -18,8 +18,8 @@ from baselines.gurobi_md_residual_oracle import (
     enumerate_forced_batches,
     residual_domain,
     residual_task_map,
-    solve_residual_forced_batch,
 )
+from baselines.md_ortools_residual_oracle import solve_residual_forced_batch
 from simulation_environment.domain_model import ProcessTask, SchedulingDomain, TransportTask
 from simulation_environment.md_discrete_simulator import MDDiscreteSimulator
 

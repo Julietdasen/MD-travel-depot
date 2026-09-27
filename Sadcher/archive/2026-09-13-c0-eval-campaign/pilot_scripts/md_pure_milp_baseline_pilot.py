@@ -14,7 +14,8 @@ import argparse
 import json
 from pathlib import Path
 
-from baselines.gurobi_md_oracle import GurobiOracleStatus, solve_gurobi_md_oracle
+from baselines.md_oracle_types import GurobiOracleStatus
+from baselines.md_ortools_scheduler import solve_ortools_md_oracle as solve_gurobi_md_oracle
 from data_generation.md_instance_generator import MDGeneratorConfig, generate_md_instance
 from data_generation.md_instance_profiles import INSTANCE_PROFILES
 

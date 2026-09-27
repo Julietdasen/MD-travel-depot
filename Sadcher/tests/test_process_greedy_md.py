@@ -88,16 +88,23 @@ class ProcessGreedyMDAdapterTests(unittest.TestCase):
         simulator.step()
 
         self.assertIs(simulator.task_state(1).status, TaskStatus.COMPLETE)
+        # Under the arrival contract, task 3 is not yet ready (material
+        # predecessor 2 has not completed) but ProcessGreedy may still commit
+        # to it; simulator.is_task_ready still reports False until precursors
+        # complete, and the coalition waits for the material.
         self.assertFalse(simulator.is_task_ready(3))
-        self.assertEqual(scheduler.assign(simulator), ())
+        second = scheduler.assign(simulator)
+        self.assertEqual([assignment.task_id for assignment in second], [3])
+        self.assertIs(simulator.task_state(3).status, TaskStatus.PENDING)
 
         simulator.assign(robot_id=1, task_id=2)
         simulator.step()
         self.assertIs(simulator.task_state(2).status, TaskStatus.COMPLETE)
-
-        unlocked = scheduler.assign(simulator)
-        self.assertEqual([assignment.task_id for assignment in unlocked], [3])
-        self.assertIs(simulator.task_state(3).status, TaskStatus.IN_PROGRESS)
+        # The next step launches the already-assigned coalition once every
+        # precursor is COMPLETE, and its service (duration 1) also finishes
+        # inside that step.
+        simulator.step()
+        self.assertIs(simulator.task_state(3).status, TaskStatus.COMPLETE)
 
 
 class ProcessGreedyMDRolloutTests(unittest.TestCase):
@@ -121,7 +128,9 @@ class ProcessGreedyMDRolloutTests(unittest.TestCase):
 
         self.assertTrue(result.success)
         self.assertEqual(result.method, "process_greedy_md")
-        self.assertEqual(result.makespan, 3)
+        # The process robot travels zero to task (same location) and returns
+        # to its home location (also (2, 0)); only service duration counts.
+        self.assertEqual(result.makespan, 1)
         self.assertTrue(result.all_real_tasks_completed)
         self.assertTrue(result.all_robots_at_exit)
         self.assertEqual(result.process_execution_records[0]["robot_ids"], (0,))

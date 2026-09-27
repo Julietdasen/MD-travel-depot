@@ -115,11 +115,16 @@ class TerminalReturnAwareScoreProvider:
         for robot_index, robot_id in enumerate(robot_ids):
             robot = robots[robot_id]
             speed = robot.speed if isinstance(robot, ProcessRobot) else robot.unloaded_speed
+            return_target = (
+                robot.home_location
+                if isinstance(robot, ProcessRobot)
+                else self.exit_location
+            )
             for task_index, task_id in enumerate(task_ids):
                 task = tasks[task_id]
                 location = task.delivery_location if isinstance(task, TransportTask) else task.location
                 penalty[robot_index, task_index] = self.weight * travel_duration(
-                    location, self.exit_location, speed
+                    location, return_target, speed
                 )
         adjusted = scores - penalty
         if isinstance(output, ScoreOutput):

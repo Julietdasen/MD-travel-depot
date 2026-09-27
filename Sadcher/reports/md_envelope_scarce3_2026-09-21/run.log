@@ -1,0 +1,119 @@
+=== scarce=3 sweep start ===
+--- tc=24 pr=4 tr=4 scarce=3 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 307.0, "gd_ms": 319.0, "ge_ms": 319.0, "gu_ms": 319.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 301.0, "c0_ms": 326.0, "gd_ms": 345.0, "ge_ms": 345.0, "gu_ms": 349.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "feasible", "milp_ms": 278.0, "c0_ms": 309.0, "gd_ms": 308.0, "ge_ms": 308.0, "gu_ms": 308.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 246.0, "gd_ms": 301.0, "ge_ms": 301.0, "gu_ms": 301.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 284.75,
+      "milp_timeout_count": 1,
+      "c0_makespan": 297.0,
+      "best_greedy_name": "greedy_distance",
+      "best_greedy_makespan": 318.25,
+      "c0_gap_vs_milp_percent": 4.302019315188762,
+      "best_greedy_gap_vs_milp_percent": 11.76470588235294,
+      "c0_vs_best_greedy_percent": -6.677140612725845
+    }
+  ]
+}
+--- tc=42 pr=7 tr=7 scarce=3 ---
+{"profile": "process_scarce", "tc": 42, "seed": 301, "milp_status": "optimal", "milp_ms": 333.0, "c0_ms": 357.0, "gd_ms": 410.0, "ge_ms": 410.0, "gu_ms": 410.0}
+{"profile": "process_scarce", "tc": 42, "seed": 302, "milp_status": "feasible", "milp_ms": 457.0, "c0_ms": 464.0, "gd_ms": 490.0, "ge_ms": 490.0, "gu_ms": 490.0}
+{"profile": "process_scarce", "tc": 42, "seed": 303, "milp_status": "optimal", "milp_ms": 351.0, "c0_ms": 385.0, "gd_ms": 412.0, "ge_ms": 412.0, "gu_ms": 412.0}
+{"profile": "process_scarce", "tc": 42, "seed": 304, "milp_status": "optimal", "milp_ms": 404.0, "c0_ms": 445.0, "gd_ms": 446.0, "ge_ms": 465.0, "gu_ms": 443.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    42
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 7,
+  "override_transport_robot_count": 7,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 42,
+      "milp_incumbent": 386.25,
+      "milp_timeout_count": 1,
+      "c0_makespan": 412.75,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 438.75,
+      "c0_gap_vs_milp_percent": 6.86084142394822,
+      "best_greedy_gap_vs_milp_percent": 13.592233009708737,
+      "c0_vs_best_greedy_percent": -5.9259259259259265
+    }
+  ]
+}
+--- tc=60 pr=10 tr=10 scarce=3 ---
+{"profile": "process_scarce", "tc": 60, "seed": 301, "milp_status": "feasible", "milp_ms": 585.0, "c0_ms": 597.0, "gd_ms": 675.0, "ge_ms": 708.0, "gu_ms": 635.0}
+{"profile": "process_scarce", "tc": 60, "seed": 302, "milp_status": "feasible", "milp_ms": 523.0, "c0_ms": 570.0, "gd_ms": 586.0, "ge_ms": 586.0, "gu_ms": 586.0}
+{"profile": "process_scarce", "tc": 60, "seed": 303, "milp_status": "feasible", "milp_ms": 498.0, "c0_ms": 531.0, "gd_ms": 593.0, "ge_ms": 593.0, "gu_ms": 593.0}
+{"profile": "process_scarce", "tc": 60, "seed": 304, "milp_status": "feasible", "milp_ms": 507.0, "c0_ms": 566.0, "gd_ms": 613.0, "ge_ms": 613.0, "gu_ms": 619.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    60
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 10,
+  "override_transport_robot_count": 10,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 60,
+      "milp_incumbent": 528.25,
+      "milp_timeout_count": 4,
+      "c0_makespan": 566.0,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 608.25,
+      "c0_gap_vs_milp_percent": 7.146237576904875,
+      "best_greedy_gap_vs_milp_percent": 15.144344533838144,
+      "c0_vs_best_greedy_percent": -6.94615700780929
+    }
+  ]
+}
+=== SCARCE3 DONE ===

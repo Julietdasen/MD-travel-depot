@@ -7,7 +7,7 @@ from typing import Callable
 
 import torch
 
-from baselines.gurobi_md_residual_oracle import enumerate_forced_batches
+from baselines.md_oracle_types import enumerate_forced_batches
 from data_generation.md_residual_generation import eligible_snapshot, residual_state
 from schedulers.md_constrained_decoder import (
     DecoderResult,

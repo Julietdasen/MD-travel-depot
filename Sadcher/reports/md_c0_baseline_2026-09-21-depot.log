@@ -1,0 +1,36 @@
+{
+  "output_root": "reports/md_c0_baseline_2026-09-21-depot",
+  "dataset_generation": {
+    "shards": [
+      {
+        "shard": "balanced",
+        "requested_count": 100,
+        "generated_count": 100,
+        "skipped_count": 0,
+        "skipped": []
+      },
+      {
+        "shard": "scale_medium",
+        "requested_count": 100,
+        "generated_count": 100,
+        "skipped_count": 0,
+        "skipped": []
+      },
+      {
+        "shard": "scale42",
+        "requested_count": 50,
+        "generated_count": 50,
+        "skipped_count": 0,
+        "skipped": []
+      }
+    ]
+  },
+  "artifacts": {
+    "summary": "reports/md_c0_baseline_2026-09-21-depot/pilot_summary.json",
+    "report": "reports/md_c0_baseline_2026-09-21-depot/RESULTS.md",
+    "training_loss_plot": "reports/md_c0_baseline_2026-09-21-depot/training_loss.png",
+    "dataset_split_plot": "reports/md_c0_baseline_2026-09-21-depot/dataset_split.png",
+    "checkpoint": "reports/md_c0_baseline_2026-09-21-depot/training/best_checkpoint.pt",
+    "training_summary": "reports/md_c0_baseline_2026-09-21-depot/training/training_summary.json"
+  }
+}

@@ -1,0 +1,158 @@
+=== threshold ablation start ===
+--- threshold=0.0 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 286.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 321.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 231.0, "c0_ms": 239.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 267.0, "c0_ms": 269.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": null,
+  "override_transport_robot_count": null,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 264.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 278.75,
+      "best_greedy_name": "n/a",
+      "best_greedy_makespan": null,
+      "c0_gap_vs_milp_percent": 5.387523629489603,
+      "best_greedy_gap_vs_milp_percent": null,
+      "c0_vs_best_greedy_percent": null
+    }
+  ]
+}
+--- threshold=0.1 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 286.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 321.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 231.0, "c0_ms": 239.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 267.0, "c0_ms": 269.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": null,
+  "override_transport_robot_count": null,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 264.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 278.75,
+      "best_greedy_name": "n/a",
+      "best_greedy_makespan": null,
+      "c0_gap_vs_milp_percent": 5.387523629489603,
+      "best_greedy_gap_vs_milp_percent": null,
+      "c0_vs_best_greedy_percent": null
+    }
+  ]
+}
+--- threshold=0.5 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 286.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 321.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 231.0, "c0_ms": 239.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 267.0, "c0_ms": 269.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": null,
+  "override_transport_robot_count": null,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 264.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 278.75,
+      "best_greedy_name": "n/a",
+      "best_greedy_makespan": null,
+      "c0_gap_vs_milp_percent": 5.387523629489603,
+      "best_greedy_gap_vs_milp_percent": null,
+      "c0_vs_best_greedy_percent": null
+    }
+  ]
+}
+--- threshold=1.5 ---
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 260.0, "c0_ms": 286.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 300.0, "c0_ms": 321.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 231.0, "c0_ms": 239.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 267.0, "c0_ms": 269.0, "gd_ms": null, "ge_ms": null, "gu_ms": null}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": null,
+  "override_transport_robot_count": null,
+  "override_process_duration_range": null,
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 264.5,
+      "milp_timeout_count": 0,
+      "c0_makespan": 278.75,
+      "best_greedy_name": "n/a",
+      "best_greedy_makespan": null,
+      "c0_gap_vs_milp_percent": 5.387523629489603,
+      "best_greedy_gap_vs_milp_percent": null,
+      "c0_vs_best_greedy_percent": null
+    }
+  ]
+}
+=== THRESHOLD DONE ===

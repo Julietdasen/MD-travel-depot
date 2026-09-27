@@ -1,0 +1,127 @@
+=== duration=narrow (8,12) ===
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 221.0, "c0_ms": 279.0, "gd_ms": 281.0, "ge_ms": 266.0, "gu_ms": 281.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 197.0, "c0_ms": 222.0, "gd_ms": 228.0, "ge_ms": 228.0, "gu_ms": 228.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 211.0, "c0_ms": 239.0, "gd_ms": 262.0, "ge_ms": 262.0, "gu_ms": 262.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 239.0, "c0_ms": 271.0, "gd_ms": 281.0, "ge_ms": 281.0, "gu_ms": 275.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": [
+    8,
+    12
+  ],
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 217.0,
+      "milp_timeout_count": 0,
+      "c0_makespan": 252.75,
+      "best_greedy_name": "greedy_eta",
+      "best_greedy_makespan": 259.25,
+      "c0_gap_vs_milp_percent": 16.474654377880185,
+      "best_greedy_gap_vs_milp_percent": 19.470046082949306,
+      "c0_vs_best_greedy_percent": -2.507232401157184
+    }
+  ]
+}
+=== duration=medium (5,20) ===
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 263.0, "c0_ms": 286.0, "gd_ms": 312.0, "ge_ms": 312.0, "gu_ms": 312.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 278.0, "c0_ms": 292.0, "gd_ms": 323.0, "ge_ms": 323.0, "gu_ms": 305.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 206.0, "c0_ms": 238.0, "gd_ms": 266.0, "ge_ms": 266.0, "gu_ms": 266.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 253.0, "c0_ms": 265.0, "gd_ms": 333.0, "ge_ms": 333.0, "gu_ms": 333.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": [
+    5,
+    20
+  ],
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 250.0,
+      "milp_timeout_count": 0,
+      "c0_makespan": 270.25,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 304.0,
+      "c0_gap_vs_milp_percent": 8.1,
+      "best_greedy_gap_vs_milp_percent": 21.6,
+      "c0_vs_best_greedy_percent": -11.101973684210527
+    }
+  ]
+}
+=== duration=wide (3,40) ===
+{"profile": "process_scarce", "tc": 24, "seed": 301, "milp_status": "optimal", "milp_ms": 359.0, "c0_ms": 425.0, "gd_ms": 424.0, "ge_ms": 424.0, "gu_ms": 424.0}
+{"profile": "process_scarce", "tc": 24, "seed": 302, "milp_status": "optimal", "milp_ms": 348.0, "c0_ms": 371.0, "gd_ms": 379.0, "ge_ms": 377.0, "gu_ms": 361.0}
+{"profile": "process_scarce", "tc": 24, "seed": 303, "milp_status": "optimal", "milp_ms": 334.0, "c0_ms": 369.0, "gd_ms": 402.0, "ge_ms": 402.0, "gu_ms": 402.0}
+{"profile": "process_scarce", "tc": 24, "seed": 304, "milp_status": "optimal", "milp_ms": 340.0, "c0_ms": 402.0, "gd_ms": 420.0, "ge_ms": 386.0, "gu_ms": 386.0}
+{
+  "schema": "md-c0-scaled-target-profiles-eval-1.0",
+  "checkpoint": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3101/training/checkpoint_epoch_5.pt",
+  "profiles": [
+    "process_scarce"
+  ],
+  "task_counts": [
+    24
+  ],
+  "seeds": [
+    301,
+    302,
+    303,
+    304
+  ],
+  "override_process_robot_count": 4,
+  "override_transport_robot_count": 4,
+  "override_process_duration_range": [
+    3,
+    40
+  ],
+  "milp_time_limit_seconds": 300.0,
+  "per_tier": [
+    {
+      "profile": "process_scarce",
+      "task_count": 24,
+      "milp_incumbent": 345.25,
+      "milp_timeout_count": 0,
+      "c0_makespan": 391.75,
+      "best_greedy_name": "greedy_unlock",
+      "best_greedy_makespan": 393.25,
+      "c0_gap_vs_milp_percent": 13.468501086169443,
+      "best_greedy_gap_vs_milp_percent": 13.90296886314265,
+      "c0_vs_best_greedy_percent": -0.3814367450731087
+    }
+  ]
+}
+SWEEP2 DONE

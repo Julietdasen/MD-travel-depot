@@ -13,7 +13,10 @@ from simulation_environment.domain_model import (
     ProcessTask,
     TransportTask,
 )
-from simulation_environment.md_discrete_simulator import MDDiscreteSimulator
+from simulation_environment.md_discrete_simulator import (
+    MDDiscreteSimulator,
+    TaskStatus,
+)
 
 
 Assignment = tuple[int, int]
@@ -44,7 +47,7 @@ def simulator_hard_mask(simulator: MDDiscreteSimulator) -> torch.Tensor:
 
     robot_ids = tuple(sorted(simulator.robot_states))
     task_ids = tuple(sorted(simulator.task_states))
-    return torch.tensor(
+    mask = torch.tensor(
         [
             [
                 simulator.assignment_feasibility(
@@ -56,6 +59,77 @@ def simulator_hard_mask(simulator: MDDiscreteSimulator) -> torch.Tensor:
         ],
         dtype=torch.bool,
     )
+    _apply_ready_preference_guard(mask, simulator, robot_ids, task_ids)
+    return mask
+
+
+def _apply_ready_preference_guard(
+    mask: torch.Tensor,
+    simulator: MDDiscreteSimulator,
+    robot_ids: tuple[int, ...],
+    task_ids: tuple[int, ...],
+) -> None:
+    """Reject process-task columns whose precursors are not yet committed.
+
+    ``is_task_assignable`` allows a robot to depart toward a process task
+    while its precursors are still IN_PROGRESS (OR-Tools "travel overlap"
+    contract): the precursor is expected to finish while the robot travels.
+    The same contract holds while a precursor is PENDING with a complete
+    coalition already committed — those robots are on their way and service
+    starts as soon as the precursor's own precursors clear. The contract
+    only breaks when a precursor is PENDING with nobody committed yet, so
+    a robot departing to the successor could wait forever while its peers
+    get consumed on other blocked tasks, producing a deadlock.
+
+    Classify each process task by precursor state (both normal_predecessors
+    and material_predecessor):
+
+    - precursor COMPLETE or IN_PROGRESS → safe (leave mask alone)
+    - precursor PENDING with non-empty assigned_robot_ids → safe (coalition
+      committed and traveling; matches the OR-Tools departure-during-
+      precursor pattern)
+    - precursor PENDING with no assigned robots → unsafe (zero out
+      process-robot entries so the decoder cannot commit a robot to the
+      successor yet)
+    """
+    tasks = {task.task_id: task for task in simulator.domain.tasks}
+    task_states = simulator.task_states
+
+    def precursor_ids(task: ProcessTask) -> tuple[int, ...]:
+        ids = list(task.normal_predecessors)
+        if task.material_predecessor is not None:
+            ids.append(task.material_predecessor)
+        return tuple(ids)
+
+    def is_uncommitted_pending(task_id: int) -> bool:
+        state = task_states[task_id]
+        return (
+            state.status is TaskStatus.PENDING and not state.assigned_robot_ids
+        )
+
+    unsafe_columns: list[int] = []
+    for column, task_id in enumerate(task_ids):
+        task = tasks[task_id]
+        if not isinstance(task, ProcessTask):
+            continue
+        precursors = precursor_ids(task)
+        if not precursors:
+            continue
+        if any(is_uncommitted_pending(predecessor) for predecessor in precursors):
+            unsafe_columns.append(column)
+    if not unsafe_columns:
+        return
+    robots = {robot.robot_id: robot for robot in simulator.domain.robots}
+    process_robot_rows = [
+        row
+        for row, robot_id in enumerate(robot_ids)
+        if isinstance(robots[robot_id], ProcessRobot)
+    ]
+    if not process_robot_rows:
+        return
+    for row in process_robot_rows:
+        for column in unsafe_columns:
+            mask[row, column] = False
 
 
 class LearnedConstrainedDecoder:

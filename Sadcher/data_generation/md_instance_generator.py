@@ -49,6 +49,9 @@ class MDGeneratorConfig:
     process_robot_count: int = 3
     transport_robot_count: int = 2
     skill_count: int = 3
+    scarce_skill_count: int = 0
+    material_downstream_stratified: bool = False
+    process_duration_range: tuple[int, int] | None = None
 
     def __post_init__(self) -> None:
         _nonnegative_integer(self.seed, "seed")
@@ -93,6 +96,19 @@ class MDGeneratorConfig:
             raise ValueError(
                 "transport tasks require at least one transport robot"
             )
+        _nonnegative_integer(self.scarce_skill_count, "scarce_skill_count")
+        if self.scarce_skill_count > self.skill_count:
+            raise ValueError(
+                "scarce_skill_count cannot exceed skill_count"
+            )
+        if self.process_duration_range is not None:
+            lo, hi = self.process_duration_range
+            if not isinstance(lo, int) or not isinstance(hi, int):
+                raise ValueError("process_duration_range entries must be int")
+            if lo < 1 or hi < lo:
+                raise ValueError(
+                    "process_duration_range must satisfy 1 <= lo <= hi"
+                )
 
         candidate_count = self.precedence_candidate_count
         required_count = self.critical_path_length - 1
@@ -149,7 +165,7 @@ def generate_md_instance(config: MDGeneratorConfig) -> GeneratedMDInstance:
         range(config.process_task_count + 1, config.task_count + 1)
     )
 
-    normal_edges = _generate_normal_edges(process_ids, config, generator)
+    normal_edges, level_by_id = _generate_normal_edges(process_ids, config, generator)
     process_locations = {
         task_id: _random_location(generator) for task_id in process_ids
     }
@@ -157,18 +173,30 @@ def generate_md_instance(config: MDGeneratorConfig) -> GeneratedMDInstance:
         config.process_task_count, config.skill_count, generator
     )
 
-    downstream_ids = generator.sample(
-        process_ids, config.transport_task_count
-    )
+    if config.material_downstream_stratified and config.transport_task_count:
+        downstream_ids = _stratified_downstream_sample(
+            process_ids,
+            level_by_id,
+            config.critical_path_length,
+            config.transport_task_count,
+            generator,
+        )
+    else:
+        downstream_ids = generator.sample(
+            process_ids, config.transport_task_count
+        )
     material_edges = tuple(zip(transport_ids, downstream_ids, strict=True))
+
+    if config.process_duration_range is not None:
+        duration_lo, duration_hi = config.process_duration_range
+    else:
+        duration_lo, duration_hi = MIN_PROCESS_DURATION, MAX_PROCESS_DURATION
 
     process_tasks = tuple(
         ProcessTask(
             task_id=task_id,
             location=process_locations[task_id],
-            duration=generator.randint(
-                MIN_PROCESS_DURATION, MAX_PROCESS_DURATION
-            ),
+            duration=generator.randint(duration_lo, duration_hi),
             requirements=process_requirements[index],
         )
         for index, task_id in enumerate(process_ids)
@@ -199,11 +227,19 @@ def generate_md_instance(config: MDGeneratorConfig) -> GeneratedMDInstance:
     process_capabilities = _random_covering_boolean_rows(
         config.process_robot_count, config.skill_count, generator
     )
+    if config.scarce_skill_count > 0:
+        process_capabilities = _apply_scarce_skills(
+            process_capabilities,
+            config.scarce_skill_count,
+            generator,
+        )
+    depot = _random_location(generator)
     process_robots = tuple(
         ProcessRobot(
             robot_id=robot_id,
-            location=_random_location(generator),
+            location=depot,
             capabilities=process_capabilities[robot_id],
+            home_location=depot,
         )
         for robot_id in range(config.process_robot_count)
     )
@@ -238,7 +274,7 @@ def _generate_normal_edges(
     process_ids: list[int],
     config: MDGeneratorConfig,
     generator: random.Random,
-) -> tuple[tuple[int, int], ...]:
+) -> tuple[tuple[tuple[int, int], ...], dict[int, int]]:
     ordered_ids = process_ids.copy()
     generator.shuffle(ordered_ids)
     level_by_id = {
@@ -262,7 +298,55 @@ def _generate_normal_edges(
     generator.shuffle(optional_edges)
     optional_count = config.normal_edge_count - len(required_edges)
     selected_edges = required_edges + tuple(optional_edges[:optional_count])
-    return tuple(sorted(selected_edges))
+    return tuple(sorted(selected_edges)), level_by_id
+
+
+def _stratified_downstream_sample(
+    process_ids: list[int],
+    level_by_id: dict[int, int],
+    critical_path_length: int,
+    transport_task_count: int,
+    generator: random.Random,
+) -> list[int]:
+    """Sample downstream process ids for transports split between upstream / downstream halves."""
+    threshold = critical_path_length / 2.0
+    upper = [tid for tid in process_ids if level_by_id[tid] < threshold]
+    lower = [tid for tid in process_ids if level_by_id[tid] >= threshold]
+    upper_quota = transport_task_count // 2
+    lower_quota = transport_task_count - upper_quota
+    if len(upper) < upper_quota:
+        overflow = upper_quota - len(upper)
+        upper_quota -= overflow
+        lower_quota += overflow
+    if len(lower) < lower_quota:
+        overflow = lower_quota - len(lower)
+        lower_quota -= overflow
+        upper_quota += overflow
+    picked_upper = generator.sample(upper, upper_quota) if upper_quota else []
+    picked_lower = generator.sample(lower, lower_quota) if lower_quota else []
+    combined = picked_upper + picked_lower
+    generator.shuffle(combined)
+    return combined
+
+
+def _apply_scarce_skills(
+    capabilities: tuple[tuple[bool, ...], ...],
+    scarce_skill_count: int,
+    generator: random.Random,
+) -> tuple[tuple[bool, ...], ...]:
+    """Force the last k skill columns to be owned by exactly one robot each."""
+    row_count = len(capabilities)
+    column_count = len(capabilities[0]) if capabilities else 0
+    scarce_start = column_count - scarce_skill_count
+    mutable = [list(row) for row in capabilities]
+    for column in range(scarce_start, column_count):
+        chosen = generator.randrange(row_count)
+        for row_index in range(row_count):
+            mutable[row_index][column] = row_index == chosen
+    for row_index, row in enumerate(mutable):
+        if not any(row):
+            row[generator.randrange(scarce_start) if scarce_start else 0] = True
+    return tuple(tuple(row) for row in mutable)
 
 
 def _random_nonempty_boolean_rows(

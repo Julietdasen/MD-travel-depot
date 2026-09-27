@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 
-from baselines.gurobi_md_residual_oracle import (
+from baselines.md_oracle_types import (
     ForcedAssignmentBatch,
     ResidualMDState,
     ResidualOracleResult,

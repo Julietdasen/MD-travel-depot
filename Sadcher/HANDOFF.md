@@ -385,7 +385,13 @@ bash run_frozen_joint_test.sh
 ```
 
 该命令会写入既有 evaluation 目录。若需要重新实验，使用新的带日期输出目录，不要覆盖
-本文引用的历史结果。生成 exact-action 数据仍需要有效的 Gurobi license。
+本文引用的历史结果。
+
+MILP solver 后端（2026-09-17 更新）：默认已切换到 OR-Tools CP-SAT，无需 Gurobi
+license。所有 runtime 调用统一走 `baselines.md_oracle_dispatch`（`solve_md_oracle`、
+`solve_residual_forced_batch`）；用环境变量 `MRTA_MILP_SOLVER=gurobi` 切回旧后端。
+Residual forced-batch oracle 已完成 CP-SAT 移植（`baselines/md_ortools_residual_oracle.py`），
+exact-action 数据生成也不再需要 Gurobi。细节见 `ReadME/2026-09-17/BASELINE_SWAP_TO_ORTOOLS.md`。
 
 ## 给新 Session 的建议首条指令
 

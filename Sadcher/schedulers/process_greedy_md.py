@@ -10,10 +10,33 @@ from typing import Any
 
 from experiments.protocol import DatasetSplit, ExperimentResult, FailureReason
 from simulation_environment.domain_model import ProcessRobot, ProcessTask
+from simulation_environment.hard_feasibility import TaskStatus
 from simulation_environment.md_discrete_simulator import (
     MDDiscreteSimulator,
     RobotActivity,
 )
+
+
+def _has_pending_precursor(
+    task: ProcessTask, simulator: MDDiscreteSimulator
+) -> bool:
+    """True iff any precursor is PENDING with no coalition committed yet.
+
+    Mirrors ``schedulers/md_constrained_decoder._apply_ready_preference_guard``:
+    a PENDING precursor whose coalition is already traveling (non-empty
+    ``assigned_robot_ids``) is safe to overlap with — the successor's robot
+    can depart in parallel. Only PENDING+uncommitted precursors risk a
+    coalition-starvation deadlock.
+    """
+    precursors = list(task.normal_predecessors)
+    if task.material_predecessor is not None:
+        precursors.append(task.material_predecessor)
+    task_states = simulator.task_states
+    return any(
+        task_states[predecessor].status is TaskStatus.PENDING
+        and not task_states[predecessor].assigned_robot_ids
+        for predecessor in precursors
+    )
 
 
 @dataclass(frozen=True, slots=True)
@@ -69,6 +92,8 @@ class ProcessGreedyMDAdapter:
                 if not simulator.assignment_feasibility(
                     robot_id=robot.robot_id, task_id=task.task_id
                 ).is_feasible:
+                    continue
+                if _has_pending_precursor(task, simulator):
                     continue
                 remaining = _remaining_required_skills(
                     task,

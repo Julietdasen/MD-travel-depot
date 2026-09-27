@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from baselines.gurobi_md_oracle import (
+from baselines.md_oracle_types import (
     GurobiMDModel,
     GurobiOracleResult,
     GurobiOracleStatus,
@@ -80,9 +80,12 @@ class MDExpertDatasetTests(unittest.TestCase):
         self.assertEqual(first.task_ids, (1, 2, 3))
         self.assertEqual(first.typed_graph.normal_edges, ((2, 1),))
         self.assertEqual(first.typed_graph.material_edges, ((3, 1),))
+        # Under the arrival-contract, robot 0 may commit to task 1 while its
+        # precursors are still in progress; simulator.is_task_ready still gates
+        # actual service start.
         self.assertEqual(
             first.hard_feasibility_mask,
-            ((False, True, False), (False, False, True)),
+            ((True, True, False), (False, False, True)),
         )
         self.assertEqual(
             first.capacity_feasibility,

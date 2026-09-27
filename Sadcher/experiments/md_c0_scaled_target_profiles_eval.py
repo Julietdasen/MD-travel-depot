@@ -24,11 +24,12 @@ import argparse
 import json
 import time
 from collections import defaultdict
+from dataclasses import replace
 from pathlib import Path
 
 import torch
 
-from baselines.gurobi_md_oracle import solve_gurobi_md_oracle
+from baselines.md_oracle_dispatch import solve_md_oracle
 from data_generation.md_instance_generator import MDGeneratorConfig, generate_md_instance
 from data_generation.md_instance_profiles import INSTANCE_PROFILES
 from experiments.protocol import DatasetSplit
@@ -82,17 +83,20 @@ def _scaled_profile_config(profile_name: str, task_count: int, seed: int) -> MDG
         process_robot_count=max(1, round(base["process_robot_count"] * scale)),
         transport_robot_count=max(base.get("transport_robot_count", 1), round(base["transport_robot_count"] * scale)),
         skill_count=base["skill_count"],
+        scarce_skill_count=base.get("scarce_skill_count", 0),
+        material_downstream_stratified=base.get("material_downstream_stratified", False),
+        process_duration_range=base.get("process_duration_range", None),
     )
 
 
-def _run_c0(model, domain, *, run_id, instance_id, seed, device):
+def _run_c0(model, domain, *, run_id, instance_id, seed, device, confidence_threshold=0.0):
     scheduler = OnlineMDScheduler(
         scorer=OnlineNeuralScoreProvider(
             model, build_md_policy_inputs_from_simulator, device=device
         ),
         decoder=LearnedConstrainedDecoder(),
         fallback=ExplicitMIPFallback(threads=1),
-        confidence_threshold=0.0,
+        confidence_threshold=confidence_threshold,
         max_steps=MAX_ROLLOUT_STEPS,
     )
     started = time.perf_counter()
@@ -114,9 +118,9 @@ def _run_c0(model, domain, *, run_id, instance_id, seed, device):
     }
 
 
-def _run_milp(domain):
-    r = solve_gurobi_md_oracle(
-        domain, time_limit_seconds=MILP_TIME_LIMIT_SECONDS, threads=MILP_THREADS
+def _run_milp(domain, time_limit_seconds: float = MILP_TIME_LIMIT_SECONDS):
+    r = solve_md_oracle(
+        domain, time_limit_seconds=time_limit_seconds, threads=MILP_THREADS
     )
     return {
         "status": r.status.value,
@@ -131,19 +135,69 @@ def _mean(values):
     return sum(values) / len(values) if values else None
 
 
-def run(checkpoint: Path, output: Path, device_name: str) -> dict:
+def _apply_config_overrides(
+    cfg: MDGeneratorConfig,
+    *,
+    process_robot_count: int | None,
+    transport_robot_count: int | None,
+    process_duration_range: tuple[int, int] | None,
+    skill_count: int | None,
+    scarce_skill_count: int | None,
+) -> MDGeneratorConfig:
+    updates: dict = {}
+    if process_robot_count is not None:
+        updates["process_robot_count"] = process_robot_count
+    if transport_robot_count is not None:
+        updates["transport_robot_count"] = transport_robot_count
+    if process_duration_range is not None:
+        updates["process_duration_range"] = process_duration_range
+    if skill_count is not None:
+        updates["skill_count"] = skill_count
+    if scarce_skill_count is not None:
+        updates["scarce_skill_count"] = scarce_skill_count
+    if not updates:
+        return cfg
+    return replace(cfg, **updates)
+
+
+def run(
+    checkpoint: Path,
+    output: Path,
+    device_name: str,
+    profiles: tuple[str, ...] | None = None,
+    task_counts: tuple[int, ...] | None = None,
+    override_process_robot_count: int | None = None,
+    override_transport_robot_count: int | None = None,
+    override_process_duration_range: tuple[int, int] | None = None,
+    override_skill_count: int | None = None,
+    override_scarce_skill_count: int | None = None,
+    milp_time_limit_seconds: float = MILP_TIME_LIMIT_SECONDS,
+    skip_greedies: bool = False,
+    confidence_threshold: float = 0.0,
+) -> dict:
     device = torch.device(device_name)
     model, _ = load_md_policy_checkpoint(checkpoint, device=device)
     model.eval()
 
+    active_profiles = tuple(profiles) if profiles else TARGET_PROFILES
+    active_task_counts = tuple(task_counts) if task_counts else TASK_COUNTS
+
     rows = []
-    for profile in TARGET_PROFILES:
-        for tc in TASK_COUNTS:
+    for profile in active_profiles:
+        for tc in active_task_counts:
             for seed in SEEDS:
                 cfg = _scaled_profile_config(profile, tc, seed)
+                cfg = _apply_config_overrides(
+                    cfg,
+                    process_robot_count=override_process_robot_count,
+                    transport_robot_count=override_transport_robot_count,
+                    process_duration_range=override_process_duration_range,
+                    skill_count=override_skill_count,
+                    scarce_skill_count=override_scarce_skill_count,
+                )
                 domain = generate_md_instance(cfg).domain
 
-                milp = _run_milp(domain)
+                milp = _run_milp(domain, time_limit_seconds=milp_time_limit_seconds)
                 c0 = _run_c0(
                     model,
                     domain,
@@ -151,9 +205,11 @@ def run(checkpoint: Path, output: Path, device_name: str) -> dict:
                     instance_id=f"scaled-{profile}-{tc}-{seed}",
                     seed=seed,
                     device=device,
+                    confidence_threshold=confidence_threshold,
                 )
                 greedies = {}
-                for name, fn in GREEDY_BASELINES.items():
+                if not skip_greedies:
+                  for name, fn in GREEDY_BASELINES.items():
                     r = fn(
                         MDDiscreteSimulator(domain),
                         run_id=f"scaled-{profile}-{name}-{tc}-{seed}",
@@ -183,9 +239,9 @@ def run(checkpoint: Path, output: Path, device_name: str) -> dict:
                             "milp_status": milp["status"],
                             "milp_ms": milp["makespan"],
                             "c0_ms": c0["makespan"],
-                            "gd_ms": greedies["greedy_distance"]["makespan"],
-                            "ge_ms": greedies["greedy_eta"]["makespan"],
-                            "gu_ms": greedies["greedy_unlock"]["makespan"],
+                            "gd_ms": greedies.get("greedy_distance", {}).get("makespan"),
+                            "ge_ms": greedies.get("greedy_eta", {}).get("makespan"),
+                            "gu_ms": greedies.get("greedy_unlock", {}).get("makespan"),
                         }
                     ),
                     flush=True,
@@ -216,7 +272,8 @@ def run(checkpoint: Path, output: Path, device_name: str) -> dict:
     ]
 
     summary_rows = []
-    for profile in TARGET_PROFILES:
+    _iter_task_counts = active_task_counts
+    for profile in active_profiles:
         milp_by_tc = defaultdict(list)
         c0_by_tc = defaultdict(list)
         greedy_by_tc = defaultdict(lambda: defaultdict(list))
@@ -241,7 +298,7 @@ def run(checkpoint: Path, output: Path, device_name: str) -> dict:
             "| task_count | MILP status | MILP incumbent | new C0 | new C0 gap vs MILP | best greedy (name) | greedy gap vs MILP | **new C0 vs best greedy** |"
         )
         lines.append("|---:|---|---:|---:|---:|---|---:|---:|")
-        for tc in TASK_COUNTS:
+        for tc in _iter_task_counts:
             milp_mean = _mean(milp_by_tc[tc])
             c0_mean = _mean(c0_by_tc[tc])
             gm = {name: _mean(v) for name, v in greedy_by_tc[tc].items() if v}
@@ -275,10 +332,17 @@ def run(checkpoint: Path, output: Path, device_name: str) -> dict:
     summary = {
         "schema": "md-c0-scaled-target-profiles-eval-1.0",
         "checkpoint": str(checkpoint),
-        "profiles": list(TARGET_PROFILES),
-        "task_counts": list(TASK_COUNTS),
+        "profiles": list(active_profiles),
+        "task_counts": list(active_task_counts),
         "seeds": list(SEEDS),
-        "milp_time_limit_seconds": MILP_TIME_LIMIT_SECONDS,
+        "override_process_robot_count": override_process_robot_count,
+        "override_transport_robot_count": override_transport_robot_count,
+        "override_process_duration_range": (
+            list(override_process_duration_range)
+            if override_process_duration_range is not None
+            else None
+        ),
+        "milp_time_limit_seconds": milp_time_limit_seconds,
         "per_tier": summary_rows,
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
@@ -294,5 +358,110 @@ if __name__ == "__main__":
         default=Path("reports/md_c0_scaled_target_profiles_eval_2026-09-14"),
     )
     parser.add_argument("--device", default="cuda:0")
+    parser.add_argument(
+        "--profiles",
+        nargs="+",
+        default=None,
+        help="Subset of profile names to evaluate. Defaults to TARGET_PROFILES.",
+    )
+    parser.add_argument(
+        "--tc-list",
+        type=str,
+        default=None,
+        help="Comma-separated task_count values to evaluate (defaults to 12,24,42,60).",
+    )
+    parser.add_argument(
+        "--override-process-robot-count",
+        type=int,
+        default=None,
+        help="Override scaled process_robot_count for every generated instance.",
+    )
+    parser.add_argument(
+        "--override-transport-robot-count",
+        type=int,
+        default=None,
+        help="Override scaled transport_robot_count for every generated instance.",
+    )
+    parser.add_argument(
+        "--override-process-duration-min",
+        type=int,
+        default=None,
+        help="Override process duration lower bound; requires the max override too.",
+    )
+    parser.add_argument(
+        "--override-process-duration-max",
+        type=int,
+        default=None,
+        help="Override process duration upper bound; requires the min override too.",
+    )
+    parser.add_argument(
+        "--override-skill-count",
+        type=int,
+        default=None,
+        help="Override skill_count (default from profile).",
+    )
+    parser.add_argument(
+        "--override-scarce-skill-count",
+        type=int,
+        default=None,
+        help="Override scarce_skill_count (default from profile).",
+    )
+    parser.add_argument(
+        "--milp-time-limit",
+        type=float,
+        default=MILP_TIME_LIMIT_SECONDS,
+        help="MILP wall-clock time limit in seconds (default 300).",
+    )
+    parser.add_argument(
+        "--skip-greedies",
+        action="store_true",
+        help="Skip greedy baselines to save wallclock (large tc runs).",
+    )
+    parser.add_argument(
+        "--confidence-threshold",
+        type=float,
+        default=0.0,
+        help="Fallback to MILP when C0 assignment margin < threshold (default 0.0).",
+    )
     args = parser.parse_args()
-    print(json.dumps(run(args.checkpoint, args.output, args.device), indent=2))
+    profiles = tuple(args.profiles) if args.profiles else None
+    task_counts = (
+        tuple(int(x) for x in args.tc_list.split(","))
+        if args.tc_list
+        else None
+    )
+    override_range: tuple[int, int] | None
+    if (args.override_process_duration_min is None) != (
+        args.override_process_duration_max is None
+    ):
+        parser.error(
+            "--override-process-duration-min and --override-process-duration-max "
+            "must be provided together."
+        )
+    if args.override_process_duration_min is not None:
+        override_range = (
+            args.override_process_duration_min,
+            args.override_process_duration_max,
+        )
+    else:
+        override_range = None
+    print(
+        json.dumps(
+            run(
+                args.checkpoint,
+                args.output,
+                args.device,
+                profiles=profiles,
+                task_counts=task_counts,
+                override_process_robot_count=args.override_process_robot_count,
+                override_transport_robot_count=args.override_transport_robot_count,
+                override_process_duration_range=override_range,
+                override_skill_count=args.override_skill_count,
+                override_scarce_skill_count=args.override_scarce_skill_count,
+                milp_time_limit_seconds=args.milp_time_limit,
+                skip_greedies=args.skip_greedies,
+                confidence_threshold=args.confidence_threshold,
+            ),
+            indent=2,
+        )
+    )

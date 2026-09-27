@@ -12,15 +12,16 @@ def test_balanced_profile_preserves_the_historical_default():
 
 def test_profiles_generate_deterministic_task_oriented_instances():
     expected = {
-        "balanced": (12, 3, 3, 2),
-        "process_scarce": (12, 2, 2, 2),
-        "transport_bottleneck": (12, 5, 3, 1),
-        "dependency_deep": (12, 3, 3, 2),
-        "mixed_hard": (15, 5, 3, 2),
-        "scale_medium": (18, 6, 4, 3),
+        "balanced": (12, 3, 3, 2, 3),
+        "process_scarce": (12, 2, 2, 2, 3),
+        "process_scarce_v2": (12, 3, 3, 2, 3),
+        "transport_bottleneck": (12, 5, 3, 1, 3),
+        "dependency_deep": (12, 3, 3, 2, 3),
+        "mixed_hard": (15, 5, 3, 2, 3),
+        "scale_medium": (18, 6, 4, 3, 3),
     }
     assert set(INSTANCE_PROFILES) == set(expected)
-    for name, (tasks, transport_tasks, process_robots, transport_robots) in expected.items():
+    for name, (tasks, transport_tasks, process_robots, transport_robots, skills) in expected.items():
         config = md_generator_config_for_profile(name, 41)
         first = generate_md_instance(config)
         second = generate_md_instance(config)
@@ -29,7 +30,7 @@ def test_profiles_generate_deterministic_task_oriented_instances():
         assert sum(isinstance(task, TransportTask) for task in first.domain.tasks) == transport_tasks
         assert sum(isinstance(robot, ProcessRobot) for robot in first.domain.robots) == process_robots
         assert sum(isinstance(robot, TransportRobot) for robot in first.domain.robots) == transport_robots
-        assert config.skill_count == 3
+        assert config.skill_count == skills
 
 
 def test_unknown_profile_is_rejected_with_available_names():

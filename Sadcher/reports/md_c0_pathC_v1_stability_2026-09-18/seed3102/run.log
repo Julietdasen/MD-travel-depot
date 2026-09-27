@@ -1,0 +1,111 @@
+[01:03:13] epoch 000 (pretrained) val=0.679442 pos_pairs=1952 skipped_states=37
+[01:04:50] epoch 001 train=0.632827 val=0.662720 pos_pairs(train)=15048 skipped=293 elapsed=97.2s
+[01:06:15] epoch 002 train=0.618362 val=0.651091 pos_pairs(train)=15048 skipped=293 elapsed=84.3s
+[01:07:33] epoch 003 train=0.602617 val=0.634967 pos_pairs(train)=15048 skipped=293 elapsed=78.5s
+[01:09:00] epoch 004 train=0.594057 val=0.632011 pos_pairs(train)=15048 skipped=293 elapsed=86.8s
+[01:10:18] epoch 005 train=0.583376 val=0.629117 pos_pairs(train)=15048 skipped=293 elapsed=78.4s
+[01:11:37] epoch 006 train=0.574693 val=0.607676 pos_pairs(train)=15048 skipped=293 elapsed=78.3s
+[01:12:55] epoch 007 train=0.567979 val=0.622070 pos_pairs(train)=15048 skipped=293 elapsed=78.0s
+[01:14:13] epoch 008 train=0.566828 val=0.606416 pos_pairs(train)=15048 skipped=293 elapsed=78.1s
+[01:15:30] epoch 009 train=0.557938 val=0.605095 pos_pairs(train)=15048 skipped=293 elapsed=77.2s
+[01:16:47] epoch 010 train=0.557982 val=0.603201 pos_pairs(train)=15048 skipped=293 elapsed=77.3s
+[01:18:04] epoch 011 train=0.551425 val=0.602239 pos_pairs(train)=15048 skipped=293 elapsed=77.0s
+[01:19:22] epoch 012 train=0.547270 val=0.592764 pos_pairs(train)=15048 skipped=293 elapsed=77.1s
+[01:20:39] epoch 013 train=0.546909 val=0.590963 pos_pairs(train)=15048 skipped=293 elapsed=77.3s
+[01:21:56] epoch 014 train=0.542696 val=0.583625 pos_pairs(train)=15048 skipped=293 elapsed=77.1s
+[01:23:13] epoch 015 train=0.536652 val=0.582815 pos_pairs(train)=15048 skipped=293 elapsed=77.3s
+[01:24:30] epoch 016 train=0.536461 val=0.576094 pos_pairs(train)=15048 skipped=293 elapsed=77.1s
+[01:25:48] epoch 017 train=0.531873 val=0.574285 pos_pairs(train)=15048 skipped=293 elapsed=77.2s
+[01:27:05] epoch 018 train=0.533886 val=0.580033 pos_pairs(train)=15048 skipped=293 elapsed=77.3s
+[01:28:21] epoch 019 train=0.529141 val=0.573269 pos_pairs(train)=15048 skipped=293 elapsed=76.3s
+[01:29:36] epoch 020 train=0.525495 val=0.576010 pos_pairs(train)=15048 skipped=293 elapsed=74.8s
+{
+  "schema": "md-c0-pathC-ranking-v1-1.0",
+  "pretrained_checkpoint": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/training/best_checkpoint.pt",
+  "dataset_dir": "reports/md_c0_pathA_scaled_finetune_2026-09-17/dataset",
+  "output_dir": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training",
+  "epochs_requested": 20,
+  "epochs_run": 20,
+  "learning_rate": 5e-06,
+  "num_negatives": 5,
+  "margin": 1.0,
+  "seed": 3102,
+  "device": "cuda:0",
+  "train_sample_count": 9838,
+  "validation_sample_count": 1291,
+  "train_instance_count": 441,
+  "validation_instance_count": 56,
+  "epoch0_validation_loss": 0.6794419719113244,
+  "train_losses": [
+    0.6328267481846687,
+    0.6183623333389943,
+    0.6026166008355526,
+    0.5940567303257875,
+    0.58337565845786,
+    0.5746930903062607,
+    0.5679792123249708,
+    0.5668279342353344,
+    0.5579378162868894,
+    0.557982368585773,
+    0.5514246650422231,
+    0.5472697195095512,
+    0.5469087253873929,
+    0.5426958682111058,
+    0.5366516651537938,
+    0.5364612470357082,
+    0.5318725683177129,
+    0.5338862666334862,
+    0.5291406507962025,
+    0.5254945415907946
+  ],
+  "validation_losses": [
+    0.6794419719113244,
+    0.6627204689714644,
+    0.6510910418298509,
+    0.6349666853745778,
+    0.6320109473334419,
+    0.6291172954771254,
+    0.6076758841673533,
+    0.6220700369940864,
+    0.6064161188072629,
+    0.6050947454240587,
+    0.6032013250721826,
+    0.602239480945799,
+    0.5927644246154361,
+    0.5909627497196197,
+    0.5836253378126356,
+    0.5828149285581377,
+    0.5760942233933343,
+    0.5742854595184326,
+    0.580032679107454,
+    0.5732690857516395,
+    0.576010470257865
+  ],
+  "checkpoint_paths": {
+    "1": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_1.pt",
+    "2": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_2.pt",
+    "3": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_3.pt",
+    "4": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_4.pt",
+    "5": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_5.pt",
+    "6": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_6.pt",
+    "7": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_7.pt",
+    "8": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_8.pt",
+    "9": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_9.pt",
+    "10": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_10.pt",
+    "11": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_11.pt",
+    "12": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_12.pt",
+    "13": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_13.pt",
+    "14": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_14.pt",
+    "15": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_15.pt",
+    "16": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_16.pt",
+    "17": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_17.pt",
+    "18": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_18.pt",
+    "19": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_19.pt",
+    "20": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/checkpoint_epoch_20.pt",
+    "final": "reports/md_c0_pathC_v1_stability_2026-09-18/seed3102/training/best_checkpoint.pt"
+  },
+  "environment": {
+    "python": "3.11.16",
+    "torch": "2.4.0+cu121"
+  }
+}

@@ -1,0 +1,112 @@
+[23:28:30] epoch 000 (pretrained) val=0.677796 pos_pairs=1952 skipped_states=37
+[23:29:48] epoch 001 train=0.635839 val=0.671010 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.72 elapsed=78.5s
+[23:31:05] epoch 002 train=0.613546 val=0.646423 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.68 elapsed=76.7s
+[23:32:23] epoch 003 train=0.602626 val=0.636490 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.76 elapsed=78.1s
+[23:33:39] epoch 004 train=0.590452 val=0.627864 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.73 elapsed=75.7s
+[23:34:56] epoch 005 train=0.580847 val=0.624454 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.75 elapsed=77.0s
+[23:36:17] epoch 006 train=0.569732 val=0.632429 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.69 elapsed=81.0s
+[23:37:36] epoch 007 train=0.559198 val=0.619523 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.78 elapsed=79.4s
+[23:38:56] epoch 008 train=0.555545 val=0.609119 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.72 elapsed=79.9s
+[23:40:15] epoch 009 train=0.550218 val=0.616354 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.71 elapsed=79.0s
+[23:41:34] epoch 010 train=0.547248 val=0.596149 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.73 elapsed=78.2s
+[23:42:52] epoch 011 train=0.542762 val=0.593620 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.74 elapsed=78.2s
+[23:44:10] epoch 012 train=0.535713 val=0.590242 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.70 elapsed=78.2s
+[23:45:29] epoch 013 train=0.528836 val=0.579174 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.68 elapsed=78.6s
+[23:46:48] epoch 014 train=0.528975 val=0.584414 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.76 elapsed=79.0s
+[23:48:06] epoch 015 train=0.526509 val=0.582275 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.74 elapsed=78.7s
+[23:49:27] epoch 016 train=0.520415 val=0.580397 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.69 elapsed=80.9s
+[23:50:45] epoch 017 train=0.522383 val=0.568429 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.69 elapsed=78.1s
+[23:52:04] epoch 018 train=0.517187 val=0.575485 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.71 elapsed=78.4s
+[23:53:22] epoch 019 train=0.520178 val=0.566515 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.69 elapsed=78.3s
+[23:54:40] epoch 020 train=0.513550 val=0.565642 pos_pairs(train)=15048 skipped=293 w_mean=1.000 n_legal_mean=15.68 elapsed=78.2s
+{
+  "schema": "md-c0-pathC-b2-regret-weighted-1.0",
+  "pretrained_checkpoint": "reports/md_c0_milp_supervised_scale_pilot_2026-09-13/training/best_checkpoint.pt",
+  "dataset_dir": "reports/md_c0_pathA_scaled_finetune_2026-09-17/dataset",
+  "output_dir": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training",
+  "epochs_requested": 20,
+  "epochs_run": 20,
+  "learning_rate": 5e-06,
+  "num_negatives": 5,
+  "margin": 1.0,
+  "seed": 3101,
+  "device": "cuda:0",
+  "weight_scheme": "n_legal_pairs / batch_mean",
+  "train_sample_count": 9838,
+  "validation_sample_count": 1291,
+  "train_instance_count": 441,
+  "validation_instance_count": 56,
+  "epoch0_validation_loss": 0.6777955671151479,
+  "train_losses": [
+    0.6358388645861012,
+    0.6135463215028628,
+    0.6026264096204287,
+    0.5904521031830555,
+    0.5808465534295791,
+    0.5697322021692227,
+    0.559197946332204,
+    0.555544875562191,
+    0.5502181822099746,
+    0.5472481190107572,
+    0.5427622088732628,
+    0.5357126063452318,
+    0.5288358566184075,
+    0.5289753368363167,
+    0.5265085061725515,
+    0.5204145018584453,
+    0.522382990289957,
+    0.5171873540832446,
+    0.5201776234480815,
+    0.5135501636048923
+  ],
+  "validation_losses": [
+    0.6777955671151479,
+    0.6710101895862155,
+    0.6464226285616557,
+    0.6364901423454284,
+    0.627864475382699,
+    0.6244540168179407,
+    0.6324287825160556,
+    0.6195230457517836,
+    0.6091188655959235,
+    0.6163537164529165,
+    0.5961492346392737,
+    0.59362027976248,
+    0.5902422606945038,
+    0.579174491431978,
+    0.5844143430391947,
+    0.5822748038503859,
+    0.5803968495792813,
+    0.5684288567966885,
+    0.5754846195379894,
+    0.5665148907237583,
+    0.565641768111123
+  ],
+  "checkpoint_paths": {
+    "1": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_1.pt",
+    "2": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_2.pt",
+    "3": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_3.pt",
+    "4": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_4.pt",
+    "5": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_5.pt",
+    "6": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_6.pt",
+    "7": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_7.pt",
+    "8": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_8.pt",
+    "9": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_9.pt",
+    "10": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_10.pt",
+    "11": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_11.pt",
+    "12": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_12.pt",
+    "13": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_13.pt",
+    "14": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_14.pt",
+    "15": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_15.pt",
+    "16": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_16.pt",
+    "17": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_17.pt",
+    "18": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_18.pt",
+    "19": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_19.pt",
+    "20": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/checkpoint_epoch_20.pt",
+    "final": "reports/md_c0_pathC_b2_regret_weighted_2026-09-20/seed3101/training/best_checkpoint.pt"
+  },
+  "environment": {
+    "python": "3.11.16",
+    "torch": "2.4.0+cu121"
+  }
+}

@@ -3,7 +3,8 @@
 Extends md_c0_milp_supervised_pilot.py by mixing three instance sizes in
 the training set (task_count 12 / 24 / 42), so the resulting model has
 seen the same scaled-profile geometry that the scale-ladder evaluation
-covers. Uses the same reused infrastructure — solve_gurobi_md_oracle +
+covers. Uses the same reused infrastructure — MD MILP dispatch (OR-Tools
+CP-SAT by default, Gurobi opt-in via ``MRTA_MILP_SOLVER=gurobi``) +
 generate_md_expert_record_from_oracle + train_md_policy — no new label
 schema or dataloader shims.
 
@@ -11,7 +12,7 @@ Instances at 42 tasks sometimes time out at 300s (see the pure-MILP
 baseline pilot). generate_md_expert_dataset skips non-{OPTIMAL,FEASIBLE}
 results; feasible-but-timed-out schedules are still admitted because
 those are still a *better than random* supervision signal (they came from
-Gurobi's best incumbent within the time budget).
+the solver's best incumbent within the time budget).
 """
 from __future__ import annotations
 

@@ -110,6 +110,7 @@ class MDDiscreteSimulator:
         self._transport_records: dict[int, TransportExecutionRecord] = {}
         self._process_records: dict[int, ProcessExecutionRecord] = {}
         self._robot_occupied_durations = dict.fromkeys(self._robots, 0)
+        self._return_targets: dict[int, tuple[float, float]] = {}
         self._refresh_terminal_flags()
 
     def task_state(self, task_id: int) -> TaskRuntimeState:
@@ -145,10 +146,30 @@ class MDDiscreteSimulator:
             for state in self.task_states.values()
         ):
             return True
-        return any(
+        if any(
             state.activity in (RobotActivity.TRANSPORT, RobotActivity.RETURNING)
             for state in self.robot_states.values()
-        )
+        ):
+            return True
+        # A process robot still travelling toward a committed task, or one
+        # already parked and waiting for a precursor that will complete, is
+        # active work: the pending task will start once every committed robot
+        # arrives and every precursor completes.
+        for task_id, task in self._tasks.items():
+            if not isinstance(task, ProcessTask):
+                continue
+            state = self.task_states[task_id]
+            if state.status is not TaskStatus.PENDING:
+                continue
+            if not state.assigned_robot_ids:
+                continue
+            travelling = any(
+                self.robot_states[robot_id].remaining > 0
+                for robot_id in state.assigned_robot_ids
+            )
+            if travelling or self._can_start_process(task_id):
+                return True
+        return False
 
     def metrics(
         self,
@@ -214,6 +235,16 @@ class MDDiscreteSimulator:
         return ExperimentResult.failed(reason=metrics.failure_reason, **common)
 
     def is_task_ready(self, task_id: int) -> bool:
+        """Whether a task's actual service may start (all precursors COMPLETE).
+
+        Used by ``_can_start_process`` to gate the moment a process coalition
+        transitions to IN_PROGRESS. Assignment eligibility (whether a robot is
+        allowed to commit to the task now) is governed by ``is_task_assignable``
+        below, which mirrors the OR-Tools contract: robots may depart to a task
+        while its precursors are still in progress, as long as service does not
+        begin until precursors complete.
+        """
+
         task = self._tasks[task_id]
         state = self.task_states[task_id]
         if state.status is not TaskStatus.PENDING:
@@ -225,6 +256,24 @@ class MDDiscreteSimulator:
         if task.material_predecessor is not None:
             if self.task_states[task.material_predecessor].status is not TaskStatus.COMPLETE:
                 return False
+        return True
+
+    def is_task_assignable(self, task_id: int) -> bool:
+        """Whether a robot may be assigned to a task now.
+
+        Aligns with the OR-Tools MILP contract: precursor tasks must exist in
+        the schedule and not be terminally blocked, but their service may still
+        be in progress at assignment time (the assigning robot's travel
+        overlaps with the precursor). Service start is deferred until every
+        precursor is COMPLETE (see ``_can_start_process``).
+        """
+
+        task = self._tasks[task_id]
+        state = self.task_states[task_id]
+        if state.status is not TaskStatus.PENDING:
+            return False
+        if isinstance(task, TransportTask):
+            return state.transport_phase is TransportPhase.WAITING
         return True
 
     def assignment_feasibility(self, *, robot_id: int, task_id: int) -> FeasibilityResult:
@@ -250,7 +299,7 @@ class MDDiscreteSimulator:
             ),
             TaskFeasibilityContext(
                 task,
-                ready=self.is_task_ready(task_id),
+                ready=self.is_task_assignable(task_id),
                 status=task_state.status,
                 covered_skills=covered,
             ),
@@ -294,7 +343,12 @@ class MDDiscreteSimulator:
                 "occupied_duration": None,
             }
         else:
+            assert isinstance(task, ProcessTask)
+            assert isinstance(robot, ProcessRobot)
             robot_state.activity = RobotActivity.PROCESS
+            robot_state.remaining = travel_duration(
+                robot_state.location, task.location, robot.speed
+            )
             if self._can_start_process(task_id):
                 self._start_process(task_id)
         return result
@@ -302,6 +356,11 @@ class MDDiscreteSimulator:
     def step(self) -> None:
         if self.done:
             return
+        # Start any pending process tasks whose coalition is already fully
+        # assigned and whose precursors are now COMPLETE. This mirrors the
+        # OR-Tools contract: a robot may commit to a task while its precursors
+        # are still in progress; service begins the tick precursors complete.
+        self._launch_ready_pending_processes()
         process_task_ids: set[int] = set()
         for robot_id in sorted(self.robot_states):
             state = self.robot_states[robot_id]
@@ -309,13 +368,31 @@ class MDDiscreteSimulator:
                 self._advance_transport(robot_id)
             elif state.activity is RobotActivity.PROCESS:
                 assert state.task_id is not None
-                process_task_ids.add(state.task_id)
+                if self.task_states[state.task_id].status is TaskStatus.IN_PROGRESS:
+                    process_task_ids.add(state.task_id)
+                elif state.remaining > 0:
+                    # Robot travelling toward its committed process task; the
+                    # coalition holds service until every robot has arrived.
+                    state.remaining -= 1
             elif state.activity is RobotActivity.RETURNING:
                 self._advance_return(robot_id)
         for task_id in sorted(process_task_ids):
             self._advance_process(task_id)
         self.time += 1
         self._refresh_terminal_flags()
+
+    def _launch_ready_pending_processes(self) -> None:
+        for task_id in sorted(self.task_states):
+            task = self._tasks[task_id]
+            if not isinstance(task, ProcessTask):
+                continue
+            state = self.task_states[task_id]
+            if state.status is not TaskStatus.PENDING:
+                continue
+            if not state.assigned_robot_ids:
+                continue
+            if self._can_start_process(task_id):
+                self._start_process(task_id)
 
     def _advance_transport(self, robot_id: int) -> None:
         robot_state = self.robot_states[robot_id]
@@ -389,7 +466,7 @@ class MDDiscreteSimulator:
         if state.remaining > 0:
             state.remaining -= 1
         if state.remaining <= 0:
-            state.location = self.exit_location
+            state.location = self._return_targets.get(robot_id, self.exit_location)
             state.activity = RobotActivity.AT_EXIT
 
     def _can_start_process(self, task_id: int) -> bool:
@@ -403,6 +480,11 @@ class MDDiscreteSimulator:
             for robot in (self._robots[robot_id],)
             if isinstance(robot, ProcessRobot)
         )
+        # Every committed robot must have finished travelling to the task
+        # location before service can begin. Robots that arrive early wait.
+        for robot_id in state.assigned_robot_ids:
+            if self.robot_states[robot_id].remaining > 0:
+                return False
         return is_process_coalition_start_feasible(
             TaskFeasibilityContext(
                 task,
@@ -451,16 +533,20 @@ class MDDiscreteSimulator:
                 if state.activity is not RobotActivity.AVAILABLE:
                     continue
                 robot = self._robots[robot_id]
-                speed = (
-                    robot.speed
-                    if isinstance(robot, ProcessRobot)
-                    else robot.unloaded_speed
-                )
+                # Process robots return to their designated home location;
+                # transport robots return to the shared exit. This matches the
+                # OR-Tools return-travel bound used by the MILP oracle.
+                if isinstance(robot, ProcessRobot):
+                    target = robot.home_location or self.exit_location
+                    speed = robot.speed
+                else:
+                    target = self.exit_location
+                    speed = robot.unloaded_speed
+                self._return_targets[robot_id] = target
                 state.activity = RobotActivity.RETURNING
-                state.remaining = travel_duration(
-                    state.location, self.exit_location, speed
-                )
+                state.remaining = travel_duration(state.location, target, speed)
                 if state.remaining == 0:
+                    state.location = target
                     state.activity = RobotActivity.AT_EXIT
         self.all_robots_at_exit = all(
             state.activity is RobotActivity.AT_EXIT for state in self.robot_states.values()

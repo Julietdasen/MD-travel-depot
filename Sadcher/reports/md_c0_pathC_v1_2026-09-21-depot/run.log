@@ -1,0 +1,21 @@
+[17:49:24] epoch 000 (pretrained) val=0.541420 pos_pairs=1527 skipped_states=13
+[17:50:50] epoch 001 train=0.495387 val=0.524049 pos_pairs(train)=11323 skipped=92 elapsed=86.3s
+[17:52:16] epoch 002 train=0.484375 val=0.493619 pos_pairs(train)=11323 skipped=92 elapsed=85.1s
+[17:53:42] epoch 003 train=0.473958 val=0.489025 pos_pairs(train)=11323 skipped=92 elapsed=86.5s
+[17:55:09] epoch 004 train=0.469275 val=0.478737 pos_pairs(train)=11323 skipped=92 elapsed=86.8s
+[17:56:36] epoch 005 train=0.457388 val=0.468018 pos_pairs(train)=11323 skipped=92 elapsed=87.1s
+[17:58:01] epoch 006 train=0.448676 val=0.464322 pos_pairs(train)=11323 skipped=92 elapsed=84.9s
+[17:59:27] epoch 007 train=0.441015 val=0.464284 pos_pairs(train)=11323 skipped=92 elapsed=86.4s
+[18:00:53] epoch 008 train=0.437121 val=0.463016 pos_pairs(train)=11323 skipped=92 elapsed=85.4s
+[18:02:16] epoch 009 train=0.431337 val=0.441288 pos_pairs(train)=11323 skipped=92 elapsed=83.3s
+[18:03:40] epoch 010 train=0.425784 val=0.462405 pos_pairs(train)=11323 skipped=92 elapsed=84.0s
+[18:05:03] epoch 011 train=0.425462 val=0.446631 pos_pairs(train)=11323 skipped=92 elapsed=83.3s
+[18:06:27] epoch 012 train=0.422796 val=0.438780 pos_pairs(train)=11323 skipped=92 elapsed=83.4s
+[18:07:50] epoch 013 train=0.419975 val=0.424318 pos_pairs(train)=11323 skipped=92 elapsed=83.7s
+[18:09:14] epoch 014 train=0.402681 val=0.432859 pos_pairs(train)=11323 skipped=92 elapsed=83.4s
+[18:10:39] epoch 015 train=0.407704 val=0.427872 pos_pairs(train)=11323 skipped=92 elapsed=84.8s
+[18:12:02] epoch 016 train=0.398884 val=0.431342 pos_pairs(train)=11323 skipped=92 elapsed=83.2s
+[18:13:27] epoch 017 train=0.400454 val=0.431594 pos_pairs(train)=11323 skipped=92 elapsed=84.6s
+[18:14:52] epoch 018 train=0.400289 val=0.423165 pos_pairs(train)=11323 skipped=92 elapsed=85.1s
+[18:16:17] epoch 019 train=0.398540 val=0.425039 pos_pairs(train)=11323 skipped=92 elapsed=85.5s
+[18:17:42] epoch 020 train=0.386272 val=0.426663 pos_pairs(train)=11323 skipped=92 elapsed=85.2s

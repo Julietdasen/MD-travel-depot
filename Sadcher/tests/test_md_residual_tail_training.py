@@ -3,7 +3,7 @@ import unittest
 import torch
 from torch import nn
 
-from baselines.gurobi_md_residual_oracle import (
+from baselines.md_oracle_types import (
     ForcedAssignmentBatch, ResidualMDState, ResidualOracleResult,
     ResidualOracleStatus, enumerate_forced_batches, residual_domain,
 )

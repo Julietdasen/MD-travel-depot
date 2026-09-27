@@ -11,12 +11,12 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Callable
 
-from baselines.gurobi_md_oracle import (
+from baselines.md_oracle_types import (
     GurobiOracleResult,
     GurobiOracleStatus,
     OracleScheduleEntry,
-    solve_gurobi_md_oracle,
 )
+from baselines.md_oracle_dispatch import solve_md_oracle
 from data_generation.md_dataset import MDInstanceRecord
 from data_generation.md_expert_dataset import (
     MDExpertRecord,
@@ -46,6 +46,9 @@ class MDExpertGenerationConfig:
     process_robot_count: int = 3
     transport_robot_count: int = 2
     skill_count: int = 3
+    scarce_skill_count: int = 0
+    material_downstream_stratified: bool = False
+    process_duration_range: tuple[int, int] | None = None
     time_limit_seconds: float = 60.0
     threads: int = 1
     max_steps: int = 10_000
@@ -83,6 +86,9 @@ class MDExpertGenerationConfig:
             process_robot_count=self.process_robot_count,
             transport_robot_count=self.transport_robot_count,
             skill_count=self.skill_count,
+            scarce_skill_count=self.scarce_skill_count,
+            material_downstream_stratified=self.material_downstream_stratified,
+            process_duration_range=self.process_duration_range,
         )
 
 
@@ -136,14 +142,16 @@ def generate_md_expert_dataset(
     output_dir: str | Path,
     *,
     config: MDExpertGenerationConfig,
-    oracle_solver: OracleSolver = solve_gurobi_md_oracle,
+    oracle_solver: OracleSolver = solve_md_oracle,
     overwrite: bool = False,
 ) -> MDExpertGenerationSummary:
     """Generate one replayed expert record per feasible offline oracle result.
 
     The solver is deliberately injected for tests and alternative offline
-    solver wrappers. Normal use calls the Gurobi oracle; no solver is called
-    during later IL training.
+    solver wrappers. Normal use dispatches through
+    :func:`baselines.md_oracle_dispatch.solve_md_oracle` (OR-Tools CP-SAT by
+    default; Gurobi selectable via ``MRTA_MILP_SOLVER=gurobi``); no solver is
+    called during later IL training.
     """
 
     if not isinstance(config, MDExpertGenerationConfig):
